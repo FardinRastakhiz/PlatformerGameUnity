@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "maxChars": {
+      "welcome": 20,
+      "readyToPlay": 20,
+      "pressContinue": 50,
+      "greatJob": 20,
+      "onePlusOne": 30
+    }
+  },
+  "en": {
+    "welcome": "Welcome!",
+    "readyToPlay": "Are you ready to play?",
+    "greatJob": "Great job!",
+    "pressContinue": "Press the next button to continue.",
+    "onePlusOne": "One + One = Two",
+    "newGame": "New Game",
+    "continue": "Continue",
+    "pantry": "Pantry",
+    "purchasePan": "Purchase Pan  <color=#F9DD3B>{0}</color>",
+    "autoSave": "...Auto Saving Complete"
+  },
+  "es": {
+    "welcome": "¡Bienvenido!",
+    "readyToPlay": "¿Estás listo para jugar?",
+    "greatJob": "¡Gran trabajo!",
+    "pressContinue": "Presione el botón 'siguiente' para continuar.",
+    "onePlusOne": "Uno + Uno = Dos"
+  },
+  "zh": {
+    "welcome": "欢迎！",
+    "readyToPlay": "你准备好玩吗",
+    "greatJob": "做得好！",
+    "pressContinue": "按“下一步”按钮继续。",
+    "onePlusOne": "一+一=二"
+  },
+  "jp": {
+    "welcome": "ようこそ!",
+    "readyToPlay": "あなたは遊ぶ準備ができていますか？",
+    "greatJob": "よくやった！",
+    "pressContinue": "続行するには '次へ'ボタンを押してください。",
+    "onePlusOne": "1 + 1 = 2"
+  },
+  "ru": {
+    "welcome": "Добро пожаловать!",
+    "readyToPlay": "Вы готовы играть?",
+    "greatJob": "Отличная работа!",
+    "pressContinue": "Нажмите следующую кнопку, чтобы продолжить.",
+    "onePlusOne": "один + один"
+  }
+}
