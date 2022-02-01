@@ -6,22 +6,14 @@ namespace ThePotentialJump.ProgressSystem
 {
 
 
-    [System.Serializable]
-    public class GameProgressData
-    {
-        public int Score { get; set; }
-        public int currentProgress { get; set; }
-        public int maximumProgress { get; set; }
-    }
 
-    public class SaveGame : Utilities.Singleton<SaveGame>
+    public class SaveAndLoad : Utilities.Singleton<SaveAndLoad>
     {
         [SerializeField] private TMPro.TextMeshProUGUI feedbackText;
         WaitForSeconds _feedbackTimer = new WaitForSeconds(2);
-        private GameProgressData data = new GameProgressData();
         Coroutine _feedbackMethod;
         // Start is called before the first frame update
-        private void SaveProgress()
+        private void SaveProgress(GameProgressData data)
         {
             // At least 8 progress point should be submitted
             LOLSDK.Instance.SubmitProgress(100, 100, 100);
@@ -48,17 +40,20 @@ namespace ThePotentialJump.ProgressSystem
             _feedbackMethod = StartCoroutine(_Feedback("autoSave"));
         }
 
-        public void LoadGameProgress()
+        public GameProgressData LoadGameProgress()
         {
+            GameProgressData data = null;
             LOLSDK.Instance.LoadState<GameProgressData>(state =>
             {
                 if (state != null)
                 {
+                    data = new GameProgressData();
                     data.currentProgress = state.currentProgress;
                     data.Score = state.score;
                     data.maximumProgress = state.maximumProgress;
                 }
             });
+            return data;
         }
 
 

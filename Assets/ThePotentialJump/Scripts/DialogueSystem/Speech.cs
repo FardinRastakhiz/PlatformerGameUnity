@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ThePotentialJump.DialogueSystem
+namespace ThePotentialJump.Dialogues
 {
     public class Speech : MonoBehaviour
     {

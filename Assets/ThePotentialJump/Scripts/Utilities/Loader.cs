@@ -54,7 +54,7 @@ namespace ThePotentialJump.Utilities
 		// Handle pause / resume
 		void HandleGameStateChange(GameState gameState)
 		{
-			SaveGame.Instance.LoadGameProgress();
+			SaveAndLoad.Instance.LoadGameProgress();
 		}
 
 

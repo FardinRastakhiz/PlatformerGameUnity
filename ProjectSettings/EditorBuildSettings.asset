@@ -11,22 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ThePotentialJump/Scenes/Game.unity
     guid: c7deb297fb1768344a6e5b712d964e87
-  - enabled: 1
-    path: Assets/WebGLLoLDemo/Scenes/Commands.unity
-    guid: c6496434894d049bf8b0de4fbc8b2824
-  - enabled: 1
-    path: Assets/WebGLLoLDemo/Scenes/Language.unity
-    guid: 631f67fadd869440b82f0835505f444b
-  - enabled: 1
-    path: Assets/WebGLLoLDemo/Scenes/MainMenu.unity
-    guid: d9a2194137d5d4fa28804b74786060b2
-  - enabled: 1
-    path: Assets/WebGLLoLDemo/Scenes/Questions.unity
-    guid: 7313ce3f7ed89487088b720680ddb588
-  - enabled: 1
-    path: Assets/WebGLLoLDemo/Scenes/Sound.unity
-    guid: b8f6e4294b68b427bac374053df9f0e4
-  - enabled: 1
-    path: Assets/WebGLLoLDemo/Scenes/Speech.unity
-    guid: 57bb3b159a4464d7d813b921528142ea
   m_configObjects: {}
