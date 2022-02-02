@@ -37,16 +37,16 @@ namespace ThePotentialJump.Dialogues
             closeButton.onClick.AddListener(() => OnCloseButtonClicked());
         }
 
-        //private void Start()
-        //{
-        //    StartCoroutine(TestDialogue());
-        //}
+        private void Start()
+        {
+            StartCoroutine(TestDialogue());
+        }
 
-        //IEnumerator TestDialogue()
-        //{
-        //    yield return new WaitForSeconds(3);
-        //    OnPlayDialogueSection("stage2", "dialogue01");
-        //}
+        IEnumerator TestDialogue()
+        {
+            yield return new WaitForSeconds(3);
+            OnPlayDialogueSection("stage2", "dialogue01");
+        }
 
         private void OnCloseButtonClicked()
         {

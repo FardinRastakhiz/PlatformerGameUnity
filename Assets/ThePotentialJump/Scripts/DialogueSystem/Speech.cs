@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ThePotentialJump.Dialogues
 {
     public class Speech : MonoBehaviour
     {
 		AudioSource _ttsAudioSource;
+
+		public InputField speakTextArgs;
 
 		void Start()
 		{
