@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections;
 using ThePotentialJump.Inputs;
+using ThePotentialJump.Utilities;
 using UnityEngine;
 
 
 namespace ThePotentialJump.CharacterController
 {
 
-    public class PlatformerCharacterController : MonoBehaviour
+    public class PlatformerCharacterController : Utilities.Singleton<PlatformerCharacterController>
     {
         [SerializeField] private Rigidbody2D rigidBody;
 
-        private void Awake()
+        protected override void Awake()
         {
+            destroyOnLoad = true;
+            base.Awake();
             if (rigidBody == null) rigidBody = GetComponent<Rigidbody2D>();
+            waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
         }
 
         private void Start()
@@ -95,13 +99,14 @@ namespace ThePotentialJump.CharacterController
         [SerializeField] private float dampSpeed = 1f;
         [SerializeField] private float playerSpeed = 10.0f;
 
+        private WaitForSeconds waitFixedDeltaTime;
         IEnumerator GoLeft()
         {
             while (true)
             {
                 if (lookRight) Flip();
-                Move(Time.deltaTime * -playerSpeed);
-                yield return null;
+                Move(Time.fixedDeltaTime * -playerSpeed);
+                yield return waitFixedDeltaTime;
             }
         }
 
@@ -111,8 +116,8 @@ namespace ThePotentialJump.CharacterController
             while (true)
             {
                 if (!lookRight) Flip();
-                Move(Time.deltaTime * playerSpeed);
-                yield return null;
+                Move(Time.fixedDeltaTime * playerSpeed);
+                yield return waitFixedDeltaTime;
             }
         }
 
@@ -131,6 +136,7 @@ namespace ThePotentialJump.CharacterController
         [SerializeField]
         private float energySavingRate = 350;
         private bool isInTheAir = false;
+        public float MaxEnergy { get => maxEnergy; set => maxEnergy = value; }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
@@ -146,15 +152,20 @@ namespace ThePotentialJump.CharacterController
                 isInTheAir = true;
         }
 
+        public event EventHandler<HoldEnergyEventArgs> HoldedEnergyChanged;
+        private HoldEnergyEventArgs holdEnergyEventArgs = new HoldEnergyEventArgs();
         IEnumerator HoldJumpEnergy()
         {
             holdedEnergy = 0;
             while (!isInTheAir)
             {
-                holdedEnergy = holdedEnergy >= maxEnergy ? maxEnergy : holdedEnergy + Time.deltaTime * energySavingRate;
-                yield return null;
+                holdedEnergy = holdedEnergy >= maxEnergy ? maxEnergy : holdedEnergy + Time.fixedDeltaTime * energySavingRate;
+                holdEnergyEventArgs.HoldedEnergy = holdedEnergy;
+                HoldedEnergyChanged?.Invoke(this, holdEnergyEventArgs);
+                yield return waitFixedDeltaTime;
             }
         }
+
 
         IEnumerator Jump()
         {
@@ -168,6 +179,7 @@ namespace ThePotentialJump.CharacterController
         }
 
         bool lookRight = false;
+
         private void Flip()
         {
             // Switch the way the player is labelled as facing.
@@ -179,5 +191,6 @@ namespace ThePotentialJump.CharacterController
             transform.localScale = theScale;
         }
     }
+
 
 }
