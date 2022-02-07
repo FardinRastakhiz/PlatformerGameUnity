@@ -4,7 +4,7 @@ namespace ThePotentialJump.Utilities
 {
     public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
-        protected static bool IsDestroyOnLoad = false;
+        protected static bool destroyOnLoad = false;
 
         private static object lockobj = new object();
         private static T instance;
@@ -35,9 +35,9 @@ namespace ThePotentialJump.Utilities
             if (instance == null)
             {
                 instance = this as T;
-                if (!IsDestroyOnLoad) DontDestroyOnLoad(gameObject);
+                if (!destroyOnLoad) DontDestroyOnLoad(gameObject);
             }
-            else
+            else if (instance != this)
             {
                 Destroy(gameObject);
             }
