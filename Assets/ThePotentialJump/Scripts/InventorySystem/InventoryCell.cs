@@ -28,14 +28,14 @@ namespace ThePotentialJump.Inventory
         public int Capacity { get => capacity; set => capacity = value; }
         public int Count { get => count; set => count = value; }
 
-        public void SetItem(string name, Sprite itemIcon, int count, bool replace = false)
+        public void SetItem(InventoryItem item, bool replace = false)
         {
             if (!replace && itemImage.sprite != emptyIcon) return;
-            if ((Capacity > 0) && (Count + count > Capacity)) return;
-            Count += count;
-            itemImage.sprite = itemIcon;
+            if ((Capacity > 0) && (Count + item.Count > Capacity)) return;
+            Content = new InventoryItem(item);
+            Count += Content.Count;
+            itemImage.sprite = Content.ItemIcon;
             itemCount.text = Count.ToString();
-            Content = new InventoryItem { Count = Count, ItemIcon = itemIcon, Name = name };
         }
         public void RemoveItem(int count, bool removeCellIfEmpty = true)
         {
@@ -63,7 +63,9 @@ namespace ThePotentialJump.Inventory
         {
             if (Count == 0) return;
             ActivateCell();
-            draggingItem = Instantiate(itemImage, Inventory.transform).rectTransform;
+            var draggingItemImage = Instantiate(itemImage, transform);
+            draggingItemImage.maskable = false;
+            draggingItem = draggingItemImage.rectTransform;
             UpdateDraggingItemPosition();
             dragBegan = true;
             print("started dragging");
@@ -85,6 +87,7 @@ namespace ThePotentialJump.Inventory
         {
             if (!dragBegan) return;
             dragBegan = false;
+            Destroy(draggingItem.gameObject);
         }
 
 

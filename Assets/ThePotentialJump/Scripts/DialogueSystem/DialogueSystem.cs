@@ -32,6 +32,7 @@ namespace ThePotentialJump.Dialogues
         Coroutine fadeOutCoroutine;
         protected override void Awake()
         {
+            IsDestroyOnLoad = true;
             base.Awake();
             dialogues = JsonConvert.DeserializeObject<DialogueSequence>(dialoguesJSON.text);
             closeButton.onClick.AddListener(() => OnCloseButtonClicked());
@@ -39,7 +40,7 @@ namespace ThePotentialJump.Dialogues
 
         private void Start()
         {
-            StartCoroutine(TestDialogue());
+            //StartCoroutine(TestDialogue());
         }
 
         IEnumerator TestDialogue()

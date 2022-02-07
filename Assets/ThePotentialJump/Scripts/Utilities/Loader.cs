@@ -9,6 +9,15 @@ using ThePotentialJump.ProgressSystem;
 
 namespace ThePotentialJump.Utilities
 {
+    //public class BoxedCoroutine
+    //{
+    //    public Coroutine Coroutine { get; set; }
+    //    public bool IsRunning { get; set; }
+    //    public void Start(IEnumerator enumerator)
+    //    {
+    //        Coroutine = MonoBehaviour.StartCoroutine(enumerator)
+    //    }
+    //}
 
 	public class Loader : MonoBehaviour
 	{

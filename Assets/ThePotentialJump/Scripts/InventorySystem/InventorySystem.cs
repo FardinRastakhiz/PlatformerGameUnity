@@ -16,7 +16,7 @@ namespace ThePotentialJump.Inventory
         {
             yield return CreateCell((inventoryCell) =>
             {
-                inventoryCell.SetItem(item.Name, item.ItemIcon, item.Count);
+                inventoryCell.SetItem(item);
                 if (!inventoryCells.ContainsKey(item.Name))
                     inventoryCells.Add(item.Name, inventoryCell);
             });

@@ -851,10 +851,16 @@ MonoBehaviour:
     itemIcon: {fileID: 4086421132753134573, guid: 5cbd2ede22278df448e4780e90e63c82,
       type: 3}
     count: 1
+    dropItame: {fileID: 7477577328868701103, guid: 157d91db1a5ca2d43a2b4edef6124bb3,
+      type: 3}
   - name: Weight2
     itemIcon: {fileID: 3498072343638026650, guid: d5915d798d867a0458926ffa08472447,
       type: 3}
     count: 1
+    dropItame: {fileID: 7477577328868701103, guid: 157d91db1a5ca2d43a2b4edef6124bb3,
+      type: 3}
   - name: Weight3
     itemIcon: {fileID: 21300000, guid: 8aab0f8961b0147e495a46b3bb275442, type: 3}
     count: 1
+    dropItame: {fileID: 7477577328868701103, guid: 157d91db1a5ca2d43a2b4edef6124bb3,
+      type: 3}
