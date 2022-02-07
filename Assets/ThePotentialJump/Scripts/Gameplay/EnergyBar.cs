@@ -56,8 +56,8 @@ namespace ThePotentialJump.Gameplay
 
         private void OnEnergyChanged(object o, HoldEnergyEventArgs e)
         {
-            fillProporsion =  e.HoldedEnergy / PlatformerCharacterController.Instance.MaxEnergy;
-            energyAmount = e.HoldedEnergy;
+            fillProporsion =  e.Value / PlatformerCharacterController.Instance.MaxEnergy;
+            energyAmount = e.Value;
             FillEnergy();
             SetFrameTransform();
         }

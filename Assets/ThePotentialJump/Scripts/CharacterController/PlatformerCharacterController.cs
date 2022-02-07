@@ -160,7 +160,7 @@ namespace ThePotentialJump.CharacterController
             while (!isInTheAir)
             {
                 holdedEnergy = holdedEnergy >= maxEnergy ? maxEnergy : holdedEnergy + Time.fixedDeltaTime * energySavingRate;
-                holdEnergyEventArgs.HoldedEnergy = holdedEnergy;
+                holdEnergyEventArgs.Value = holdedEnergy;
                 HoldedEnergyChanged?.Invoke(this, holdEnergyEventArgs);
                 yield return waitFixedDeltaTime;
             }
