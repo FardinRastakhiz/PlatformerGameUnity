@@ -9,8 +9,10 @@ namespace ThePotentialJump.Cameras
 
         private void Start()
         {
-            camController.MoveCameraTo(targetZoomObject.position + Vector3.back * 5, 2.0f);
+
         }
+
+
 
     }
 }
