@@ -17,7 +17,8 @@ namespace ThePotentialJump.Gameplay
         [SerializeField]
         private float maxCompressCapacity = 3.5f;
 
-        public void SetupParameters()
+
+        public void SetupParameters(JumpRuler ruler)
         {
             springCollider = spring.GetComponent<BoxCollider2D>();
             SetSpringSize(0);

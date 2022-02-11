@@ -13,6 +13,7 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private float springHeadMass;
         [SerializeField] private float swingThreshold = 0.1f;
         [SerializeField] private Rigidbody2D loadedweight;
+        JumpRuler ruler;
         private Rigidbody2D unloadedWeight = null;
         private bool isSwinging = false;
 
@@ -23,10 +24,12 @@ namespace ThePotentialJump.Gameplay
         private float fakeSpringConstant => 10 * springConstant;
         public float SpringConstant => springConstant;
 
-        public void SetParameters(Action<float> setSpringSize)
+        public void SetParameters(Action<float> setSpringSize, JumpRuler ruler)
         {
             waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
             this.setSpringSize = setSpringSize;
+            this.ruler = ruler;
+            projectile.SetupParameters(ruler);
         }
 
         public void OnWeightCollided()

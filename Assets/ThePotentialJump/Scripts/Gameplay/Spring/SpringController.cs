@@ -16,6 +16,7 @@ namespace ThePotentialJump.Gameplay
         SpringPhysics springPhysics;
         [SerializeField] SpringComponents springComponents;
         [SerializeField] EnergyUIContrller energyUIContrller;
+        [SerializeField] JumpRuler ruler;
 
         private float compressMeasure = 0.0f;
 
@@ -25,12 +26,12 @@ namespace ThePotentialJump.Gameplay
             energyUIContrller.ValueFinalized += OnEnergyValueFinalized;
             energyUIContrller.ValueChanged += OnEnergyValueChanged;
 
-            springComponents.SetupParameters();
+            springComponents.SetupParameters(ruler);
 
             InputController.Instance.PressSpace += OnPressSpace;
             InputController.Instance.ReleaseSpace += OnReleaseSpace;
             HoldedEnergyChanged += OnEnergyValueChanged;
-            springPhysics.SetParameters(springComponents.SetSpringSize);
+            springPhysics.SetParameters(springComponents.SetSpringSize, ruler);
         }
 
 
@@ -46,6 +47,7 @@ namespace ThePotentialJump.Gameplay
         {
             if (swingingCoroutine != null)
                 StopCoroutine(swingingCoroutine);
+            ruler.OnHideRuler();
             compressMeasure = GetAmplitude(e.Value);
             if (compressMeasure > springComponents.MaxCompressCapacity)
             {
@@ -84,10 +86,14 @@ namespace ThePotentialJump.Gameplay
         IEnumerator HoldSpringEnergy()
         {
             holdedEnergy = 0.0f;
+            var addedSign = 1.0f;
             float maxEnergy = GetEnergy(springComponents.MaxCompressCapacity);
             while (!isSwinging)
             {
-                holdedEnergy = holdedEnergy >= maxEnergy ? maxEnergy : holdedEnergy + Time.fixedDeltaTime * saveEnergyRate;
+                holdedEnergy = holdedEnergy + Time.fixedDeltaTime * saveEnergyRate * addedSign;
+                if ((holdedEnergy >= maxEnergy - Time.fixedDeltaTime && addedSign > 0)
+                    || (holdedEnergy <= Time.fixedDeltaTime && addedSign < 0))
+                    addedSign *= -1.0f;
                 holdEnergyEventArgs.Value = holdedEnergy;
                 energyUIContrller.SetUIValues(holdedEnergy);
                 HoldedEnergyChanged?.Invoke(this, holdEnergyEventArgs);
@@ -95,7 +101,7 @@ namespace ThePotentialJump.Gameplay
             }
         }
 
-        
+
         public float GetEnergy(float compressMeasure)
         {
             return compressMeasure * compressMeasure * springPhysics.SpringConstant / 2.0f;
