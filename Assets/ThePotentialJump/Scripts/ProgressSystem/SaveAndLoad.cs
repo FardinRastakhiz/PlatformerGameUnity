@@ -7,7 +7,7 @@ namespace ThePotentialJump.ProgressSystem
 
 
 
-    public class SaveAndLoad : Utilities.Singleton<SaveAndLoad>
+    public class SaveAndLoad : Utilities.MonoSingleton<SaveAndLoad>
     {
         [SerializeField] private TMPro.TextMeshProUGUI feedbackText;
         WaitForSeconds _feedbackTimer = new WaitForSeconds(2);

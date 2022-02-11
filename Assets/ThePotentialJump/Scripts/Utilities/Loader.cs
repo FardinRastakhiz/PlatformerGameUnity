@@ -9,6 +9,7 @@ using ThePotentialJump.ProgressSystem;
 
 namespace ThePotentialJump.Utilities
 {
+
     //public class BoxedCoroutine
     //{
     //    public Coroutine Coroutine { get; set; }
@@ -19,7 +20,7 @@ namespace ThePotentialJump.Utilities
     //    }
     //}
 
-	public class Loader : MonoBehaviour
+    public class Loader : MonoBehaviour
 	{
 
 		// Relative to Assets /StreamingAssets/
