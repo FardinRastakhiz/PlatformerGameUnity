@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace ThePotentialJump.Dialogues
 {
-    public class DialogueSystem : Utilities.Singleton<DialogueSystem>
+    public class DialogueSystem : Utilities.MonoSingleton<DialogueSystem>
     {
         [Space]
         [Header("Files")]
