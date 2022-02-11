@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
 
 namespace ThePotentialJump.Utilities
 {
-    public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+    public abstract class Singleton<T> where T:class
     {
         protected static bool destroyOnLoad = false;
 
@@ -13,34 +13,19 @@ namespace ThePotentialJump.Utilities
         {
             get
             {
+                if (instance != null) return instance;
                 lock (lockobj)
                 {
-
                     if (instance == null)
-                    {
-                        instance = FindObjectOfType<T>();
-                        if (instance == null)
-                            instance = new GameObject(typeof(T).Name)
-                                .AddComponent<T>();
-                    }
+                        instance = Activator.CreateInstance<T>();
 
                     return instance;
                 }
             }
         }
 
-
-        protected virtual void Awake()
+        protected Singleton()
         {
-            if (instance == null)
-            {
-                instance = this as T;
-                if (!destroyOnLoad) DontDestroyOnLoad(gameObject);
-            }
-            else if (instance != this)
-            {
-                Destroy(gameObject);
-            }
         }
 
     }
