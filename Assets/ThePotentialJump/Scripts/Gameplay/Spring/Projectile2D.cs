@@ -14,9 +14,16 @@ namespace ThePotentialJump.Gameplay
 
         private bool hitThePeak = false;
         private bool isOnPlatform = true;
+        private JumpRuler ruler;
+
+        public void SetupParameters(JumpRuler ruler)
+        {
+            this.ruler = ruler;
+        }
 
 
         private WaitForSeconds waitForSeconds;
+
         public void Project(Vector3 velocity)
         {
             if (!isOnPlatform) return;
@@ -30,11 +37,13 @@ namespace ThePotentialJump.Gameplay
         IEnumerator Moving(Vector3 velocity)
         {
             rigidbody.velocity = velocity;
+            ruler.OnStartUpdateRuler(rigidbody.transform);
             Debug.Log(velocity);
             while (rigidbody.velocity.y>0)
             {
                 yield return waitForSeconds;
             }
+            ruler.OnStopUpdateRuler();
             hitThePeak = true;
         }
 
@@ -42,7 +51,10 @@ namespace ThePotentialJump.Gameplay
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (hitThePeak && collision.gameObject.tag == "Platform")
+            {
                 isOnPlatform = true;
+                //ruler.OnHideRuler();
+            }
         }
     }
 }
