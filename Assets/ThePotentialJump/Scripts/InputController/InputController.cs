@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace ThePotentialJump.Inputs
 {
-    public class InputController : Singleton<InputController>
+    public class InputController : Utilities.MonoSingleton<InputController>
     {
-        private void Start()
+        void Start()
         {
             StartCoroutine(UpdateInputs());
         }

@@ -57,7 +57,7 @@ namespace ThePotentialJump.Utilities
 		void HandleStartGame(string json)
 		{
 			print("load game json:\n" + json);
-			SceneManager.LoadScene("Game", LoadSceneMode.Single);
+			SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 			SharedState.StartGameData = JSON.Parse(json);
 		}
 
