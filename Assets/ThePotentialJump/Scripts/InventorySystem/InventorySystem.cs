@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Inventory
 {
@@ -11,6 +12,7 @@ namespace ThePotentialJump.Inventory
         private Dictionary<string, InventoryCell> inventoryCells = new Dictionary<string, InventoryCell>();
         [SerializeField] private InventoryCell inventoryCellPrefab;
         [SerializeField] private RectTransform content;
+        [SerializeField] private UnityEvent inventoryEmptied;
         public InventoryCell ActivatedCell { get; private set; }
         public IEnumerator AddItem(InventoryItem item)
         {
@@ -35,6 +37,8 @@ namespace ThePotentialJump.Inventory
                 var cell = inventoryCells[cellName];
                 inventoryCells.Remove(cellName);
                 Destroy(cell.gameObject);
+                if (inventoryCells.Count == 0)
+                    inventoryEmptied?.Invoke();
             }
         }
 

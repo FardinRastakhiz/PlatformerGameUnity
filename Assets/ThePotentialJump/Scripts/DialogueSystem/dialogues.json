@@ -17,10 +17,20 @@
 		},
 	"4": {
 		"speaker": "Evelyn",
-		"paragraph": "Gravity is a force between objects that pull each other. Everything with mass has gravity relative to its weight and position. We cannot see the small gravities. But Earth is so massive and heavy, and because we are on Earth and close to it, we can see and feel its gravity.",
+		"paragraph": "Gravity is a force between objects that pull each other. Everything with mass has gravity relative to its weight and position. We cannot see the small gravities.",
 		"titleAlignment": "Left"
 		},
 	"5": {
+		"speaker": "Evelyn",
+		"paragraph": "But Earth is so massive and heavy, and because we are on Earth and close to it, we can see and feel its gravity. The moon is so big and heavy, too.",
+		"titleAlignment": "Left"
+		},
+	"6": {
+		"speaker": "Evelyn",
+		"paragraph": "Both objects' gravities pull each other the same, but for smaller object pairs, the amount of gravitational energy is smaller, too.",
+		"titleAlignment": "Left"
+		},
+	"7": {
 		"speaker": "Evelyn",
 		"paragraph": "As I said, gravity is relative to the distance and weight of objects. While we are on Earth, we calculate gravity as: PE=mgh, where g=9.81 m⁄s^2 . But when we arrive on the Moon, the g can change relative to the size and weight of the Moon.",
 		"titleAlignment": "Left"

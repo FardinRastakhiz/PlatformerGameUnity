@@ -45,7 +45,7 @@ namespace ThePotentialJump.CharacterController
         {
             animatorOverrideController["Watching"] = animationClip;
             animator.SetBool("Watching", true);
-            var cutsceneAnimator = animator.GetBehaviour<CutsceneAnimation>();
+            var cutsceneAnimator = animator.GetBehaviour<AnimationClipExit>();
             if (animationExitHandler != null)
                 cutsceneAnimator.OnAnimationExit += animationExitHandler;
         }

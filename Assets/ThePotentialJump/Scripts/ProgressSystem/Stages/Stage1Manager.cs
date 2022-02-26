@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ThePotentialJump.ProgressSystem
 {
-    public class Stage1Manager : MonoSingleton<Stage1Manager>
+    public class Stage1Manager : StageManager
     {
         void Start()
         {

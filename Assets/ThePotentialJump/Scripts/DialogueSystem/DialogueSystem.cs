@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Text;
 using UnityEngine.UI;
+using System;
 
 namespace ThePotentialJump.Dialogues
 {
@@ -49,17 +50,24 @@ namespace ThePotentialJump.Dialogues
             OnPlayDialogueSection("stage2", "dialogue01");
         }
 
-        private void OnCloseButtonClicked()
+        public void OnCloseButtonClicked()
         {
             closeButton.interactable = false;
             if (fillDialogueCoroutine != null) StopCoroutine(fillDialogueCoroutine);
             if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
             fadeOutCoroutine = StartCoroutine(FadeOut());
+            onFinishSectionAction?.Invoke();
         }
 
-        public void OnPlayDialogueSection(string stage, string section)
-        {
+        private Action onFinishSectionAction = null;
 
+        public void OnPlayDialogueSection(string stage,
+                                            string section,
+                                            Action onFinishSectionAction = null,
+                                            float beginPause = 0.0f,
+                                            float endingPause = 0.0f)
+        {
+            this.onFinishSectionAction = onFinishSectionAction;
             var ds = dialogues[stage][section];
             dialogueTitle.text = ds.Speaker;
             dialogueTitle.alignment = ds.TitleAlignment;
@@ -68,13 +76,13 @@ namespace ThePotentialJump.Dialogues
 
             if (fillDialogueCoroutine != null) StopCoroutine(fillDialogueCoroutine);
             if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
-            fillDialogueCoroutine = StartCoroutine(FillDialogue(ds.Paragraph));
+            fillDialogueCoroutine = StartCoroutine(FillDialogue(ds.Paragraph, beginPause, endingPause));
         }
 
-        private IEnumerator FillDialogue(string dialogueText)
+        private IEnumerator FillDialogue(string dialogueText, float beginPause = 0.0f, float endingPause = 0.0f)
         {
             yield return FadeIn();
-
+            yield return new WaitForSeconds(beginPause);
             StringBuilder sb = new StringBuilder();
             var waitTime = new WaitForSeconds(1.0f / (characterPerSecond * 1.0f));
             for(int i = 0; i< dialogueText.Length; i++)
@@ -84,7 +92,11 @@ namespace ThePotentialJump.Dialogues
                 yield return waitTime;
             }
             closeButton.interactable = true;
+            yield return new WaitForSeconds(endingPause);
+            //yield return new WaitForSeconds(0.2f);
+            OnCloseButtonClicked();
         }
+
         IEnumerator FadeIn()
         {
             while (dialogueUIGroup.alpha < 1)
