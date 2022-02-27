@@ -68,13 +68,11 @@ namespace ThePotentialJump.Inventory
             draggingItem = draggingItemImage.rectTransform;
             UpdateDraggingItemPosition();
             dragBegan = true;
-            print("started dragging");
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             ActivateCell();
-            print("started clicking");
         }
 
         public void OnDrag(PointerEventData eventData)

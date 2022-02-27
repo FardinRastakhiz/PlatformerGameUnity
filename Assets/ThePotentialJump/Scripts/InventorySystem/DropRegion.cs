@@ -1,14 +1,14 @@
-﻿using UnityEngine;
+﻿using ThePotentialJump.Gameplay;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace ThePotentialJump.Inventory
 {
 
-    public abstract class DropRegion : MonoBehaviour, IDropHandler
+    public abstract class DropRegion : Replacable, IDropHandler
     {
         public void OnDrop(PointerEventData eventData)
         {
-            print("drop worked");
             var droppedObject = eventData.pointerDrag;
             var inventoryCell = droppedObject.GetComponent<InventoryCell>();
             if (inventoryCell == null || inventoryCell.Count == 0) return;

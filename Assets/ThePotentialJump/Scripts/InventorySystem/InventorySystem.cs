@@ -47,7 +47,6 @@ namespace ThePotentialJump.Inventory
             var inventoryCell = Instantiate(inventoryCellPrefab, content);
             while (inventoryCell == null)
                 yield return null;
-            Debug.Log(inventoryCell.gameObject.name);
             inventoryCell.Inventory = this;
             inventoryCell.CellActivated += OnCellActivated;
             callback(inventoryCell);

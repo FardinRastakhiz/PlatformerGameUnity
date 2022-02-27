@@ -3,14 +3,8 @@ using UnityEngine;
 
 namespace ThePotentialJump.Gameplay
 {
-    public abstract class SlidingObject: MonoBehaviour
+    public abstract class SlidingObject: Replacable
     {
-        public event EventHandler Destroyed;
-
-        private void OnDestroy()
-        {
-            Destroyed?.Invoke(this, null);
-        }
     }
 
 }
