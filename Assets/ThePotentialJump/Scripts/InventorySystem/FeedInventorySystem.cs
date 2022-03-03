@@ -12,9 +12,6 @@ namespace ThePotentialJump.Inventory
             for (int i = 0; i < inventoryItems.Length; i++)
                 StartCoroutine(inventorySystem.AddItem(inventoryItems[i]));
         }
-
-
-
     }
 
 }

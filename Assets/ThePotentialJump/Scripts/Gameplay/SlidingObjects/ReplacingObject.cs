@@ -15,13 +15,14 @@ namespace ThePotentialJump.Gameplay
 
         private WaitForSeconds waitForDelay;
         private WaitForSeconds waitForFixedUpdate;
+        
         private void Awake()
         {
             waitForDelay = new WaitForSeconds(fadeOutDelay);
             waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
-            replacable.Replace += PlaceTheObject;
+            replacable.Replace += ReplaceTheObject;
         }
-        public void PlaceTheObject(object o, PlaceObjectEventArgs e)
+        public void ReplaceTheObject(object o, ReplaceObjectEventArgs e)
         {
             if (e.ReplacePrefab == null) e.ReplacePrefab = defaultReplaceObjectPrefab;
             if(e.ReplacePrefab == null)

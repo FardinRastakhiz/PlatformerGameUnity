@@ -123,4 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   replaceObjectPrefab: {fileID: 2781329174838105043, guid: e52039abac3d6064da639ce75ea98f99,
     type: 3}
-  impactEnergyTolerance: 100
+  brokenObjectPrefab: {fileID: 2781329174838105043, guid: e52039abac3d6064da639ce75ea98f99,
+    type: 3}
+  minEnergyTolerance: 198
+  maxEnergyTolerance: 247.5
+  openingReward: 5
+  breakingCost: 1

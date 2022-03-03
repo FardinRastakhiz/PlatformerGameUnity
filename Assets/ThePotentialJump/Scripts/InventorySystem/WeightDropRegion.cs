@@ -9,7 +9,7 @@ namespace ThePotentialJump.Inventory
     {
         private HashSet<Droppable> droppables = new HashSet<Droppable>();
 
-        public override event EventHandler<PlaceObjectEventArgs> Replace;
+        public override event EventHandler<ReplaceObjectEventArgs> Replace;
         [SerializeField] private JumpRuler jumpRuler;
         private void Awake()
         {
@@ -21,6 +21,9 @@ namespace ThePotentialJump.Inventory
             if (dropObject is WeightDroppable weightDroppable)
             {
                 var droppable = Instantiate(weightDroppable, position, Quaternion.identity, this.transform);
+                droppable.MinHeight = minHeight;
+                this.droppable = droppable;
+                
                 jumpRuler.OnStartUpdateRuler(droppable.transform);
                 droppable.Replace += Replace;
                 droppable.Replace += (o, e) => jumpRuler.OnStopUpdateRuler();

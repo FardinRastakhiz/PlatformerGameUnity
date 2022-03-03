@@ -18,7 +18,7 @@ namespace ThePotentialJump.Menus
         [Space]
         [SerializeField] private Animator fadeOutController;
 
-        [SerializeField] private CollectedCarrotViewer carrotViewer;
+        [SerializeField] private CurrencyViewer carrotViewer;
 
         private GameProgressData data = new GameProgressData();
 
@@ -27,7 +27,7 @@ namespace ThePotentialJump.Menus
             Debug.Log("question list: \n" + SharedState.QuestionList);
             newGameButton.onClick.AddListener(() => OnNewGameClicked());
             continueButton.onClick.AddListener(() => OnContinueClicked());
-            if (carrotViewer == null) carrotViewer = transform.parent.gameObject.GetComponentInChildren<CollectedCarrotViewer>();
+            if (carrotViewer == null) carrotViewer = transform.parent.gameObject.GetComponentInChildren<CurrencyViewer>();
         }
 
         private void Start()

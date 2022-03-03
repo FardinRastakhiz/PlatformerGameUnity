@@ -10,7 +10,7 @@ namespace ThePotentialJump.Inventory
         private new Rigidbody2D rigidbody;
         private float maxSpeedSquare = 0.0f;
 
-        public override event System.EventHandler<PlaceObjectEventArgs> Replace;
+        public override event System.EventHandler<ReplaceObjectEventArgs> Replace;
 
         public float MaxSpeed => Mathf.Sqrt(maxSpeedSquare);
         private void Awake()
@@ -20,18 +20,18 @@ namespace ThePotentialJump.Inventory
 
         private void Start()
         {
-            StartCoroutine(UpdateSpeed());
+            StartCoroutine(UpdateParameters());
         }
 
         public void OnDestroy()
         {
-            Replace?.Invoke(this, new PlaceObjectEventArgs { 
+            Replace?.Invoke(this, new ReplaceObjectEventArgs { 
                 ReplacePrefab = ReplaceObjectPrefab,
                 Parent = transform.parent,
                 Position = transform.position });
         }
 
-        IEnumerator UpdateSpeed()
+        IEnumerator UpdateParameters()
         {
             var speedSquare = rigidbody.velocity.sqrMagnitude;
             while (maxSpeedSquare <= speedSquare)
@@ -39,7 +39,12 @@ namespace ThePotentialJump.Inventory
                 maxSpeedSquare = Mathf.Max(speedSquare, maxSpeedSquare);
                 yield return null;
                 speedSquare = rigidbody.velocity.sqrMagnitude;
+                if(transform.position.y < MinHeight)
+                {
+                    Destroy(this.gameObject);
+                }
             }
+            Destroy(this.gameObject);
         }
 
         public void ReleaseEnergy(float energy)

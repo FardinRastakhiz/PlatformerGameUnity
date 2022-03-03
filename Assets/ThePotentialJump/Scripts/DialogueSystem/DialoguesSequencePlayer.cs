@@ -62,6 +62,7 @@ namespace ThePotentialJump.Dialogues
                 }
                 yield return null;
             }
+            Finish();
         }
     }
 }

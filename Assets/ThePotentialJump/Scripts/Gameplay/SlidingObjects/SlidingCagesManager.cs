@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace ThePotentialJump.Gameplay
 {
-    public class SlidingObjectsManager : Replacable
+    public class SlidingCagesManager : Replacable
     {
         [SerializeField] private SlidingObject slidingObjectPrefab;
         [SerializeField] private RegionOfGenerating[] regionsOfGenerating;
@@ -13,7 +13,9 @@ namespace ThePotentialJump.Gameplay
         private Coroutine generateCoroutine;
         private SlidingObject[] slidingObjects;
 
-        public override event EventHandler<PlaceObjectEventArgs> Replace;
+        public override event EventHandler<ReplaceObjectEventArgs> Replace;
+        public UnityEvent CageOpened;
+        public UnityEvent CageBroke;
 
         private WaitForSeconds waitForGenerateDelay;
         private void Awake()
@@ -60,7 +62,19 @@ namespace ThePotentialJump.Gameplay
             yield return waitForGenerateDelay;
             slidingObjects[index] = regionsOfGenerating[index].Generate(slidingObjectPrefab);
             slidingObjects[index].Replace += Replace;
+            slidingObjects[index].Replace += OnCageReplaced;
             yield return new WaitUntil(() => slidingObjects[index] != null);
+        }
+
+        private void OnCageReplaced(object sender, ReplaceObjectEventArgs e)
+        {
+            if(e is ReplaceCageEventArgs replaceCage)
+            {
+                if (replaceCage.isBroke)
+                    CageBroke?.Invoke();
+                else
+                    CageOpened?.Invoke();
+            }
         }
     }
 }
