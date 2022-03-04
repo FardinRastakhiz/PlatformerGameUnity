@@ -34,7 +34,7 @@ namespace ThePotentialJump.Gameplay
         private void Start()
         {
             BeginUpdating();
-            PlatformerCharacterMovement.Instance.HoldedEnergyChanged += OnEnergyChanged;
+            PlatformerCharacterController.Instance.HoldedEnergyChanged += OnEnergyChanged;
         }
 
         [SerializeField]
@@ -45,18 +45,18 @@ namespace ThePotentialJump.Gameplay
         private void OnEnable()
         {
             topViewSlider.gameObject.SetActive(true);
-            PlatformerCharacterMovement.Instance.HoldedEnergyChanged += OnEnergyChanged;
+            PlatformerCharacterController.Instance.HoldedEnergyChanged += OnEnergyChanged;
         }
 
         private void OnDisable()
         {
-            PlatformerCharacterMovement.Instance.HoldedEnergyChanged -= OnEnergyChanged;
+            PlatformerCharacterController.Instance.HoldedEnergyChanged -= OnEnergyChanged;
             topViewSlider.gameObject.SetActive(false);
         }
 
         private void OnEnergyChanged(object o, HoldEnergyEventArgs e)
         {
-            fillProporsion =  e.Value / PlatformerCharacterMovement.Instance.MaxEnergy;
+            fillProporsion =  e.Value / PlatformerCharacterController.Instance.MaxEnergy;
             energyAmount = e.Value;
             FillEnergy();
             SetFrameTransform();

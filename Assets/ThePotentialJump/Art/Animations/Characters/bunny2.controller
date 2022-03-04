@@ -80,8 +80,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2596856105551172053}
-  m_StateMachineBehaviours:
-  - {fileID: -6379229558486038442}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -157,7 +156,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 8576597703932304147}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 210, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5774464245404710355}
     m_Position: {x: 500, y: 0, z: 0}
@@ -188,13 +187,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Watching
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

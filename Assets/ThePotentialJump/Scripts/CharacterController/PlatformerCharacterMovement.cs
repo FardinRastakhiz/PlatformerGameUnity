@@ -27,11 +27,11 @@ namespace ThePotentialJump.CharacterController
         public void OnEnable()
         {
             if (InputController.Instance == null) return;
-            InputController.Instance.PressSpace += OnPressSpace;
+            // InputController.Instance.PressSpace += OnPressSpace;
             InputController.Instance.PressLeft += OnPressLeft;
             InputController.Instance.PressRight += OnPressRight;
 
-            InputController.Instance.ReleaseSpace += OnReleaseSpace;
+            // InputController.Instance.ReleaseSpace += OnReleaseSpace;
             InputController.Instance.ReleaseLeft += OnReleaseLeft;
             InputController.Instance.ReleaseRight += OnReleaseRight;
         }
@@ -39,11 +39,11 @@ namespace ThePotentialJump.CharacterController
         public void OnDisable()
         {
             if (InputController.Instance == null) return;
-            InputController.Instance.PressSpace -= OnPressSpace;
+            // InputController.Instance.PressSpace -= OnPressSpace;
             InputController.Instance.PressLeft -= OnPressLeft;
             InputController.Instance.PressRight -= OnPressRight;
 
-            InputController.Instance.ReleaseSpace -= OnReleaseSpace;
+            // InputController.Instance.ReleaseSpace -= OnReleaseSpace;
             InputController.Instance.ReleaseLeft -= OnReleaseLeft;
             InputController.Instance.ReleaseRight -= OnReleaseRight;
         }
@@ -80,18 +80,18 @@ namespace ThePotentialJump.CharacterController
                 controller.StopCoroutine(goRightCoroutine);
         }
 
-        private void OnPressSpace(object sender, EventArgs e)
-        {
-            if (isInTheAir) return;
-            jumpCoroutine = controller.StartCoroutine(HoldJumpEnergy());
-        }
+        //private void OnPressSpace(object sender, EventArgs e)
+        //{
+        //    if (IsJumping) return;
+        //    jumpCoroutine = controller.StartCoroutine(HoldJumpEnergy());
+        //}
 
-        public void OnReleaseSpace(object o, EventArgs e)
-        {
-            if (jumpCoroutine != null)
-                controller.StopCoroutine(jumpCoroutine);
-            jumpCoroutine = controller.StartCoroutine(Jump());
-        }
+        //public void OnReleaseSpace(object o, EventArgs e)
+        //{
+        //    if (jumpCoroutine != null)
+        //        controller.StopCoroutine(jumpCoroutine);
+        //    jumpCoroutine = controller.StartCoroutine(Jump());
+        //}
 
         [Space]
         [Header("Character movement controller")]
@@ -104,76 +104,43 @@ namespace ThePotentialJump.CharacterController
             while (true)
             {
                 if (lookRight) Flip();
-                Move(Time.fixedDeltaTime * -playerSpeed);
+                Move();
                 yield return waitFixedDeltaTime;
             }
         }
 
-        private Vector3 velVelocity = Vector3.zero;
         IEnumerator GoRight()
         {
             while (true)
             {
                 if (!lookRight) Flip();
-                Move(Time.fixedDeltaTime * playerSpeed);
+                Move();
                 yield return waitFixedDeltaTime;
             }
         }
 
 
-        private void Move(float deltaMove)
+        private Vector3 velVelocity = Vector3.zero;
+        private void Move()
         {
-            Vector3 targetVelocity = new Vector2(deltaMove, rigidBody.velocity.y);
-            rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocity, ref velVelocity, dampSpeed);
+            if (IsJumping) return;
+            float x = Input.GetAxis("Horizontal");
+            Vector3 move = new Vector3(x * playerSpeed, rigidBody.velocity.y, 0f);
+            rigidBody.velocity = move;
         }
 
-        [Space]
-        [Header("Jump energy")]
-        [SerializeField]
-        private float maxEnergy = 1000;
-        private float holdedEnergy = 0;
-        [SerializeField]
-        private float energySavingRate = 350;
-        private bool isInTheAir = false;
-        public float MaxEnergy { get => maxEnergy; set => maxEnergy = value; }
-
-        private void OnCollisionEnter2D(Collision2D collision)
+        public bool IsJumping { get; set; } = false;
+        public IEnumerator Jump(float holdedEnergy)
         {
-            Debug.Log("OnCollisionEnter: " + isInTheAir);
-            if (isInTheAir && collision.gameObject.tag == "Ground")
-                isInTheAir = false;
-        }
-
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            Debug.Log("OnCollisionExit2D: " + isInTheAir);
-            if (!isInTheAir && collision.gameObject.tag == "Ground")
-                isInTheAir = true;
-        }
-
-        public event EventHandler<HoldEnergyEventArgs> HoldedEnergyChanged;
-        private HoldEnergyEventArgs holdEnergyEventArgs = new HoldEnergyEventArgs();
-        IEnumerator HoldJumpEnergy()
-        {
-            holdedEnergy = 0;
-            while (!isInTheAir)
-            {
-                holdedEnergy = holdedEnergy >= maxEnergy ? maxEnergy : holdedEnergy + Time.fixedDeltaTime * energySavingRate;
-                holdEnergyEventArgs.Value = holdedEnergy;
-                HoldedEnergyChanged?.Invoke(this, holdEnergyEventArgs);
-                yield return waitFixedDeltaTime;
-            }
-        }
-
-
-        IEnumerator Jump()
-        {
-            rigidBody.AddForce(new Vector2(0f, holdedEnergy * 10));
-            holdedEnergy = 0;
+            var veclocity = rigidBody.velocity;
+            veclocity.y = Mathf.Sqrt((holdedEnergy * 2.0f) / rigidBody.mass);
+            rigidBody.velocity = veclocity;
+            IsJumping = true;
             do
             {
                 yield return null;
-            } while (isInTheAir);
+            } while (IsJumping);
+            IsJumping = false;
             Debug.Log(jumpCoroutine);
         }
 
