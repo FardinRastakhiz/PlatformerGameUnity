@@ -1,7 +1,4 @@
-﻿using ThePotentialJump.Gameplay;
-using UnityEngine;
-
-namespace ThePotentialJump.Inventory
+﻿namespace ThePotentialJump.Gameplay
 {
     public abstract class Droppable : Replacable
     {

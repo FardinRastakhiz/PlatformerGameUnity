@@ -1,29 +1,70 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using ThePotentialJump.CharacterController;
 using UnityEngine;
 
-public class ActivatePlatformCollider : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    [SerializeField] private Collider2D plaformCollider;
-    [SerializeField] private Transform player;
-    [SerializeField] private bool reverse;
-    private void Start()
+    public class ActivatePlatformCollider : MonoBehaviour
     {
-        StartCoroutine(CheckforActivate());
-    }
+        [SerializeField] private Collider2D plaformCollider;
+        [SerializeField] private Transform hitbodyTransform;
+        public Transform HitbodyTransform { get => hitbodyTransform; set => hitbodyTransform = value; }
 
-    private IEnumerator CheckforActivate()
-    {
-        while (true)
+        private void Start()
         {
-            if (player.position.y >= transform.position.y + plaformCollider.bounds.size.y/2.0f)
+            if(GameManager.Instance.GameType == GameType.PLATFORMER)
+                PlatformerCharacterController.Instance.HitCeiling += OnHitCeiling;
+            StartCoroutine(CheckforActivate());
+        }
+
+        private bool hitCeiling;
+        private void OnHitCeiling(object sender, EventArgs e)
+        {
+            if (!passed)
             {
-                plaformCollider.isTrigger = reverse ? true : false;
+                hitCeiling = true;
+                plaformCollider.isTrigger = true;
+                PlatformerCharacterController.Instance.JumpEnd += JumpEnd;
             }
-            else if (player.position.y < transform.position.y - plaformCollider.bounds.size.y)
+        }
+
+        private bool passed = false;
+
+
+        private IEnumerator CheckforActivate()
+        {
+            while (true)
             {
-                plaformCollider.isTrigger = reverse ? false : true;
+                yield return null;
+                if (hitCeiling || hitbodyTransform == null)
+                    continue;
+                var hbCollider = hitbodyTransform.GetComponent<Collider2D>();
+                if (hitbodyTransform.position.y - hbCollider.bounds.size.y/2 > transform.position.y + plaformCollider.bounds.size.y / 2.0f)
+                {
+                    plaformCollider.isTrigger =false;
+                }
+                else if (hitbodyTransform.position.y + hbCollider.bounds.size.y/2 < transform.position.y - plaformCollider.bounds.size.y)
+                {
+                    plaformCollider.isTrigger = true;
+                }
             }
-            yield return null;
+        }
+
+        public void JumpEnd(object o, EventArgs e)
+        {
+            hitCeiling = false;
+            PlatformerCharacterController.Instance.JumpEnd -= JumpEnd;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (!passed && collision.gameObject.tag == "Player")
+            {
+                passed = true;
+                PlatformerCharacterController.Instance.HitCeiling -= OnHitCeiling;
+            }
         }
     }
+
 }

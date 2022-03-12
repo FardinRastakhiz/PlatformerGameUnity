@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using SimpleJSON;
-using LoLSDK;
 using ThePotentialJump.ProgressSystem;
 
 namespace ThePotentialJump.Menus
 {
-    public class MainMenuManager : MonoBehaviour
+    public class MainMenuManager : Utilities.MonoSingleton<MainMenuManager>
     {
         [SerializeField] private Sprite greenButton;
         [SerializeField] private Sprite grayButton;
@@ -20,9 +17,8 @@ namespace ThePotentialJump.Menus
 
         [SerializeField] private CurrencyViewer carrotViewer;
 
-        private GameProgressData data = new GameProgressData();
 
-        void Awake()
+        protected override void Awake()
         {
             Debug.Log("question list: \n" + SharedState.QuestionList);
             newGameButton.onClick.AddListener(() => OnNewGameClicked());
@@ -32,8 +28,7 @@ namespace ThePotentialJump.Menus
 
         private void Start()
         {
-            data = SaveAndLoad.Instance.LoadGameProgress();
-            if (data == null)
+            if (LOLSDKManager.Instance.Data == null)
             {
                 DeactivateButton(continueButton);
                 ChangeButtonColor(newGameButton, greenButton);
@@ -44,7 +39,7 @@ namespace ThePotentialJump.Menus
                 ActivateButton(continueButton);
                 ChangeButtonColor(newGameButton, yellowButton);
                 ChangeButtonColor(continueButton, greenButton);
-                carrotViewer.SetCollectedCarrots(data.Score);
+                carrotViewer.SetCollectedCarrots(LOLSDKManager.Instance.Data.Score);
             }
         }
 
@@ -55,7 +50,7 @@ namespace ThePotentialJump.Menus
 
         private void OnNewGameClicked()
         {
-            data = new GameProgressData();
+            // data = new GameProgressData(); //??
             fadeOutController.SetBool("PlayFadeOut", true);
         }
 

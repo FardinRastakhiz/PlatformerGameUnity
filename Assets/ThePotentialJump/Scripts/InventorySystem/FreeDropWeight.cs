@@ -1,18 +1,16 @@
 ﻿using System.Collections;
-using ThePotentialJump.Gameplay;
 using UnityEngine;
 
-namespace ThePotentialJump.Inventory
+namespace ThePotentialJump.Gameplay
 {
-    public class WeightDroppable : Droppable
+    public class FreeDropWeight : Droppable
     {
         public float DropHeight { get; set; }
         private new Rigidbody2D rigidbody;
         private float maxSpeedSquare = 0.0f;
-
         public override event System.EventHandler<ReplaceObjectEventArgs> Replace;
-
         public float MaxSpeed => Mathf.Sqrt(maxSpeedSquare);
+
         private void Awake()
         {
             rigidbody = GetComponent<Rigidbody2D>();

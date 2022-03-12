@@ -12,11 +12,11 @@ namespace ThePotentialJump.Gameplay
     public class SpringController : MonoBehaviour
     {
 
-        [SerializeField]
-        SpringPhysics springPhysics;
+        [SerializeField] SpringPhysics springPhysics;
         [SerializeField] SpringComponents springComponents;
         [SerializeField] EnergyUIController energyUIController;
         [SerializeField] JumpRuler ruler;
+        [SerializeField] private bool isDisabled = false;
 
         private float compressMeasure = 0.0f;
         private WaitForSeconds waitFixedDeltaTime;
@@ -36,15 +36,41 @@ namespace ThePotentialJump.Gameplay
             springPhysics.SetParameters(springComponents.SetSpringSize, ruler);
 
         }
-
-        private void OnEnergyValueFinalized(object o, HoldEnergyEventArgs e)
+        private void Start()
         {
-            if (swingingCoroutine != null)
-                StopCoroutine(swingingCoroutine);
-            swingingCoroutine = StartCoroutine(springPhysics.Swing(GetAmplitude(e.Value)));
+            if (isDisabled) DisableSpring();
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Weight")
+            {
+                springPhysics.OnWeightCollided();
+            }
         }
 
-        public void OnEnergyValueChanged(object o, HoldEnergyEventArgs e)
+        public void AddProjectile(Projectile2D projectile, bool resetConstant = false)
+        {
+            springPhysics.AddProjectile(projectile, resetConstant);
+            if (resetConstant)
+            {
+                energyUIController.SetupSlider(transform.position, GetEnergy(springComponents.MaxCompressCapacity));
+            }
+        }
+
+        public void EnableSpring()
+        {
+            isDisabled = false;
+            StartCoroutine(energyUIController.Enable());
+        }
+
+        public void DisableSpring()
+        {
+            isDisabled = true;
+            springPhysics.Disable();
+            StartCoroutine(energyUIController.Disable());
+        }
+
+        private void OnEnergyValueChanged(object o, HoldEnergyEventArgs e)
         {
             if (swingingCoroutine != null)
                 StopCoroutine(swingingCoroutine);
@@ -60,21 +86,7 @@ namespace ThePotentialJump.Gameplay
 
         private Coroutine swingingCoroutine;
         private Coroutine holdEnergyCoroutine;
-        private void OnPressSpace(object o, EventArgs e)
-        {
-            if (isSwinging) return;
-            holdEnergyCoroutine = StartCoroutine(HoldSpringEnergy());
-        }
 
-        private void OnReleaseSpace(object o, EventArgs e)
-        {
-            if (swingingCoroutine != null)
-                StopCoroutine(swingingCoroutine);
-            if (holdEnergyCoroutine != null)
-                StopCoroutine(holdEnergyCoroutine);
-            isSwinging = false;
-            swingingCoroutine = StartCoroutine(springPhysics.Swing(GetAmplitude(holdedEnergy)));
-        }
 
         [Space]
         [Header("Hold energy parameters")]
@@ -83,12 +95,12 @@ namespace ThePotentialJump.Gameplay
         public event EventHandler<HoldEnergyEventArgs> HoldedEnergyChanged;
         private HoldEnergyEventArgs holdEnergyEventArgs = new HoldEnergyEventArgs();
         private float holdedEnergy = 0;
-        IEnumerator HoldSpringEnergy()
+        private IEnumerator HoldSpringEnergy()
         {
             holdedEnergy = 0.0f;
             var addedSign = 1.0f;
             float maxEnergy = GetEnergy(springComponents.MaxCompressCapacity);
-            while (!isSwinging)
+            while (!isSwinging && !isDisabled)
             {
                 holdedEnergy = holdedEnergy + Time.fixedDeltaTime * saveEnergyRate * addedSign;
                 if ((holdedEnergy >= maxEnergy - Time.fixedDeltaTime && addedSign > 0)
@@ -102,22 +114,40 @@ namespace ThePotentialJump.Gameplay
         }
 
 
-        public float GetEnergy(float compressMeasure)
+        private void OnPressSpace(object o, EventArgs e)
+        {
+            if (isSwinging || isDisabled) return;
+            holdEnergyCoroutine = StartCoroutine(HoldSpringEnergy());
+        }
+        private void OnReleaseSpace(object o, EventArgs e)
+        {
+            if (isDisabled) return;
+            if (swingingCoroutine != null)
+                StopCoroutine(swingingCoroutine);
+            if (holdEnergyCoroutine != null)
+                StopCoroutine(holdEnergyCoroutine);
+            isSwinging = false;
+            swingingCoroutine = StartCoroutine(springPhysics.Swing(GetAmplitude(holdedEnergy)));
+        }
+
+        private void OnEnergyValueFinalized(object o, HoldEnergyEventArgs e)
+        {
+            if (isDisabled) return;
+            if (swingingCoroutine != null)
+                StopCoroutine(swingingCoroutine);
+            swingingCoroutine = StartCoroutine(springPhysics.Swing(GetAmplitude(e.Value)));
+        }
+
+
+        private float GetEnergy(float compressMeasure)
         {
             return compressMeasure * compressMeasure * springPhysics.SpringConstant / 2.0f;
         }
 
-        public float GetAmplitude(float energy)
+        private float GetAmplitude(float energy)
         {
             return Mathf.Sqrt(2 * energy / springPhysics.SpringConstant);
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.tag == "Weight")
-            {
-                springPhysics.OnWeightCollided();
-            }
-        }
     }
 }

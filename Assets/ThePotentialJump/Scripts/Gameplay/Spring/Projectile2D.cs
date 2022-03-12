@@ -1,14 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ThePotentialJump.Gameplay
 {
-    public class Projectile2D : MonoBehaviour
+    public class Projectile2D : Droppable
     {
-        [SerializeField]
-        private Rigidbody2D rigidbody;
-
-        public float Mass => rigidbody.mass;
+        [SerializeField] private Rigidbody2D projectileRigidbody;
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        public float Mass => projectileRigidbody.mass;
 
         public bool HitThePeak => hitThePeak;
 
@@ -21,8 +22,20 @@ namespace ThePotentialJump.Gameplay
             this.ruler = ruler;
         }
 
+        public void OnDestroy()
+        {
+            Replace?.Invoke(this, new ReplaceObjectEventArgs
+            {
+                ReplacePrefab = ReplaceObjectPrefab,
+                Parent = transform.parent,
+                Position = transform.position
+            });
+            Debug.Log("dESTROYED"); 
+        }
 
         private WaitForSeconds waitForSeconds;
+
+        public override event EventHandler<ReplaceObjectEventArgs> Replace;
 
         public void Project(Vector3 velocity)
         {
@@ -36,10 +49,9 @@ namespace ThePotentialJump.Gameplay
 
         IEnumerator Moving(Vector3 velocity)
         {
-            rigidbody.velocity = velocity;
-            ruler.OnStartUpdateRuler(rigidbody.transform);
-            Debug.Log(velocity);
-            while (rigidbody.velocity.y>0)
+            projectileRigidbody.velocity = velocity;
+            ruler.OnStartUpdateRuler(projectileRigidbody.transform);
+            while (projectileRigidbody.velocity.y>0)
             {
                 yield return waitForSeconds;
             }
@@ -55,6 +67,19 @@ namespace ThePotentialJump.Gameplay
                 isOnPlatform = true;
                 //ruler.OnHideRuler();
             }
+            if (hitThePeak && collision.gameObject.tag == "Ground")
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        public void SetSprite(Sprite sprite)
+        {
+            spriteRenderer.sprite = sprite;
+        }
+        public void SetMass(float mass)
+        {
+            projectileRigidbody.mass = mass;
         }
     }
 }

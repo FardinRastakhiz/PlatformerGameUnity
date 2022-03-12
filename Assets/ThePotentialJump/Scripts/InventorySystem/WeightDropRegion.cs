@@ -18,7 +18,7 @@ namespace ThePotentialJump.Inventory
 
         public override void DropItem(Vector3 position, Droppable dropObject)
         {
-            if (dropObject is WeightDroppable weightDroppable)
+            if (dropObject is FreeDropWeight weightDroppable)
             {
                 var droppable = Instantiate(weightDroppable, position, Quaternion.identity, this.transform);
                 droppable.MinHeight = minHeight;

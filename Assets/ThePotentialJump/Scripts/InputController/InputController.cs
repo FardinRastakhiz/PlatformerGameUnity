@@ -6,6 +6,11 @@ namespace ThePotentialJump.Inputs
 {
     public class InputController : Utilities.MonoSingleton<InputController>
     {
+        protected override void Awake()
+        {
+            destroyOnLoad = true;
+            base.Awake();
+        }
         void Start()
         {
             StartCoroutine(UpdateInputs());

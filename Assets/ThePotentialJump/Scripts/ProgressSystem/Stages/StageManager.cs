@@ -7,5 +7,11 @@ namespace ThePotentialJump.ProgressSystem
     {
         public event EventHandler StageCompleted;
         public event EventHandler StageClosed;
+
+        protected override void Awake()
+        {
+            destroyOnLoad = true;
+            base.Awake();
+        }
     }
 }

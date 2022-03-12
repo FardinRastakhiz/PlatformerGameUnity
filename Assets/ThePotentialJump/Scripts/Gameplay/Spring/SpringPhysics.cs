@@ -23,13 +23,22 @@ namespace ThePotentialJump.Gameplay
 
         private float fakeSpringConstant => 10 * springConstant;
         public float SpringConstant => springConstant;
-
+        public void AddProjectile(Projectile2D projectile, bool resetConstant = false)
+        {
+            this.projectile = projectile;
+            projectile?.SetupParameters(ruler);
+            loadedweight = projectile.GetComponent<Rigidbody2D>();
+            if (resetConstant)
+            {
+                springConstant = 30f * loadedweight.mass;
+            }
+        }
         public void SetParameters(Action<float> setSpringSize, JumpRuler ruler)
         {
             waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
             this.setSpringSize = setSpringSize;
             this.ruler = ruler;
-            projectile.SetupParameters(ruler);
+            projectile?.SetupParameters(ruler);
         }
 
         public void OnWeightCollided()
@@ -42,11 +51,17 @@ namespace ThePotentialJump.Gameplay
             }
         }
 
+        public void Disable()
+        {
+            isSwinging = false;
+            setSpringSize?.Invoke(0);
+        }
+
         public IEnumerator Swing(float startAmplitude)
         {
             var SE = springConstant * startAmplitude * startAmplitude / 2.0f;
-            var v = Mathf.Sqrt(springConstant * startAmplitude * startAmplitude / loadedweight.mass);
-            projectile.Project(Vector2.up * v);
+            var v = Mathf.Sqrt((springConstant * startAmplitude * startAmplitude) / loadedweight.mass);
+            projectile?.Project(Vector2.up * v);
             //loadedweight.velocity = Vector2.up * v;
 
             isSwinging = true;

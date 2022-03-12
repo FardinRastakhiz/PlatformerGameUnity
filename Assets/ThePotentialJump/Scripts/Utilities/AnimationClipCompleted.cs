@@ -10,7 +10,6 @@ public class AnimationClipCompleted : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("began");
         alreadyRaised = false;
     }
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -19,8 +18,8 @@ public class AnimationClipCompleted : StateMachineBehaviour
         if (!alreadyRaised && stateInfo.normalizedTime > 1.0f)
         {
             alreadyRaised = true;
-            Debug.Log("invoke");
             Completed?.Invoke(this, null);
+            animator.SetTrigger("idle");
         }
     }
 

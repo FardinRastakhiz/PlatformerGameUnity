@@ -1,18 +1,21 @@
-﻿using ThePotentialJump.Gameplay;
-using TMPro;
+﻿using SimpleJSON;
 using UnityEngine;
 
 namespace ThePotentialJump.Menus
 {
-    public class EventOccuranceViewer : MonoBehaviour
+    public class EventOccuranceViewer : TextPresenter
     {
-        [SerializeField] private TextMeshProUGUI textMeshPro;
         [SerializeField] private string eventName;
         private int totalOccurence = 0;
         public void OnEventHappend()
         {
             totalOccurence++;
-            textMeshPro.text = $"{totalOccurence} {eventName}";
+            textComponent.text = $"{totalOccurence} {eventName}";
+        }
+
+        public override void AlterLanguage(JSONNode langNode)
+        {
+            eventName = langNode?[id];
         }
     }
 

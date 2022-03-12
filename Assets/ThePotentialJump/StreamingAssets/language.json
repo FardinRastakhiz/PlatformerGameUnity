@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "maxChars": {
+      "welcome": 20,
+      "readyToPlay": 20,
+      "pressContinue": 50,
+      "greatJob": 20,
+      "onePlusOne": 30
+    }
+  },
+  "en": {
+    "continue": "CONTINUE",
+    "jackie": "Jackie",
+    "newgame": "New Game",
+    "resume": "Resume",
+    "exit": "Exit",
+    "pause": "PAUSE",
+    "restart": "Restart",
+    "congradulation": "Congradulation",
+    "passSub": "Challenge has been passed",
+    "totalCarrots1": "Now you have",
+    "pluralSign": "s",
+    "cagesBroken": "cages broken",
+    "cagesOpened": "cages opened",
+    "failedTitle": "You can try again",
+    "failedBody": "But this time be more careful and calculate the correct height, ok?",
+    "tryLater": "Try Later",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s",
+    "pluralSign": "s"
+  }
+}

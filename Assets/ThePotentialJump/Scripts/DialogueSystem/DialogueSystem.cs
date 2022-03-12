@@ -10,9 +10,9 @@ namespace ThePotentialJump.Dialogues
 {
     public class DialogueSystem : Utilities.MonoSingleton<DialogueSystem>
     {
-        [Space]
-        [Header("Files")]
-        [SerializeField] private TextAsset dialoguesJSON;
+    //    [Space]
+    //    [Header("Files")]
+    //    [SerializeField] private TextAsset dialoguesJSON;
         [Space]
         [Header("UIs")]
         [SerializeField] private CanvasGroup dialogueUIGroup;
@@ -35,7 +35,7 @@ namespace ThePotentialJump.Dialogues
         {
             destroyOnLoad = true;
             base.Awake();
-            dialogues = JsonConvert.DeserializeObject<DialogueSequence>(dialoguesJSON.text);
+            dialogues = JsonConvert.DeserializeObject<DialogueSequence>(DialoguesContainer.Dialogues);
             closeButton.onClick.AddListener(() => OnCloseButtonClicked());
         }
 

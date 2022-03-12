@@ -16,10 +16,16 @@ namespace ThePotentialJump.Dialogues
         [SerializeField] private float beginPause = 1.0f;
         [SerializeField] private float intervalPause = 1.0f;
         [SerializeField] private float endingPause = 2.0f;
+        [SerializeField] private bool playOnAwake = false;
 
         private bool isDialogueHidden = true;
 
+        private void Start()
+        {
+            if (playOnAwake) Play();
+        }
 
+        [Space]
         public UnityEvent DialoguesSequenceStarted;
         public void Play()
         {

@@ -153,20 +153,36 @@ namespace ThePotentialJump.CharacterController
             }
         }
 
+        public event EventHandler JumpBegin;
+        public event EventHandler JumpEnd;
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log("OnCollisionEnter: " + movement.IsJumping);
-            if (movement.IsJumping && collision.gameObject.tag == "Ground")
-                movement.IsJumping = false;
-        }
+        public event EventHandler HitCeiling;
 
         private void OnCollisionExit2D(Collision2D collision)
         {
             Debug.Log("OnCollisionExit2D: " + movement.IsJumping);
             if (!movement.IsJumping && collision.gameObject.tag == "Ground")
+            {
                 movement.IsJumping = true;
+                JumpBegin?.Invoke(this, null);
+            }
         }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Debug.Log("OnCollisionEnter: " + movement.IsJumping);
+            if (movement.IsJumping && collision.gameObject.tag == "Ground")
+            {
+                movement.IsJumping = false;
+                JumpEnd?.Invoke(this, null);
+            }
+
+            if (movement.IsJumping && collision.gameObject.tag == "Ceiling")
+            {
+                HitCeiling?.Invoke(this, null);
+            }
+        }
+
     }
 
 

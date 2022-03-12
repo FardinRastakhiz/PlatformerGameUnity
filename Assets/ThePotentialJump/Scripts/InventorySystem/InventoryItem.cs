@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using ThePotentialJump.Gameplay;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace ThePotentialJump.Inventory

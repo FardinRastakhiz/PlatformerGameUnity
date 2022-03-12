@@ -25,6 +25,9 @@ namespace ThePotentialJump.Gameplay
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
         {
             CollectedOnCurrentScene = 0;
+            totalCurrencyChanged.TotalCurrency = TotalCurrency;
+            totalCurrencyChanged.CollectedOnCurrentScene = CollectedOnCurrentScene;
+            CurrencyChanged?.Invoke(this, totalCurrencyChanged);
         }
 
         public void Deposit(int amount)

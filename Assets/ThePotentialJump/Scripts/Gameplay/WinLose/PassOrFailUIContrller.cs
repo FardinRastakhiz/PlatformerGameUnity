@@ -30,5 +30,22 @@ namespace ThePotentialJump.Gameplay
             }
         }
 
+        public void FadeOutEndUI()
+        {
+            StartCoroutine(FadeOutUI(FailUI));
+        }
+
+
+        IEnumerator FadeOutUI(CanvasGroup ui)
+        {
+            ui.interactable = false;
+            ui.blocksRaycasts = false;
+            while (ui.alpha > 0)
+            {
+                ui.alpha -= Time.deltaTime;
+                yield return null;
+            }
+        }
+
     }
 }
