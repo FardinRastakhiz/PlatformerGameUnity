@@ -1,11 +1,6 @@
 {
   "_meta": {
     "maxChars": {
-      "welcome": 20,
-      "readyToPlay": 20,
-      "pressContinue": 50,
-      "greatJob": 20,
-      "onePlusOne": 30
     }
   },
   "en": {
@@ -25,19 +20,6 @@
     "failedTitle": "You can try again",
     "failedBody": "But this time be more careful and calculate the correct height, ok?",
     "tryLater": "Try Later",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s",
-    "pluralSign": "s"
+    "skip": "Skip"
   }
 }

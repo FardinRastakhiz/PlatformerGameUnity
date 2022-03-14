@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using ThePotentialJump.ProgressSystem;
+using ThePotentialJump.Utilities;
 
 namespace ThePotentialJump.Menus
 {
-    public class MainMenuManager : Utilities.MonoSingleton<MainMenuManager>
+    public class MainMenuManager : MonoSingleton<MainMenuManager>
     {
         [SerializeField] private Sprite greenButton;
         [SerializeField] private Sprite grayButton;

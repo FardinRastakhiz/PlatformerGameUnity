@@ -3,10 +3,16 @@ using UnityEngine;
 
 namespace ThePotentialJump.Menus
 {
-    public class ResumeButtonClick : MonoBehaviour
+    public class ResumeActivator : Utilities.MonoSingleton<ResumeActivator>
     {
         [SerializeField] private Animator pauseMenuController;
         private bool pauseActivated;
+
+        protected override void Awake()
+        {
+            destroyOnLoad = true;
+            base.Awake();
+        }
 
         private void Start()
         {
@@ -19,12 +25,12 @@ namespace ThePotentialJump.Menus
             {
                 pauseActivated = pauseMenuController.GetBool("ShowPauseMenu");
                 if (Input.GetKeyDown(KeyCode.Escape))
-                    OnResumeButtonClicked();
+                    OnActivateResume();
                 yield return null;
             }
         }
 
-        public void OnResumeButtonClicked()
+        public void OnActivateResume()
         {
             if (!pauseActivated) return;
             pauseMenuController.SetBool("ShowPauseMenu", false);

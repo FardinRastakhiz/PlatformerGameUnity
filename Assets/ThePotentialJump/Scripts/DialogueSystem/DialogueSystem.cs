@@ -5,6 +5,7 @@ using System.Collections;
 using System.Text;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Dialogues
 {
@@ -26,11 +27,15 @@ namespace ThePotentialJump.Dialogues
         [Header("Fade in fade out")]
         [SerializeField] private float fadeInDuration = 0.5f;
         [SerializeField] private float fadeOutDuration = 0.5f;
-
+        [Space]
+        [SerializeField] private UnityEvent activated;
+        [SerializeField] private UnityEvent deactivated;
 
         private DialogueSequence dialogues;
         Coroutine fillDialogueCoroutine;
         Coroutine fadeOutCoroutine;
+
+        
         protected override void Awake()
         {
             destroyOnLoad = true;
@@ -99,6 +104,7 @@ namespace ThePotentialJump.Dialogues
 
         IEnumerator FadeIn()
         {
+            activated?.Invoke();
             while (dialogueUIGroup.alpha < 1)
             {
                 dialogueUIGroup.alpha += Time.deltaTime * 1.0f / fadeInDuration;
@@ -109,6 +115,7 @@ namespace ThePotentialJump.Dialogues
         }
         IEnumerator FadeOut()
         {
+            deactivated?.Invoke();
             while (dialogueUIGroup.alpha > 0)
             {
                 dialogueUIGroup.alpha -= Time.deltaTime * 1.0f / fadeOutDuration;

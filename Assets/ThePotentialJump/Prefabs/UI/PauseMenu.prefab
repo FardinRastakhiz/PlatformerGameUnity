@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017921533640354511}
-  - component: {fileID: 2017921534878436127}
   - component: {fileID: 2017921533640354502}
   - component: {fileID: 2017921533640354497}
+  - component: {fileID: 6928916614640396201}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -42,20 +42,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2017921534878436127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017921533640354496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a00128818eda43dfaa959b83527b255, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherPanels:
-  - {fileID: 0}
 --- !u!225 &2017921533640354502
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -87,6 +73,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6928916614640396201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017921533640354496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a881cb6026b99f1418d1b1391216a804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2017921533777618600
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,6 +544,7 @@ GameObject:
   - component: {fileID: 2017921534164836223}
   - component: {fileID: 2017921534164836208}
   - component: {fileID: 2017921534164836222}
+  - component: {fileID: 2360164855574774437}
   m_Layer: 5
   m_Name: Button_Continue
   m_TagString: Untagged
@@ -653,7 +652,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2017921534164836208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2360164855574774437}
+        m_MethodName: OnActivateResume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2360164855574774437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017921534164836210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07df4eafb4caf2241a6143365b475d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuController: {fileID: 2017921533640354497}
 --- !u!1 &2017921534215363172
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,7 +1019,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2017921534636607278}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2360164855574774437}
+        m_MethodName: OnResumeButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2017921534992699694
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1284,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2017921535306139051}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2360164855574774437}
+        m_MethodName: OnResumeButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2017921535615857295
 GameObject:
   m_ObjectHideFlags: 0
