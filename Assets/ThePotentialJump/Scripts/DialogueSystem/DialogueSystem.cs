@@ -9,11 +9,13 @@ using UnityEngine.Events;
 
 namespace ThePotentialJump.Dialogues
 {
+    [RequireComponent(typeof(SpeechHandler))]
+    [RequireComponent(typeof(AudioSource))]
     public class DialogueSystem : Utilities.MonoSingleton<DialogueSystem>
     {
-    //    [Space]
-    //    [Header("Files")]
-    //    [SerializeField] private TextAsset dialoguesJSON;
+        [Space]
+        [Header("Files")]
+        [SerializeField] private TextAsset dialoguesJSON;
         [Space]
         [Header("UIs")]
         [SerializeField] private CanvasGroup dialogueUIGroup;
@@ -32,6 +34,7 @@ namespace ThePotentialJump.Dialogues
         [SerializeField] private UnityEvent deactivated;
 
         private DialogueSequence dialogues;
+        private SpeechHandler speechHandler;
         Coroutine fillDialogueCoroutine;
         Coroutine fadeOutCoroutine;
 
@@ -40,8 +43,10 @@ namespace ThePotentialJump.Dialogues
         {
             destroyOnLoad = true;
             base.Awake();
-            dialogues = JsonConvert.DeserializeObject<DialogueSequence>(DialoguesContainer.Dialogues);
-            closeButton.onClick.AddListener(() => OnCloseButtonClicked());
+            speechHandler = GetComponent<SpeechHandler>();
+            speechHandler.TtsAudioSource = GetComponent<AudioSource>();
+            dialogues = JsonConvert.DeserializeObject<DialogueSequence>(dialoguesJSON.text);
+            closeButton.onClick.AddListener(() => OnPassButtonClicked());
         }
 
         private void Start()
@@ -55,9 +60,18 @@ namespace ThePotentialJump.Dialogues
             OnPlayDialogueSection("stage2", "dialogue01");
         }
 
-        public void OnCloseButtonClicked()
+        public event EventHandler PassButtonClicked;
+        public void OnPassButtonClicked()
         {
-            closeButton.interactable = false;
+            FinishDialogue();
+            PassButtonClicked?.Invoke(this, null);
+        }
+
+        public void FinishDialogue()
+        {
+            PassButtonClicked?.Invoke(this, null);
+            speechHandler.CancelText();
+            //closeButton.interactable = false;
             if (fillDialogueCoroutine != null) StopCoroutine(fillDialogueCoroutine);
             if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
             fadeOutCoroutine = StartCoroutine(FadeOut());
@@ -74,21 +88,24 @@ namespace ThePotentialJump.Dialogues
         {
             this.onFinishSectionAction = onFinishSectionAction;
             var ds = dialogues[stage][section];
-            dialogueTitle.text = ds.Speaker;
+            dialogueTitle.text = SharedState.LanguageDefs?[ds.Speaker];
             dialogueTitle.alignment = ds.TitleAlignment;
             dialogueTextField.text = "";
-            closeButton.interactable = false;
+            //closeButton.interactable = false;
 
             if (fillDialogueCoroutine != null) StopCoroutine(fillDialogueCoroutine);
             if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
-            fillDialogueCoroutine = StartCoroutine(FillDialogue(ds.Paragraph, beginPause, endingPause));
+            fillDialogueCoroutine = StartCoroutine(FillDialogue(SharedState.LanguageDefs?[ds.Paragraph], beginPause, endingPause));
         }
 
         private IEnumerator FillDialogue(string dialogueText, float beginPause = 0.0f, float endingPause = 0.0f)
         {
+            speechHandler.CancelText();
+            speechHandler.OnClickSpeakText(dialogueText, SharedState.StartGameData["languageCode"]);
             yield return FadeIn();
             yield return new WaitForSeconds(beginPause);
             StringBuilder sb = new StringBuilder();
+            print("SharedState.StartGameData.Value: "+SharedState.StartGameData.Value);
             var waitTime = new WaitForSeconds(1.0f / (characterPerSecond * 1.0f));
             for(int i = 0; i< dialogueText.Length; i++)
             {
@@ -96,10 +113,9 @@ namespace ThePotentialJump.Dialogues
                 dialogueTextField.text = sb.ToString();
                 yield return waitTime;
             }
-            closeButton.interactable = true;
-            yield return new WaitForSeconds(endingPause);
-            //yield return new WaitForSeconds(0.2f);
-            OnCloseButtonClicked();
+            //closeButton.interactable = true;
+            //yield return new WaitForSeconds(endingPause);
+            //FinishDialogue();
         }
 
         IEnumerator FadeIn()

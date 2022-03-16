@@ -22,7 +22,14 @@ namespace ThePotentialJump.Dialogues
 
         private void Start()
         {
+            DialogueSystem.Instance.PassButtonClicked += OnPassButtonClicked;
             if (playOnAwake) Play();
+        }
+
+        private bool passDialogue = false;
+        private void OnPassButtonClicked(object sender, EventArgs e)
+        {
+            passDialogue = true;
         }
 
         [Space]
@@ -60,11 +67,12 @@ namespace ThePotentialJump.Dialogues
                 {
                     sectionPlayers[activeSection].IsPlaying = false;
                     activeSection++;
+                    passDialogue = false;
                 }
 
                 if (hideDialogueBox && !isDialogueHidden)
                 {
-                    DialogueSystem.Instance.OnCloseButtonClicked();
+                    DialogueSystem.Instance.FinishDialogue();
                 }
                 yield return null;
             }
