@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using ThePotentialJump.Utilities;
+using ThePotentialJump.ProgressSystem;
 
 namespace ThePotentialJump.Menus
 {
@@ -16,18 +17,19 @@ namespace ThePotentialJump.Menus
         [SerializeField] private Animator fadeOutController;
 
         [SerializeField] private CurrencyViewer carrotViewer;
+        
 
 
         protected override void Awake()
         {
-            Debug.Log("question list: \n" + SharedState.QuestionList);
-            newGameButton.onClick.AddListener(() => OnNewGameClicked());
-            continueButton.onClick.AddListener(() => OnContinueClicked());
+            //newGameButton.onClick.AddListener(() => OnNewGameClicked());
+            //continueButton.onClick.AddListener(() => OnContinueClicked());
             if (carrotViewer == null) carrotViewer = transform.parent.gameObject.GetComponentInChildren<CurrencyViewer>();
         }
 
         private void Start()
         {
+            SaveAndLoad.Instance.LoadGameProgress();
             if (LOLSDKManager.Instance.Data == null)
             {
                 DeactivateButton(continueButton);
@@ -43,16 +45,16 @@ namespace ThePotentialJump.Menus
             }
         }
 
-        private void OnContinueClicked()
-        {
-            fadeOutController.SetBool("PlayFadeOut", true);
-        }
+        //private void OnContinueClicked()
+        //{
+        //    fadeOutController.SetBool("PlayFadeOut", true);
+        //}
 
-        private void OnNewGameClicked()
-        {
-            // data = new GameProgressData(); //??
-            fadeOutController.SetBool("PlayFadeOut", true);
-        }
+        //private void OnNewGameClicked()
+        //{
+        //    // data = new GameProgressData(); //??
+        //    fadeOutController.SetBool("PlayFadeOut", true);
+        //}
 
         private void DeactivateButton(Button button)
         {

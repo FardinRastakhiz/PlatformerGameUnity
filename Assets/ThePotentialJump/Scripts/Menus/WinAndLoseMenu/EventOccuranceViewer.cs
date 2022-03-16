@@ -10,7 +10,7 @@ namespace ThePotentialJump.Menus
         public void OnEventHappend()
         {
             totalOccurence++;
-            textComponent.text = $"{totalOccurence} {eventName}";
+            textComponent.text = $"{totalOccurence} {SharedState.LanguageDefs?[id]}";
         }
 
         public override void AlterLanguage(JSONNode langNode)
