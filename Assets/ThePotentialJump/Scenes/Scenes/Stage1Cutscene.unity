@@ -979,8 +979,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 2452489010965133329}
   - {fileID: 666795641}
+  - {fileID: 2452489010965133329}
   - {fileID: 749445667}
   - {fileID: 887811554}
   m_Father: {fileID: 0}
@@ -1232,7 +1232,7 @@ RectTransform:
   m_Children:
   - {fileID: 110048241}
   m_Father: {fileID: 430201732}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6985,7 +6985,7 @@ RectTransform:
   m_Children:
   - {fileID: 2452489010818410403}
   m_Father: {fileID: 430201732}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -7208,6 +7208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FramedCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965923654795715921, guid: ab916a3704cd07f44a6ee651796a25e8,
+        type: 3}
+      propertyPath: orthographic size
+      value: 12.6388645
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab916a3704cd07f44a6ee651796a25e8, type: 3}
