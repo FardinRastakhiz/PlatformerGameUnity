@@ -8,6 +8,7 @@ TagManager:
   - Platform
   - Weight
   - Ceiling
+  - White
   layers:
   - Default
   - TransparentFX
