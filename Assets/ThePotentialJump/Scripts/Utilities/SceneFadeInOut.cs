@@ -71,8 +71,10 @@ namespace ThePotentialJump.Utilities
 
         private void OnFadeInCompleted(object o, EventArgs e)
         {
+            coverAnimator.SetBool("fadeIn", false);
             FadeInCompleted?.Invoke();
         }
+
 
         private void OnFadeOutComplete(object o, EventArgs e)
         {
