@@ -49,6 +49,7 @@ namespace ThePotentialJump.Gameplay
                     plaformCollider.isTrigger = true;
                 }
             }
+            Debug.Log("Finisheddddd");
         }
 
         public void JumpEnd(object o, EventArgs e)

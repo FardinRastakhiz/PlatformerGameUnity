@@ -63,6 +63,11 @@ namespace ThePotentialJump.Gameplay
             slidingObjects[index] = regionsOfGenerating[index].Generate(slidingObjectPrefab);
             slidingObjects[index].Replace += Replace;
             slidingObjects[index].Replace += OnCageReplaced;
+            //if(slidingObjects[index] is SlidingCage cage)
+            //{
+            //    //cage.CageBroke +=
+            //    //cage.CageOpened +=
+            //}
             yield return new WaitUntil(() => slidingObjects[index] != null);
         }
 

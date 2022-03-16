@@ -30,14 +30,14 @@ namespace ThePotentialJump.Gameplay
             springComponents.SetupParameters(ruler);
             waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
 
-            InputController.Instance.PressSpace += OnPressSpace;
-            InputController.Instance.ReleaseSpace += OnReleaseSpace;
             HoldedEnergyChanged += OnEnergyValueChanged;
             springPhysics.SetParameters(springComponents.SetSpringSize, ruler);
 
         }
         private void Start()
         {
+            InputController.Instance.PressSpace += OnPressSpace;
+            InputController.Instance.ReleaseSpace += OnReleaseSpace;
             if (isDisabled) DisableSpring();
         }
         private void OnCollisionEnter2D(Collision2D collision)

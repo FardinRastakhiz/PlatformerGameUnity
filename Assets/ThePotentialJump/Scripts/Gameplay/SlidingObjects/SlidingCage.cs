@@ -1,4 +1,5 @@
-﻿using ThePotentialJump.Inventory;
+﻿using System;
+using ThePotentialJump.Inventory;
 using UnityEngine;
 
 namespace ThePotentialJump.Gameplay
@@ -15,6 +16,9 @@ namespace ThePotentialJump.Gameplay
         private ReplaceCageEventArgs placeObjectEventArgs;
 
         public GameObject BrokenObjectPrefab { get => brokenObjectPrefab; set => brokenObjectPrefab = value; }
+
+        public event EventHandler CageBroke;
+        public event EventHandler CageOpened;
 
         private void Awake()
         {
@@ -39,12 +43,14 @@ namespace ThePotentialJump.Gameplay
                         EconomySystem.Instance?.Deposit(openingReward);
                         placeObjectEventArgs.ReplacePrefab = ReplaceObjectPrefab;
                         placeObjectEventArgs.isBroke = false;
+                        CageOpened?.Invoke(this, null);
                     }
                     else
                     {
                         EconomySystem.Instance?.Withdraw(breakingCost);
                         placeObjectEventArgs.ReplacePrefab = BrokenObjectPrefab;
                         placeObjectEventArgs.isBroke = true;
+                        CageBroke?.Invoke(this, null);
                     }
 
                     Destroy(droppableWeight.gameObject);

@@ -22,9 +22,10 @@ namespace ThePotentialJump.Inventory
             if (inventoryCell == null || inventoryCell.Count == 0) return;
             Dropped?.Invoke(this, null);
             if (inventoryCell.Content.DropItame != null && droppable == null)
+            {
                 DropItem(eventData.pointerCurrentRaycast.worldPosition, inventoryCell.Content.DropItame);
-
-            inventoryCell.RemoveItem(1);
+                inventoryCell.RemoveItem(1);
+            }
         }
 
         internal void SetMinHeight(float baseFloorHeight)
