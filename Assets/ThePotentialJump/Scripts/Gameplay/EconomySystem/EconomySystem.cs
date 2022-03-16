@@ -17,6 +17,8 @@ namespace ThePotentialJump.Gameplay
         public event EventHandler<TotalCurrencyChangedEventArgs> CurrencyChanged;
         private TotalCurrencyChangedEventArgs totalCurrencyChanged = new TotalCurrencyChangedEventArgs();
         public int CollectedOnCurrentScene { get; set; }
+        public int MaximumCapacity { get; internal set; } = 100;
+
         private void Start()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;

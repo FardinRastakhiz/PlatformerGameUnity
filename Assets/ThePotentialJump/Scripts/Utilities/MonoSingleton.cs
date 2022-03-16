@@ -15,22 +15,24 @@ namespace ThePotentialJump.Utilities
             get
             {
                 if (instance != null) return instance;
-                lock (lockobj)
-                {
-                    if (instance == null)
-                    {
-                        instance = FindObjectOfType<T>();
-                        if (instance == null)
-                            instance = new GameObject(typeof(T).Name)
-                                .AddComponent<T>();
-                    }
+                Debug.LogError($"Game object of type '{typeof(T).Name}' is not present in the scene!");
+                return null;
+                //lock (lockobj)
+                //{
+                //    if (instance == null)
+                //    {
+                //        instance = FindObjectOfType<T>();
+                //        if (instance == null)
+                //            instance = new GameObject(typeof(T).Name)
+                //                .AddComponent<T>();
+                //    }
 
-                    return instance;
-                }
+                //    return instance;
+                //}
             }
         }
 
-
+        protected bool destroyed = false;
         protected virtual void Awake()
         {
             if (instance == null)
@@ -40,7 +42,8 @@ namespace ThePotentialJump.Utilities
             }
             else if (instance != this)
             {
-                Destroy(gameObject);
+                destroyed = true;
+                Destroy(this.gameObject);
             }
         }
 

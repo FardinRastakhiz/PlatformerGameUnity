@@ -3,7 +3,7 @@
     {
       "questionId": "q1",
       "stem": "gravitational potential energy depends on which property of objects?",
-      "imageURL": "http://conversationagent.typepad.com/.a/6a00d8341c03bb53ef01bb0855b040970d-pi",
+      "imageURL": "",
       "alternatives": [
         {
           "alternativeId": "a1",
@@ -27,7 +27,7 @@
     {
       "questionId": "q2",
       "stem": "Which sentence is not true about this level?",
-      "imageURL": "http://3.bp.blogspot.com/-QM6KFrHYfMQ/U4X92xgQ5WI/AAAAAAAACo0/KLVH0MJbSrc/s1600/Stitch+in+time+saves+nine+(1).gif",
+      "imageURL": "",
       "alternatives": [
         {
           "alternativeId": "a5",
@@ -51,7 +51,7 @@
     {
       "questionId": "q3",
       "stem": "Which type of energy wasn't used in this level?",
-      "imageURL": "https://cdn.meme.am/instances/250x250/23625193.jpg",
+      "imageURL": "",
       "alternatives": [
         {
           "alternativeId": "a9",
@@ -75,7 +75,7 @@
     {
       "questionId": "q4",
       "stem": "If we neglect wasted energy, which option is not equal with others?",
-      "imageURL": "https://cdn.meme.am/instances/65111038.jpg",
+      "imageURL": "",
       "alternatives": [
         {
           "alternativeId": "a13",
@@ -99,7 +99,7 @@
     {
       "questionId": "q5",
       "stem": "Which one is not part of spaceship taking off?",
-      "imageURL": "https://cdn.meme.am/instances/65111038.jpg",
+      "imageURL": "",
       "alternatives": [
         {
           "alternativeId": "a13",

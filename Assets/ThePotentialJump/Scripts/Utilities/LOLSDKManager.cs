@@ -35,36 +35,37 @@ namespace ThePotentialJump.Utilities
 		protected override void Awake()
 		{
             base.Awake();
-			// Create the WebGL (or mock) object
-#if UNITY_EDITOR
-			ILOLSDK webGL = new LoLSDK.MockWebGL();
+            if (destroyed) return;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            // Create the WebGL (or mock) object
+            #if UNITY_EDITOR
+                ILOLSDK webGL = new LoLSDK.MockWebGL();
 #elif UNITY_WEBGL
-			ILOLSDK webGL = new LoLSDK.WebGL();
+			    ILOLSDK webGL = new LoLSDK.WebGL();
 #endif
+            var objectName = this.gameObject.name;
+            var objectParent = this.transform.parent;
+            // Initialize the object, passing in the WebGL
+            LOLSDK.Init(webGL, "com.EmeraldInteractive.ThePotentialJump");
 
-			// Initialize the object, passing in the WebGL
-			LOLSDK.Init(webGL, "com.EmeraldInteractive.ThePotentialJump");
-
-			// Register event handlers
+            // Register event handlers
             LOLSDK.Instance.StartGameReceived += new StartGameReceivedHandler(this.HandleStartGame);
             LOLSDK.Instance.GameStateChanged += new GameStateChangedHandler(this.HandleGameStateChange);
             LOLSDK.Instance.QuestionsReceived += new QuestionListReceivedHandler(this.HandleQuestions);
             LOLSDK.Instance.LanguageDefsReceived += new LanguageDefsReceivedHandler(this.HandleLanguageDefs);
 
             // Mock the platform-to-game messages when in the Unity editor.
-#if UNITY_EDITOR
-            LoadMockData();
-#endif
-
+            #if UNITY_EDITOR
+                LoadMockData();
+            #endif
             // Then, tell the platform the game is ready.
             LOLSDK.Instance.GameIsReady();
-		}
+        }
 
         private void Start()
         {
-            data = SaveAndLoad.Instance.LoadGameProgress();
-
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            data = SaveAndLoad.Instance?.LoadGameProgress();
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
@@ -95,7 +96,8 @@ namespace ThePotentialJump.Utilities
         // Start the game here
         void HandleStartGame(string json)
 		{
-			SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+            if (SceneManager.GetActiveScene().name == "_Init")
+                SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
 			SharedState.StartGameData = JSON.Parse(json);
 		}
 
