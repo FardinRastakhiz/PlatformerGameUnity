@@ -29,15 +29,15 @@ public class Molecule : MonoBehaviour
             var otherMolecule = collision.gameObject.GetComponent<Molecule>();
             if (otherMolecule.Changed)
             {
-                Destroy(this.gameObject);
+                // Destroy(this.gameObject);
                 otherMolecule.Changed = false;
             }
             else
             {
                 Changed = true;
                 gameObject.tag = "Untagged";
-                spriteRenderer.color = Color.black;
-                rate += 30;
+                spriteRenderer.color = new Color(Color.black.r, Color.black.g, Color.black.b, spriteRenderer.color.a);
+                rate += 50;
             }
         }
     }

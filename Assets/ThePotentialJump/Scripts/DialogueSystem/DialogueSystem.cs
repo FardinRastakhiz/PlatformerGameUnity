@@ -6,6 +6,7 @@ using System.Text;
 using UnityEngine.UI;
 using System;
 using UnityEngine.Events;
+using ThePotentialJump.Sounds;
 
 namespace ThePotentialJump.Dialogues
 {
@@ -29,6 +30,8 @@ namespace ThePotentialJump.Dialogues
         [Header("Fade in fade out")]
         [SerializeField] private float fadeInDuration = 0.5f;
         [SerializeField] private float fadeOutDuration = 0.5f;
+        [Space]
+        [SerializeField] private SFXModule keyTyping;
         [Space]
         [SerializeField] private UnityEvent activated;
         [SerializeField] private UnityEvent deactivated;
@@ -111,6 +114,7 @@ namespace ThePotentialJump.Dialogues
             {
                 sb.Append(dialogueText[i]);
                 dialogueTextField.text = sb.ToString();
+                if (i % 2 == 0) keyTyping.PlayImmediate();
                 yield return waitTime;
             }
             //closeButton.interactable = true;

@@ -10,8 +10,10 @@ namespace ThePotentialJump.Gameplay
         private float baseHeight = 0.0f;
         public int maxHeight = 0;
         public event EventHandler<NewHeightEventArgs> NewHeightApproached;
-        private void Awake()
+        protected override void Awake()
         {
+            destroyOnLoad = true;
+            base.Awake();
             baseHeight = transform.position.y;
             PlatformerCharacterController.Instance.JumpEnd += OnPlatformLanded;
         }

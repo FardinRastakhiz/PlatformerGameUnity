@@ -4,11 +4,11 @@ using UnityEngine.UI;
 
 namespace ThePotentialJump.Sounds
 {
-    public class MusicVolume : audioVolume
+    public class MusicVolume : audioVolume<MusicVolume, MusicModule>
     {
-        public static event EventHandler Muted;
-        public static event EventHandler UnMuted;
-        public static event EventHandler<VolumeEventArgs> VolumeChanged;
+        public event EventHandler Muted;
+        public event EventHandler UnMuted;
+        public event EventHandler<VolumeEventArgs> VolumeChanged;
 
         protected override void Mute()
         {

@@ -15,6 +15,7 @@ namespace ThePotentialJump.Utilities
         [SerializeField] private string nextLevelToLoad;
         [Space]
         [SerializeField] private UnityEvent FadeInCompleted;
+        [SerializeField] private UnityEvent FadeOutBegan;
 
         private void Start()
         {
@@ -56,6 +57,7 @@ namespace ThePotentialJump.Utilities
         IEnumerator FadeOutCoroutine(float delay = 0.0f)
         {
             yield return new WaitForSeconds(delay);
+            FadeOutBegan?.Invoke();
             coverAnimator.SetBool("fadeOut", true);
             if (animationClipCompleted == null) animationClipCompleted = coverAnimator.GetBehaviours<AnimationClipCompleted>();
             if (animationClipCompleted != null)

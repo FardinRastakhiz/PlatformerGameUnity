@@ -17,8 +17,37 @@ namespace ThePotentialJump.Utilities
         {
             waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
             spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-            var hashCode = this.gameObject.GetHashCode();
             StartCoroutine(UpdateChecking());
+        }
+
+        Coroutine fadeInOut;
+        public void Show()
+        {
+            if (fadeInOut != null) StopCoroutine(fadeInOut);
+            fadeInOut = StartCoroutine(FadeIn());
+        }
+        public void Hide()
+        {
+            if (fadeInOut != null) StopCoroutine(fadeInOut);
+            fadeInOut = StartCoroutine(FadeOut());
+        }
+
+
+        IEnumerator FadeIn()
+        {
+            while (Alpha<1-float.Epsilon)
+            {
+                Alpha += Time.fixedDeltaTime * 2f;
+                yield return waitForFixedUpdate;
+            }
+        }
+        IEnumerator FadeOut()
+        {
+            while (Alpha > float.Epsilon)
+            {
+                Alpha -= Time.fixedDeltaTime * 2f;
+                yield return waitForFixedUpdate;
+            }
         }
 
         IEnumerator UpdateChecking()

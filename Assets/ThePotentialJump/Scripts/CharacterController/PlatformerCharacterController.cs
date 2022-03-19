@@ -35,7 +35,7 @@ namespace ThePotentialJump.CharacterController
 
             InputController.Instance.PressSpace += OnPressSpace;
             InputController.Instance.ReleaseSpace += OnReleaseSpace;
-            movement.SetupParameters(this);
+            movement.SetupParameters(this, animator);
             destroyOnLoad = true;
             base.Awake();
             if (bunnyRigidBody == null) bunnyRigidBody = GetComponent<Rigidbody2D>();

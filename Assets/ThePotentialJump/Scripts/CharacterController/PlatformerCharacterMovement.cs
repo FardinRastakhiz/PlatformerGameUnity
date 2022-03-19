@@ -16,12 +16,13 @@ namespace ThePotentialJump.CharacterController
         private PlatformerCharacterController controller;
         private Transform transform;
         private Rigidbody2D rigidBody;
-        public void SetupParameters(PlatformerCharacterController controller)
+        public void SetupParameters(PlatformerCharacterController controller, Animator animator)
         {
             this.controller = controller;
             transform = controller.transform;
             rigidBody = controller.GetComponent<Rigidbody2D>();
             waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
+            this.animator = animator;
         }
 
         public void OnEnable()
@@ -99,24 +100,30 @@ namespace ThePotentialJump.CharacterController
         [SerializeField] private float playerSpeed = 10.0f;
 
         private WaitForSeconds waitFixedDeltaTime;
+        private Animator animator;
+
         IEnumerator GoLeft()
         {
+            animator.SetBool("Walking", true);
             while (true)
             {
                 if (lookRight) Flip();
                 Move();
                 yield return waitFixedDeltaTime;
             }
+            animator.SetBool("Walking", false);
         }
 
         IEnumerator GoRight()
         {
+            animator.SetBool("Walking", true);
             while (true)
             {
                 if (!lookRight) Flip();
                 Move();
                 yield return waitFixedDeltaTime;
             }
+            animator.SetBool("Walking", false);
         }
 
 
@@ -136,11 +143,13 @@ namespace ThePotentialJump.CharacterController
             veclocity.y = Mathf.Sqrt((holdedEnergy * 2.0f) / rigidBody.mass);
             rigidBody.velocity = veclocity;
             IsJumping = true;
+            animator.SetBool("Jumping", true);
             do
             {
                 yield return null;
             } while (IsJumping);
             IsJumping = false;
+            animator.SetBool("Jumping", false);
             Debug.Log(jumpCoroutine);
         }
 

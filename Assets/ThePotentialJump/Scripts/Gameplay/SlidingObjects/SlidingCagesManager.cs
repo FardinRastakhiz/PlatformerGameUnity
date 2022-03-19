@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using ThePotentialJump.Sounds;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,10 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private SlidingObject slidingObjectPrefab;
         [SerializeField] private RegionOfGenerating[] regionsOfGenerating;
         [SerializeField] private float generateDelay = 0.33f;
+        [Space]
+        [Header("SFX Modules")]
+        [SerializeField] private SFXModule cageOpenedSFX;
+        [SerializeField] private SFXModule cageBrokeSFX;
         private Coroutine generateCoroutine;
         private SlidingObject[] slidingObjects;
 
@@ -76,9 +81,15 @@ namespace ThePotentialJump.Gameplay
             if(e is ReplaceCageEventArgs replaceCage)
             {
                 if (replaceCage.isBroke)
+                {
                     CageBroke?.Invoke();
+                    cageBrokeSFX.PlayImmediate();
+                }
                 else
+                {
                     CageOpened?.Invoke();
+                    cageOpenedSFX.PlayImmediate();
+                }
             }
         }
     }

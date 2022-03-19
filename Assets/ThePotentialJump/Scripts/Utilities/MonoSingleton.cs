@@ -2,7 +2,6 @@
 
 namespace ThePotentialJump.Utilities
 {
-
     public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         protected static bool destroyOnLoad = false;
