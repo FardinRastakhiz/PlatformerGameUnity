@@ -18,6 +18,8 @@ namespace ThePotentialJump.Sounds
         protected float volume = 0.0f;
         protected bool isMute = false;
 
+        public float MaxVolume => maxVolume;
+
         protected virtual void Awake()
         {
             if (audioSource == null)
@@ -46,15 +48,38 @@ namespace ThePotentialJump.Sounds
             this.volume = volume;
             audioSource.volume = volume * maxVolume;
         }
+        private Coroutine playCoroutine;
+        private Coroutine stopCoroutine;
         public void Play()
         {
-            StartCoroutine(PlayCoroutine());
+            if (playCoroutine != null) StopCoroutine(playCoroutine);
+            if (stopCoroutine != null) StopCoroutine(stopCoroutine);
+            playCoroutine = StartCoroutine(PlayCoroutine());
         }
 
         public void Stop()
         {
-            StartCoroutine(StopCoroutine());
+            if (playCoroutine != null) StopCoroutine(playCoroutine);
+            if (stopCoroutine != null) StopCoroutine(stopCoroutine);
+            stopCoroutine = StartCoroutine(StopCoroutine());
         }
+
+        public void ChangeMaxVolume(float newMaxVolume)
+        {
+            StartCoroutine(UpdateVolume(newMaxVolume));
+        }
+        IEnumerator UpdateVolume(float newMaxVolume)
+        {
+            var sign = Mathf.Sign(maxVolume - newMaxVolume);
+            while (sign*(maxVolume - newMaxVolume) > float.Epsilon*2)
+            {
+                Debug.Log("Update Update");
+                maxVolume -= sign * Time.deltaTime / fadeDuration;
+                audioSource.volume = volume * maxVolume;
+                yield return null;
+            }
+        }
+
         IEnumerator PlayCoroutine()
         {
             var volFactor = 0.0f;

@@ -11,8 +11,13 @@ public class SpaceShipController : MonoBehaviour
     [SerializeField] Slider energySlider;
     [SerializeField] TMP_InputField energyInputField;
     [Space]
+
+    [SerializeField] private string heightId;
     [SerializeField] private TextMeshProUGUI heightViewer;
+    [SerializeField] private string speedId;
     [SerializeField] private TextMeshProUGUI speedViewer;
+    [SerializeField] private string accelerationId;
+    [SerializeField] private TextMeshProUGUI accelerationViewer;
 
     private WaitForSeconds waitForFixedUpdate;
     private float energyRate = 0;
@@ -55,8 +60,9 @@ public class SpaceShipController : MonoBehaviour
         while (true)
         {
             spaceShipRigidBody.AddForce(Vector2.up * energyRate);
-            heightViewer.text = $"{Mathf.Round(transform.position.y * 100) / 100.0f} m";
-            speedViewer.text = $"{Mathf.Round(spaceShipRigidBody.velocity.y * 100) / 100.0f} m/s";
+            heightViewer.text = $"{SharedState.LanguageDefs?[heightId]}  = {Mathf.Round(transform.position.y * 100) / 100.0f} m";
+            speedViewer.text = $"{SharedState.LanguageDefs?[speedId]} = {Mathf.Round(spaceShipRigidBody.velocity.y * 100) / 100.0f} m/s";
+            accelerationViewer.text = $"{SharedState.LanguageDefs?[accelerationId]} = {Mathf.Round((energyRate / spaceShipRigidBody.mass) * 100) / 100.0f} m/s^2";
             yield return waitForFixedUpdate;
         }
     }

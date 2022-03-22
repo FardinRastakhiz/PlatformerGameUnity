@@ -24,10 +24,17 @@ namespace ThePotentialJump.Utilities
         }
         private void Start()
         {
-            dropRegion.Dropped += (o, e) => DeactivateText();
-            dropRegion.Entered += (o, e) => ActivateText();
-            dropRegion.Exitted += (o, e) => DeactivateText();
-            dropRegion.SetMinHeight(floorHeight);
+            if (dropRegion != null)
+            {
+                dropRegion.Dropped += (o, e) => DeactivateText();
+                dropRegion.Entered += (o, e) => ActivateText();
+                dropRegion.Exitted += (o, e) => DeactivateText();
+                dropRegion.SetMinHeight(floorHeight);
+            }
+            else
+            {
+                fadeInCoroutine = StartCoroutine(FadeIn());
+            }
         }
         Coroutine fadeInCoroutine;
         Coroutine fadeOutCoroutine;

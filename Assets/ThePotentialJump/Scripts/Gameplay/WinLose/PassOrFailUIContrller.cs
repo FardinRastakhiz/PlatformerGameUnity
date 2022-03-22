@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Gameplay
 {
@@ -9,13 +10,18 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private CanvasGroup PassUI;
         [SerializeField] private CanvasGroup FailUI;
 
+        public UnityEvent ViewedPassUI;
+        public UnityEvent ViewedFailUI;
+
         public void OnPassed()
         {
+            ViewedPassUI?.Invoke();
             StartCoroutine(FadeInUI(PassUI));
         }
 
         public void OnFailed()
         {
+            ViewedFailUI?.Invoke();
             StartCoroutine(FadeInUI(FailUI));
         }
 

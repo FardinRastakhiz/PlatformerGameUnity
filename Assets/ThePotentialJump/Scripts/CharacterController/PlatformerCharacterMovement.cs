@@ -16,6 +16,7 @@ namespace ThePotentialJump.CharacterController
         private PlatformerCharacterController controller;
         private Transform transform;
         private Rigidbody2D rigidBody;
+        private Coroutine updateCoroutine;
         public void SetupParameters(PlatformerCharacterController controller, Animator animator)
         {
             this.controller = controller;
@@ -23,6 +24,16 @@ namespace ThePotentialJump.CharacterController
             rigidBody = controller.GetComponent<Rigidbody2D>();
             waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
             this.animator = animator;
+            if (updateCoroutine != null) controller.StopCoroutine(updateCoroutine);
+            updateCoroutine = controller.StartCoroutine(UpdateMovement());
+    }
+    IEnumerator UpdateMovement()
+        {
+            while (true)
+            {
+                animator.SetFloat("Speed", Mathf.Abs(rigidBody.velocity.x));
+                yield return null;
+            }
         }
 
         public void OnEnable()
@@ -143,14 +154,14 @@ namespace ThePotentialJump.CharacterController
             veclocity.y = Mathf.Sqrt((holdedEnergy * 2.0f) / rigidBody.mass);
             rigidBody.velocity = veclocity;
             IsJumping = true;
+            Debug.Log("Jumping");
             animator.SetBool("Jumping", true);
             do
             {
                 yield return null;
             } while (IsJumping);
-            IsJumping = false;
             animator.SetBool("Jumping", false);
-            Debug.Log(jumpCoroutine);
+            IsJumping = false;
         }
 
         bool lookRight = false;

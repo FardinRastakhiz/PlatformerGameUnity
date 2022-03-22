@@ -25,6 +25,11 @@ namespace ThePotentialJump.Sounds
         }
         public void PlayImmediate()
         {
+            if (audioSource.isPlaying) return;
+            audioSource.Play();
+        }
+        public void PlayOverrideImmediate()
+        {
             audioSource.Play();
         }
     }

@@ -36,6 +36,7 @@ namespace ThePotentialJump.Gameplay
         {
             CollectedOnCurrentScene += amount;
             TotalCurrency += amount;
+            TotalCurrency = TotalCurrency > MaximumCapacity ? MaximumCapacity : TotalCurrency;
             totalCurrencyChanged.TotalCurrency = TotalCurrency;
             totalCurrencyChanged.CollectedOnCurrentScene = CollectedOnCurrentScene;
             CurrencyChanged?.Invoke(this, totalCurrencyChanged);

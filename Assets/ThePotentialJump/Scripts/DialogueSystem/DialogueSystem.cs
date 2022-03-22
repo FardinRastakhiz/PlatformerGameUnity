@@ -32,6 +32,7 @@ namespace ThePotentialJump.Dialogues
         [SerializeField] private float fadeOutDuration = 0.5f;
         [Space]
         [SerializeField] private SFXModule keyTyping;
+        [SerializeField] private int skipCharacterSound = 2;
         [Space]
         [SerializeField] private UnityEvent activated;
         [SerializeField] private UnityEvent deactivated;
@@ -114,7 +115,7 @@ namespace ThePotentialJump.Dialogues
             {
                 sb.Append(dialogueText[i]);
                 dialogueTextField.text = sb.ToString();
-                if (i % 2 == 0) keyTyping.PlayImmediate();
+                if (i % skipCharacterSound == 0) keyTyping.PlayOverrideImmediate();
                 yield return waitTime;
             }
             //closeButton.interactable = true;

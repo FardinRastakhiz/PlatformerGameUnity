@@ -4,7 +4,7 @@ using ThePotentialJump.Gameplay;
 using ThePotentialJump.Inputs;
 using ThePotentialJump.Utilities;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 namespace ThePotentialJump.CharacterController
 {
@@ -157,10 +157,10 @@ namespace ThePotentialJump.CharacterController
         public event EventHandler JumpEnd;
 
         public event EventHandler HitCeiling;
+        [SerializeField] UnityEvent u_HitCeiling;
 
         private void OnCollisionExit2D(Collision2D collision)
         {
-            Debug.Log("OnCollisionExit2D: " + movement.IsJumping);
             if (!movement.IsJumping && collision.gameObject.tag == "Ground")
             {
                 movement.IsJumping = true;
@@ -170,7 +170,6 @@ namespace ThePotentialJump.CharacterController
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.Log("OnCollisionEnter: " + movement.IsJumping);
             if (movement.IsJumping && collision.gameObject.tag == "Ground")
             {
                 movement.IsJumping = false;
@@ -180,6 +179,7 @@ namespace ThePotentialJump.CharacterController
             if (movement.IsJumping && collision.gameObject.tag == "Ceiling")
             {
                 HitCeiling?.Invoke(this, null);
+                u_HitCeiling?.Invoke();
             }
         }
 

@@ -16,6 +16,7 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private DropZone[] dropZones;
         [SerializeField] private ProjectileParameters[] projectingWeights;
         [SerializeField] private ActivatePlatformCollider[] platforms;
+        [SerializeField] private GameObject projectileExplosionPrefab;
         [Space]
         [SerializeField] private UnityEvent projectileDestroyed;
         [SerializeField] private UnityEvent projectilesFinished;
@@ -53,9 +54,11 @@ namespace ThePotentialJump.Gameplay
             activeProjectile = Instantiate(projectilePrefab, springController.transform.position + Vector3.up * 2, Quaternion.identity, springSystem);
             activeProjectile.SetSprite(projectingWeightsList[nextWeightIndex].Icon);
             activeProjectile.SetMass(projectingWeightsList[nextWeightIndex].Mass);
+            activeProjectile.ReplaceObjectPrefab = projectileExplosionPrefab;
             SetPlatformsHitBody(activeProjectile.transform);
             projectingWeightsList.RemoveAt(nextWeightIndex);
             weightsCount = projectingWeightsList.Count;
+
 
             activeProjectile.Replace += OnProjectileDestroyed;
             activeProjectile.Replace += projectilesTracker.OnProjectileDestroyed;

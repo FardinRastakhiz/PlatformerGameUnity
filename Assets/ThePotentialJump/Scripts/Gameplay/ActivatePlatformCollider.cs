@@ -11,11 +11,13 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private Transform hitbodyTransform;
         public Transform HitbodyTransform { get => hitbodyTransform; set => hitbodyTransform = value; }
 
+
+        private Coroutine updateCoroutine;
         private void Start()
         {
             if(GameManager.Instance.GameType == GameType.PLATFORMER)
                 PlatformerCharacterController.Instance.HitCeiling += OnHitCeiling;
-            StartCoroutine(CheckforActivate());
+            updateCoroutine = StartCoroutine(CheckforActivate());
         }
 
         private bool hitCeiling;
@@ -30,6 +32,20 @@ namespace ThePotentialJump.Gameplay
         }
 
         private bool passed = false;
+
+        private void OnEnable()
+        {
+            if (updateCoroutine != null) StopCoroutine(updateCoroutine);
+            updateCoroutine = StartCoroutine(CheckforActivate());
+        }
+
+        private void OnDisable()
+        {
+            plaformCollider.isTrigger = false;
+            hitCeiling = false;
+            hitbodyTransform = null;
+            if (updateCoroutine != null) StopCoroutine(updateCoroutine);
+        }
 
 
         private IEnumerator CheckforActivate()
@@ -49,7 +65,6 @@ namespace ThePotentialJump.Gameplay
                     plaformCollider.isTrigger = true;
                 }
             }
-            Debug.Log("Finisheddddd");
         }
 
         public void JumpEnd(object o, EventArgs e)

@@ -5,6 +5,7 @@ using ThePotentialJump.Inputs;
 using System.Collections;
 using System;
 using ThePotentialJump.Utilities;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Gameplay
 {
@@ -67,9 +68,10 @@ namespace ThePotentialJump.Gameplay
         {
             isDisabled = true;
             springPhysics.Disable();
-            StartCoroutine(energyUIController.Disable());
+            if(energyUIController!=null && this.gameObject.activeSelf) StartCoroutine(energyUIController.Disable());
         }
 
+        public UnityEvent SprignCompressing;
         private void OnEnergyValueChanged(object o, HoldEnergyEventArgs e)
         {
             if (swingingCoroutine != null)
@@ -79,9 +81,10 @@ namespace ThePotentialJump.Gameplay
             if (compressMeasure > springComponents.MaxCompressCapacity)
             {
                 compressMeasure = springComponents.MaxCompressCapacity;
-                springComponents.SetSpringSize(compressMeasure);
+                //springComponents.SetSpringSize(compressMeasure);
             }
             springComponents.SetSpringSize(compressMeasure);
+            SprignCompressing?.Invoke();
         }
 
         private Coroutine swingingCoroutine;
@@ -108,7 +111,7 @@ namespace ThePotentialJump.Gameplay
                     addedSign *= -1.0f;
                 holdEnergyEventArgs.Value = holdedEnergy;
                 energyUIController.SetUIValues(holdedEnergy);
-                HoldedEnergyChanged?.Invoke(this, holdEnergyEventArgs);
+                HoldedEnergyChanged?.Invoke(this, new HoldEnergyEventArgs { Value = holdedEnergy });
                 yield return waitFixedDeltaTime;
             }
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Gameplay
 {
@@ -13,6 +14,7 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private float springHeadMass;
         [SerializeField] private float swingThreshold = 0.1f;
         [SerializeField] private Rigidbody2D loadedweight;
+        public UnityEvent SpringEnergyReleased;
         JumpRuler ruler;
         private Rigidbody2D unloadedWeight = null;
         private bool isSwinging = false;
@@ -59,6 +61,8 @@ namespace ThePotentialJump.Gameplay
 
         public IEnumerator Swing(float startAmplitude)
         {
+            SpringEnergyReleased?.Invoke();
+
             var SE = springConstant * startAmplitude * startAmplitude / 2.0f;
             var v = Mathf.Sqrt((springConstant * startAmplitude * startAmplitude) / loadedweight.mass);
             projectile?.Project(Vector2.up * v);

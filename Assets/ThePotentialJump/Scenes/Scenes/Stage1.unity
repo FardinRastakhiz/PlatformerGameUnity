@@ -4523,7 +4523,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.24612127}
     oldSize: {x: 33.329998, y: 33.329998}
     newSize: {x: 45.769997, y: 51.617264}
     adaptiveTilingThreshold: 0.5
@@ -4680,13 +4680,43 @@ PrefabInstance:
     - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
         type: 3}
       propertyPath: inventoryItems.Array.data[1].count
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
         type: 3}
       propertyPath: inventoryItems.Array.data[2].count
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
+        type: 3}
+      propertyPath: inventoryItems.Array.data[0].itemIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 38e5131946433584295f08ec12e732e9,
+        type: 3}
+    - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
+        type: 3}
+      propertyPath: inventoryItems.Array.data[1].itemIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 678006b67042b6d41994f6eea13001b7,
+        type: 3}
+    - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
+        type: 3}
+      propertyPath: inventoryItems.Array.data[2].itemIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: b7d8c535acbc39741bb30d4f73a4bba2,
+        type: 3}
+    - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
+        type: 3}
+      propertyPath: inventoryItems.Array.data[1].dropItame
+      value: 
+      objectReference: {fileID: 7477577328868701103, guid: 0ea160944251ed84ca2315fb2dc732f4,
+        type: 3}
+    - target: {fileID: -7838002556825231828, guid: eb859af41d3e91c439127914853acd73,
+        type: 3}
+      propertyPath: inventoryItems.Array.data[2].dropItame
+      value: 
+      objectReference: {fileID: 7477577328868701103, guid: 2005ba418492d744b8aa0d38cc42e95f,
+        type: 3}
     - target: {fileID: 1042794755951372658, guid: eb859af41d3e91c439127914853acd73,
         type: 3}
       propertyPath: m_AnchorMax.x
