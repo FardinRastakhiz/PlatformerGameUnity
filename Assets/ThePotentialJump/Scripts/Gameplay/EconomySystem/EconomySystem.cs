@@ -42,15 +42,14 @@ namespace ThePotentialJump.Gameplay
             CurrencyChanged?.Invoke(this, totalCurrencyChanged);
         }
 
-        public bool Withdraw(int amount)
+        public void Withdraw(int amount)
         {
-            if (TotalCurrency - amount < 0) return false;
+            if (TotalCurrency - amount < 0) return;
             TotalCurrency -= amount;
             if (CollectedOnCurrentScene - amount >= 0) CollectedOnCurrentScene -= amount;
             totalCurrencyChanged.TotalCurrency = TotalCurrency;
             totalCurrencyChanged.CollectedOnCurrentScene = CollectedOnCurrentScene;
             CurrencyChanged?.Invoke(this, totalCurrencyChanged);
-            return true;
         }
     }
 

@@ -474,8 +474,8 @@ CanvasGroup:
   m_GameObject: {fileID: 8646565712235383142}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &8646565712235383140
 MonoBehaviour:
@@ -522,8 +522,13 @@ MonoBehaviour:
     type: 3}
   answerParent: {fileID: 6073845452366973046}
   submitButton: {fileID: 3828886492433833508}
-  canvasGroup: {fileID: 7696656700441256292}
-  canvasGroupFadInOut: {fileID: 8259189295709020592}
+  questionIndex: 0
+  AnsweredCorrectly:
+    m_PersistentCalls:
+      m_Calls: []
+  AnsweredIncorrectly:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8259189295709020592
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -57,12 +57,25 @@ public class SpaceShipController : MonoBehaviour
 
     IEnumerator UpdateForce()
     {
+        float heightInMeter = 0.0f;
+        float speedInMeter = 0.0f;
+        float accelerationInMeter = 0.0f;
+        float heightInFoot = 0.0f;
+        float speedInFoot = 0.0f;
+        float accelerationInFoot = 0.0f;
         while (true)
         {
             spaceShipRigidBody.AddForce(Vector2.up * energyRate);
-            heightViewer.text = $"{SharedState.LanguageDefs?[heightId]}  = {Mathf.Round(transform.position.y * 100) / 100.0f} m";
-            speedViewer.text = $"{SharedState.LanguageDefs?[speedId]} = {Mathf.Round(spaceShipRigidBody.velocity.y * 100) / 100.0f} m/s";
-            accelerationViewer.text = $"{SharedState.LanguageDefs?[accelerationId]} = {Mathf.Round((energyRate / spaceShipRigidBody.mass) * 100) / 100.0f} m/s^2";
+
+            heightInMeter = transform.position.y;
+            speedInMeter = spaceShipRigidBody.velocity.y;
+            accelerationInMeter = energyRate / spaceShipRigidBody.mass;
+            heightInFoot = heightInMeter * 3.28f;
+            speedInFoot = speedInMeter * 3.28f;
+            accelerationInFoot = accelerationInMeter * 3.28f;
+            heightViewer.text = $"{SharedState.LanguageDefs?[heightId]}  = {heightInMeter.ToString("F1")} m or {heightInFoot.ToString("F1")} ft";
+            speedViewer.text = $"{SharedState.LanguageDefs?[speedId]} = {speedInMeter.ToString("F1")} m/s or {speedInFoot.ToString("F1")} ft/s";
+            accelerationViewer.text = $"{SharedState.LanguageDefs?[accelerationId]} = {accelerationInMeter.ToString("F1")} m/s^2 or {accelerationInFoot.ToString("F1")} ft/s^2";
             yield return waitForFixedUpdate;
         }
     }

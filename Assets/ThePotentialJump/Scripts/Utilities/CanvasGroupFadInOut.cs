@@ -28,11 +28,13 @@ public class CanvasGroupFadInOut : MonoBehaviour
             yield return null;
         }
         canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 
     IEnumerator StartFadingOut()
     {
         canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
         while (canvasGroup.alpha > float.Epsilon)
         {
             canvasGroup.alpha -= Time.deltaTime * 2;

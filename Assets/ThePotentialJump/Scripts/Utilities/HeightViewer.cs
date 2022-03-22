@@ -34,6 +34,7 @@ namespace ThePotentialJump.Utilities
             else
             {
                 fadeInCoroutine = StartCoroutine(FadeIn());
+                UpdateTextValue();
             }
         }
         Coroutine fadeInCoroutine;
@@ -88,9 +89,17 @@ namespace ThePotentialJump.Utilities
                     out Vector3 mousePosition
                     );
                 transform.position = mousePosition + offset;
-                textMesh.text = $"{(Mathf.Floor((transform.position.y - floorHeight) * 100.0f) / 100.0f)} m";
+                UpdateTextValue();
                 yield return null;
             }
+        }
+
+        private void UpdateTextValue()
+        {
+            float inMeter = transform.position.y - floorHeight;
+            float inFoot = inMeter * 3.28f;
+
+            textMesh.text = $"{(Mathf.Floor((inMeter) * 100.0f) / 100.0f)} m / {(Mathf.Floor((inFoot) * 100.0f) / 100.0f)} ft";
         }
     }
 
