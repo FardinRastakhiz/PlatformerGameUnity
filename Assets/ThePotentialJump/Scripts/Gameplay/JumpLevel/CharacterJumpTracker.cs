@@ -27,7 +27,6 @@ namespace ThePotentialJump.Gameplay
                     JumpedHeight = newHeight - maxHeight,
                     MaxHeightApproached = newHeight
                 });
-                Debug.Log($"maxHeight: {newHeight}");
                 maxHeight = newHeight;
             }
         }

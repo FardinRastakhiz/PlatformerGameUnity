@@ -9,6 +9,7 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using SimpleJSON;
 using UnityEngine.Networking;
+using ThePotentialJump.Sounds;
 /**
 Version 2.0.0 RC-10
 */
@@ -419,11 +420,19 @@ namespace LoLSDK
 
         public void PlaySound(string path, bool background, bool loop)
         {
+            var sfxvol = UnityEngine.Object.FindObjectOfType<SFXVolume>();
+            var musicvol = UnityEngine.Object.FindObjectOfType<SFXVolume>();
+            sfxvol.UnMute();
+            musicvol.UnMute();
             Debug.Log("PlaySound");
         }
 
         public void StopSound(string path)
         {
+            var sfxvol = UnityEngine.Object.FindObjectOfType<SFXVolume>();
+            var musicvol = UnityEngine.Object.FindObjectOfType<SFXVolume>();
+            sfxvol.Mute();
+            musicvol.Mute();
             Debug.Log("StopSound");
         }
 

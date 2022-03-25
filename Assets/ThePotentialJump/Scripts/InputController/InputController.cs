@@ -11,9 +11,10 @@ namespace ThePotentialJump.Inputs
             destroyOnLoad = true;
             base.Awake();
         }
+        Coroutine updateInputsCoroutine;
         void Start()
         {
-            StartCoroutine(UpdateInputs());
+            updateInputsCoroutine = StartCoroutine(UpdateInputs());
         }
 
         private int leftKeyCounter = 0;
@@ -25,7 +26,10 @@ namespace ThePotentialJump.Inputs
         public event EventHandler ReleaseRight;
         public event EventHandler PressSpace;
         public event EventHandler ReleaseSpace;
-
+        private void OnDestroy()
+        {
+            if(updateInputsCoroutine!=null) StopCoroutine(updateInputsCoroutine);
+        }
         private IEnumerator UpdateInputs()
         {
             while (true)

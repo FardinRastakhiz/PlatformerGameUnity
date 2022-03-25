@@ -70,10 +70,10 @@ namespace ThePotentialJump.Sounds
             }
         }
 
-        protected abstract void Mute();
+        public abstract void Mute();
 
-        protected abstract void UnMute();
+        public abstract void UnMute();
 
-        protected abstract void ChangeVolume();
+        public abstract void ChangeVolume();
     }
 }

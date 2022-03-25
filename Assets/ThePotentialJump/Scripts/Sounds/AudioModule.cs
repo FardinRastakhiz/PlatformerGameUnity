@@ -30,9 +30,10 @@ namespace ThePotentialJump.Sounds
 
         private AudioClip TrimClip()
         {
-            if (trim == Vector2.zero) return clip;
-            if (trim.y <= trim.x) trim.y = clip.length;
-            return MakeSubclip(clip, trim.x, trim.y);
+            return clip; // Due to the security issues with browsers we directly use clip
+            //if (trim == Vector2.zero) return clip;
+            //if (trim.y <= trim.x) trim.y = clip.length;
+            //return MakeSubclip(clip, trim.x, trim.y);
         }
 
         protected virtual void Start()
@@ -52,6 +53,11 @@ namespace ThePotentialJump.Sounds
         private Coroutine stopCoroutine;
         public void Play()
         {
+            if(audioSource == null)
+            {
+                Debug.LogError("audioSource cannot be null!");
+                return;
+            }
             if (playCoroutine != null) StopCoroutine(playCoroutine);
             if (stopCoroutine != null) StopCoroutine(stopCoroutine);
             playCoroutine = StartCoroutine(PlayCoroutine());

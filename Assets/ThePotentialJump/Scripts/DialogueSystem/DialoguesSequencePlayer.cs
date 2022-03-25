@@ -22,6 +22,11 @@ namespace ThePotentialJump.Dialogues
 
         private void Start()
         {
+            if (DialogueSystem.Instance == null)
+            {
+                Debug.LogError("DialogueSystem.Instance cannot be null!");
+                return;
+            }
             DialogueSystem.Instance.PassButtonClicked += OnPassButtonClicked;
             if (playOnAwake) Play();
         }

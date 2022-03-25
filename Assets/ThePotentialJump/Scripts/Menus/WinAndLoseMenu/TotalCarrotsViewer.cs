@@ -15,6 +15,11 @@ namespace ThePotentialJump.Menus
         private string text2 = "s";
         private void Start()
         {
+            if (EconomySystem.Instance == null)
+            {
+                Debug.LogError("EconomySystem.Instance cannot be null!");
+                return;
+            }
             EconomySystem.Instance.CurrencyChanged += OnCurrencyChanged;
         }
 

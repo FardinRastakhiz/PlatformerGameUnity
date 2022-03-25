@@ -167,6 +167,7 @@ MonoBehaviour:
   fadeOutDuration: 1
   presentDuration: 10
   canvasGroup: {fileID: 7202646130851630590}
+  scheduled: 1
 --- !u!1 &5751416785001819046
 GameObject:
   m_ObjectHideFlags: 0

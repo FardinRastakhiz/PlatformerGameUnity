@@ -9,6 +9,11 @@ namespace ThePotentialJump.Sounds
         protected override void Start()
         {
             base.Start();
+            if (SFXVolume.Instance == null)
+            {
+                Debug.LogError("SFXVolume.Instance cannot be null!");
+                return;
+            }
             SFXVolume.Instance.Muted += OnMute;
             SFXVolume.Instance.UnMuted += OnUnMute;
             SFXVolume.Instance.VolumeChanged += OnVolumeChange;

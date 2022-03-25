@@ -1,0 +1,1004 @@
+fileFormatVersion: 2
+guid: 6bb371714aacc9541904cd1696fc7dd3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5121448634396532993
+    second: Pine Needles 08 (Blurred)
+  - first:
+      213: -959436503122739665
+    second: BG Building 01 T-310 B-128 (Blurred)
+  - first:
+      213: 1840385449314354963
+    second: BG Building 02 T-340 B-140 (Blurred)
+  - first:
+      213: 8392630159240286368
+    second: BG Bridge 01 LR-128 (Blurred)
+  - first:
+      213: -2254787403891847217
+    second: BG Building 03 (Blurred)
+  - first:
+      213: -2247053957998349131
+    second: Pine Needles 07 (Blurred)
+  - first:
+      213: 17113940202778855
+    second: BG Bridge 02 LR-128 (Blurred)
+  - first:
+      213: -2254799404602979720
+    second: Pine Needles 06 (Blurred)
+  - first:
+      213: -9208814762748186211
+    second: Pavement 01 LR-128 (Blurred)
+  - first:
+      213: 6816599330495794724
+    second: Pavement 02 LR-256 (Blurred)
+  - first:
+      213: -756456454885390627
+    second: Pine Needles 05 (Blurred)
+  - first:
+      213: 7515612693861370523
+    second: Stones 02 (Blurred)
+  - first:
+      213: 1343899187154242185
+    second: Pine Needles 04 (Blurred)
+  - first:
+      213: -1597088321504525015
+    second: Pine Needles 03 (Blurred)
+  - first:
+      213: -3359215825583251093
+    second: Stones 01 (Blurred)
+  - first:
+      213: 1480181707847899948
+    second: Stones 04 (Blurred)
+  - first:
+      213: -8858614647619946151
+    second: Pine Needles 02 (Blurred)
+  - first:
+      213: -2116769855123689242
+    second: Stones 03 (Blurred)
+  - first:
+      213: -3006216576657263834
+    second: Tree Pine 01 (Blurred)
+  - first:
+      213: -2143144673084246200
+    second: Pine Needles 01 (Blurred)
+  - first:
+      213: -4920248405217497657
+    second: Bush 05 (Blurred)
+  - first:
+      213: 5201461189945878069
+    second: Bush 04 (Blurred)
+  - first:
+      213: 3300679270015701915
+    second: Bush 03 (Blurred)
+  - first:
+      213: 1009397304709604659
+    second: Bush 02 (Blurred)
+  - first:
+      213: -7961649635428413517
+    second: Bush 01 (Blurred)
+  - first:
+      213: -5817274177153885123
+    second: Bush Silhouette 01 (Blurred)
+  - first:
+      213: -2325526298563682484
+    second: Tree Pine 02 (Blurred)
+  - first:
+      213: 5510346239877022656
+    second: Tree Pine 04 (Blurred)
+  - first:
+      213: 3256849715575509773
+    second: Tree Pine 03 (Blurred)
+  - first:
+      213: -6249038816454660526
+    second: Tree Pine 05 (Blurred)
+  - first:
+      213: 4992619448084353972
+    second: Cloud 01 (Blurred)
+  - first:
+      213: -4697260665060044687
+    second: Cloud 02 (Blurred)
+  - first:
+      213: -2299130162888608365
+    second: Cloud 03 (Blurred)
+  - first:
+      213: 2967590934121722434
+    second: Cloud 04 (Blurred)
+  - first:
+      213: 1548074468794237721
+    second: BG Building 04 (Blurred)
+  - first:
+      213: 3117113725030122167
+    second: House 01 BG (Blurred)
+  - first:
+      213: 5829779694993169618
+    second: House 03 BG (Blurred)
+  - first:
+      213: -4411022398961543482
+    second: House 02 BG (Blurred)
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pine Needles 08 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3316
+        width: 680
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1016d9cf56a031740800000000000000
+      internalID: 5121448634396532993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 01 T-310 B-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 3072
+        width: 360
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 128, z: 0, w: 310}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2e73de65956fa2f0800000000000000
+      internalID: -959436503122739665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 02 T-340 B-140 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 3072
+        width: 420
+        height: 900
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 140, z: 0, w: 340}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3170e2cb0dc5a8910800000000000000
+      internalID: 1840385449314354963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Bridge 01 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3302
+        width: 512
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a05fbce9ac987470800000000000000
+      internalID: 8392630159240286368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 03 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 3072
+        width: 1460
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf40037dc265b0e0800000000000000
+      internalID: -2254787403891847217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 07 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3050
+        width: 660
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b47f52a45cd0d0e0800000000000000
+      internalID: -2247053957998349131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Bridge 02 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3072
+        width: 512
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e07e76b90dcc3000800000000000000
+      internalID: 17113940202778855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 06 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2825
+        width: 615
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a80e053e755b0e0800000000000000
+      internalID: -2254799404602979720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pavement 01 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 2934
+        width: 1152
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91750083c7b33080800000000000000
+      internalID: -9208814762748186211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pavement 02 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2934
+        width: 2048
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e0e56a9fc699e50800000000000000
+      internalID: 6816599330495794724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 05 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2525
+        width: 512
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd64186bcd68085f0800000000000000
+      internalID: -756456454885390627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 02 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2270
+        width: 650
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a0607fce1dc4860800000000000000
+      internalID: 7515612693861370523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 04 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2285
+        width: 460
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98ac340c03d76a210800000000000000
+      internalID: 1343899187154242185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 03 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2101
+        width: 472
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9254cc122a006d9e0800000000000000
+      internalID: -1597088321504525015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1660
+        width: 800
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b616d38210ba161d0800000000000000
+      internalID: -3359215825583251093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 04 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1996
+        width: 808
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b1e43cb69aa8410800000000000000
+      internalID: 1480181707847899948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 02 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1931
+        width: 430
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9597a86b9e0ef0580800000000000000
+      internalID: -8858614647619946151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 03 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1556
+        width: 1024
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0f81a2809bf92e0800000000000000
+      internalID: -2116769855123689242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 2044
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623f37e73f5c746d0800000000000000
+      internalID: -3006216576657263834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1665
+        width: 200
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 847fa8256450242e0800000000000000
+      internalID: -2143144673084246200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 05 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1290
+        width: 465
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd2450e424c7bbb0800000000000000
+      internalID: -4920248405217497657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 04 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1290
+        width: 534
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53664bbc46d4f2840800000000000000
+      internalID: 5201461189945878069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 03 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1290
+        width: 480
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9318ceee4e5ecd20800000000000000
+      internalID: 3300679270015701915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 02 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1290
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335e3782089120e00800000000000000
+      internalID: 1009397304709604659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1290
+        width: 259
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bfcb26d6d9828190800000000000000
+      internalID: -7961649635428413517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush Silhouette 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 511
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3c90b505f3e44fa0800000000000000
+      internalID: -5817274177153885123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 02 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 768
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f584217221abfd0800000000000000
+      internalID: -2325526298563682484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 04 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 0
+        width: 670
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c38749c5bea87c40800000000000000
+      internalID: 5510346239877022656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 03 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 0
+        width: 1024
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03d5bf8f87a23d20800000000000000
+      internalID: 3256849715575509773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 05 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 512
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ea7952e44f649a0800000000000000
+      internalID: -6249038816454660526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 2644
+        width: 510
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b356cd9fe8594540800000000000000
+      internalID: 4992619448084353972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 02 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 2304
+        width: 560
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1705ea1ff4affceb0800000000000000
+      internalID: -4697260665060044687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 03 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 2570
+        width: 800
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39573a45c49d710e0800000000000000
+      internalID: -2299130162888608365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 04 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 2570
+        width: 1024
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242befa4b300f2920800000000000000
+      internalID: 2967590934121722434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 04 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 3072
+        width: 347
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 913055ef68ddb7510800000000000000
+      internalID: 1548074468794237721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House 01 BG (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 1290
+        width: 420
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b24ae0fa66324b20800000000000000
+      internalID: 3117113725030122167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House 03 BG (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 1812
+        width: 366
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc5adebeb987e050800000000000000
+      internalID: 5829779694993169618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House 02 BG (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 1812
+        width: 360
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c61b9daf76e8c2c0800000000000000
+      internalID: -4411022398961543482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

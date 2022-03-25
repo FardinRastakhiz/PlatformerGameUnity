@@ -1,0 +1,1052 @@
+fileFormatVersion: 2
+guid: 2c72b68b047eed74883cdf52cc950de4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8339086369582116327
+    second: Wall 01 LRTB-64
+  - first:
+      213: 4854406323316845832
+    second: Wall 02 LRTB-64
+  - first:
+      213: -7603299756102650299
+    second: Wall 03 LR-256 TB-64
+  - first:
+      213: -8170630517565858640
+    second: Briks 01 TB-64
+  - first:
+      213: -5782416693097508092
+    second: Briks 02 TB-64
+  - first:
+      213: 6912140658783015230
+    second: Briks 03 TB-256
+  - first:
+      213: 1493177901162004346
+    second: Shadow 01
+  - first:
+      213: -5401488549822058164
+    second: Wall 04 LRTB-64
+  - first:
+      213: 7865888977419793313
+    second: Wall 12 LRTD-64
+  - first:
+      213: -5635121095790660617
+    second: Wall 05 LRTB-64
+  - first:
+      213: 631995254880992906
+    second: Beam 04 LR-64
+  - first:
+      213: 5931448700714211653
+    second: Wall 06 LRTB-64
+  - first:
+      213: -3019028343522522353
+    second: Wall 09 LRTB-64
+  - first:
+      213: 1040743914437202115
+    second: Platform 02 LR-256
+  - first:
+      213: -8148168596754936362
+    second: Platform 04 LR-128
+  - first:
+      213: -7018265986759955374
+    second: Platform 03 LR-256
+  - first:
+      213: -5805767443977397381
+    second: Platform 05 LR-96-224
+  - first:
+      213: -1504243480930852662
+    second: Beam 02 LR-128
+  - first:
+      213: -5524336647940723765
+    second: Platform 06 LR-256
+  - first:
+      213: -2924412852729731939
+    second: Wall 07 LRTB-64
+  - first:
+      213: -1225358488319489410
+    second: Wall 10 LRTB-64
+  - first:
+      213: 3461614778297704061
+    second: Beam 01 LR-64
+  - first:
+      213: 3604149409825752239
+    second: Roof 01 LR-256
+  - first:
+      213: -1661721616373320840
+    second: Wall 08 LRTB-64
+  - first:
+      213: -8680258793771232720
+    second: Wall 11 LRTB-64
+  - first:
+      213: 5476081205105087828
+    second: Roof 02 LR-256
+  - first:
+      213: 3046949414379907216
+    second: Roof 03 LR-640
+  - first:
+      213: -6913406468743502890
+    second: Briks 04 TB-64-128-256
+  - first:
+      213: 4271095571045962493
+    second: Platform 08 LR-64 TB-32
+  - first:
+      213: -7390007237888728893
+    second: Platform 07 LR-128
+  - first:
+      213: 3108663871697635176
+    second: Beam 03 LR-64
+  - first:
+      213: -1967080856574548323
+    second: Roof 07 TB-64
+  - first:
+      213: 5968403098905896840
+    second: Roof 06 TB-64
+  - first:
+      213: 221543181288247223
+    second: Roof 09 TB-64
+  - first:
+      213: 2925311423803505781
+    second: Roof 08 TB-64
+  - first:
+      213: -6375677832371627920
+    second: Platform 01 LR-128
+  - first:
+      213: 5075147075402440812
+    second: Roof 05 LR-640
+  - first:
+      213: -1448083525768529302
+    second: Roof 04 LR-256
+  - first:
+      213: 7219231422066799691
+    second: Bricks Block 01 LRTB-64
+  - first:
+      213: 243056282792550190
+    second: Bricks Block 02 LRTB-64
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wall 01 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2944
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91291c5112d954c80800000000000000
+      internalID: -8339086369582116327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 02 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 2944
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80de5b0d4d05e5340800000000000000
+      internalID: 4854406323316845832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 03 LR-256 TB-64
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2944
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 64, z: 256, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546ffa4e727ab7690800000000000000
+      internalID: -7603299756102650299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 01 TB-64
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 2944
+        width: 128
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc558985d61c9e80800000000000000
+      internalID: -8170630517565858640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 02 TB-64
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 2944
+        width: 128
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40352a877aab0cfa0800000000000000
+      internalID: -5782416693097508092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 03 TB-256
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 2944
+        width: 128
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 128, z: 0, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e31db4c9e4bdcef50800000000000000
+      internalID: 6912140658783015230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow 01
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 3072
+        width: 128
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f7931d365d8b410800000000000000
+      internalID: 1493177901162004346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 04 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2422
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41348148ce0a05b0800000000000000
+      internalID: -5401488549822058164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 12 LRTD-64
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1782
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a374c58950492d60800000000000000
+      internalID: 7865888977419793313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 05 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1900
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3761338370cc1b0800000000000000
+      internalID: -5635121095790660617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 04 LR-64
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 1152
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8ef9eaf55c45c800800000000000000
+      internalID: 631995254880992906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 06 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1378
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549d589ca2db05250800000000000000
+      internalID: 5931448700714211653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 09 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1378
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0b018197b14a16d0800000000000000
+      internalID: -3019028343522522353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 02 LR-256
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 927
+        width: 1024
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0dd2a7317717e00800000000000000
+      internalID: 1040743914437202115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 04 LR-128
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 585
+        width: 1152
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ddcd6405d3ebee80800000000000000
+      internalID: -8148168596754936362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 03 LR-256
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 660
+        width: 1024
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c67f7f44c1a9e90800000000000000
+      internalID: -7018265986759955374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 05 LR-96-224
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1516
+        width: 1216
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 224, y: 0, z: 224, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b133d1545cd6fa0800000000000000
+      internalID: -5805767443977397381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 02 LR-128
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 1024
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac06b6f168adf1be0800000000000000
+      internalID: -1504243480930852662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 06 LR-256
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1324
+        width: 1280
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb22df761d9553b0800000000000000
+      internalID: -5524336647940723765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 07 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94257031066a67d0800000000000000
+      internalID: -2924412852729731939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 10 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 856
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7a053572f6aefee0800000000000000
+      internalID: -1225358488319489410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 01 LR-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 1024
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e5da9ec402a0030800000000000000
+      internalID: 3461614778297704061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 01 LR-256
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 940
+        width: 1280
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa4091aeac2840230800000000000000
+      internalID: 3604149409825752239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 08 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 334
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873fa7c7ef060f8e0800000000000000
+      internalID: -1661721616373320840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 11 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 334
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0321ec6fd96898780800000000000000
+      internalID: -8680258793771232720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 02 LR-256
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1552
+        width: 1280
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4555b7fa7d2fefb40800000000000000
+      internalID: 5476081205105087828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 03 LR-640
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2444
+        width: 1664
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 640, y: 0, z: 640, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 098e2b45950f84a20800000000000000
+      internalID: 3046949414379907216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 04 TB-64-128-256
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2944
+        width: 64
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d3e7aa0275ae00a0800000000000000
+      internalID: -6913406468743502890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 08 LR-64 TB-32
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 0
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 32, z: 64, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df250f9eacaf54b30800000000000000
+      internalID: 4271095571045962493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 07 LR-128
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 778
+        width: 1152
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0a312329b617990800000000000000
+      internalID: -7390007237888728893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 03 LR-64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 1024
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867c0a62251342b20800000000000000
+      internalID: 3108663871697635176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 07 TB-64
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 139
+        width: 64
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96276b026683b4e0800000000000000
+      internalID: -1967080856574548323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 06 TB-64
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 1378
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88760aa1ff604d250800000000000000
+      internalID: 5968403098905896840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 09 TB-64
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 139
+        width: 64
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bf881f7954131300800000000000000
+      internalID: 221543181288247223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 08 TB-64
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 1378
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c3331bd3bc89820800000000000000
+      internalID: 2925311423803505781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 01 LR-128
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 139
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078182f8aca0587a0800000000000000
+      internalID: -6375677832371627920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 05 LR-640
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2074
+        width: 1664
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 640, y: 0, z: 640, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60a934306b8e6640800000000000000
+      internalID: 5075147075402440812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 04 LR-256
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1117
+        width: 1280
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ab871a4bf57ebe0800000000000000
+      internalID: -1448083525768529302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bricks Block 01 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 595
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4431afaabcdf2460800000000000000
+      internalID: 7219231422066799691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bricks Block 02 LRTB-64
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 73
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fd644c6628f5300800000000000000
+      internalID: 243056282792550190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

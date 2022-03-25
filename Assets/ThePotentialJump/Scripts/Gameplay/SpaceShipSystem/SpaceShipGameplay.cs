@@ -1,78 +1,83 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using ThePotentialJump.Gameplay;
 using ThePotentialJump.Sounds;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SpaceShipGameplay : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    [SerializeField] Rigidbody2D spaceShipRigidBody;
-    [SerializeField] private MusicModule musicPlayer;
-    private Transform spaceshipTransform;
-
-    [Space]
-    [SerializeField] private Vector2 speedRange = new Vector2(250.0f, 260.0f);
-    [SerializeField] private float maxHeight = 15000;
-    [Space]
-    [SerializeField] private float timeToWin = 3.0f;
-
-    [Space]
-    [SerializeField] private UnityEvent succeed;
-    [SerializeField] private UnityEvent lost;
-
-    private WaitForSeconds waitForFixedUpdate;
-
-    private void Start()
+    public class SpaceShipGameplay : MonoBehaviour
     {
-        waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
-        spaceshipTransform = spaceShipRigidBody.transform;
-        StartCoroutine(CheckSpaceShip());
-    }
+        [SerializeField] Rigidbody2D spaceShipRigidBody;
+        [SerializeField] private MusicModule musicPlayer;
+        private Transform spaceshipTransform;
 
-    public bool isInTargetRange;
-    private bool isSucceed = false;
-    private bool isLost = false;
-    IEnumerator CheckSpaceShip()
-    {
-        float speed = 0.0f;
-        while (true)
+        [Space]
+        [SerializeField] private Vector2 speedRange = new Vector2(250.0f, 260.0f);
+        [SerializeField] private float maxHeight = 15000;
+        [Space]
+        [SerializeField] private float timeToWin = 3.0f;
+
+        [Space]
+        [SerializeField] private UnityEvent succeed;
+        [SerializeField] private UnityEvent lost;
+
+        private WaitForSeconds waitForFixedUpdate;
+
+        private void Start()
         {
-            speed = spaceShipRigidBody.velocity.y;
-            if (!isInTargetRange && speed >= speedRange.x && speed <= speedRange.y)
-            {
-                if (winCounterCoroutine != null) StopCoroutine(winCounterCoroutine);
-                winCounterCoroutine = StartCoroutine(WinCounter());
-                isInTargetRange = true;
-            }
-            else if (isInTargetRange && (speed < speedRange.x || speed > speedRange.y))
-            {
-                if(winCounterCoroutine!=null) StopCoroutine(winCounterCoroutine);
-                isInTargetRange = false;
-            }
-            if (spaceshipTransform.position.y > maxHeight)
-            {
-                lost?.Invoke();
-                isLost = true;
-            }
-            if (isSucceed || isLost)
-            {
-                musicPlayer.ChangeMaxVolume(musicPlayer.MaxVolume / 10.0f);
-                yield break;
-            }
-            yield return null;
+            waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
+            spaceshipTransform = spaceShipRigidBody.transform;
+            StartCoroutine(CheckSpaceShip());
         }
-    }
 
-    private Coroutine winCounterCoroutine;
-    IEnumerator WinCounter()
-    {
-        var localTimer = timeToWin;
-        while (localTimer>0.0f)
+        public bool isInTargetRange;
+        private bool isSucceed = false;
+        private bool isLost = false;
+        IEnumerator CheckSpaceShip()
         {
-            localTimer -= Time.fixedDeltaTime;
-            yield return waitForFixedUpdate;
+            float speed = 0.0f;
+            while (true)
+            {
+                speed = spaceShipRigidBody.velocity.y;
+                if (!isInTargetRange && speed >= speedRange.x && speed <= speedRange.y)
+                {
+                    if (winCounterCoroutine != null) StopCoroutine(winCounterCoroutine);
+                    winCounterCoroutine = StartCoroutine(WinCounter());
+                    isInTargetRange = true;
+                }
+                else if (isInTargetRange && (speed < speedRange.x || speed > speedRange.y))
+                {
+                    if (winCounterCoroutine != null) StopCoroutine(winCounterCoroutine);
+                    isInTargetRange = false;
+                }
+                if (spaceshipTransform.position.y > maxHeight)
+                {
+                    lost?.Invoke();
+                    isLost = true;
+                }
+                if (isSucceed || isLost)
+                {
+                    musicPlayer.ChangeMaxVolume(musicPlayer.MaxVolume / 10.0f);
+                    yield break;
+                }
+                yield return null;
+            }
         }
-        isSucceed = true;
-        succeed?.Invoke();
+
+        private Coroutine winCounterCoroutine;
+        IEnumerator WinCounter()
+        {
+            var localTimer = timeToWin;
+            while (localTimer > 0.0f)
+            {
+                localTimer -= Time.fixedDeltaTime;
+                yield return waitForFixedUpdate;
+            }
+            isSucceed = true;
+            EconomySystem.Instance?.Deposit(20);
+            succeed?.Invoke();
+        }
     }
 }

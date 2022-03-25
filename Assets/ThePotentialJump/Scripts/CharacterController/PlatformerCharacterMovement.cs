@@ -69,7 +69,6 @@ namespace ThePotentialJump.CharacterController
             if (goLeftCoroutine != null)
                 controller.StopCoroutine(goLeftCoroutine);
             goLeftCoroutine = controller.StartCoroutine(GoLeft());
-            Debug.Log("goLeftCoroutine1 " + (goLeftCoroutine == null));
         }
 
         public void OnPressRight(object o, EventArgs e)
@@ -80,8 +79,6 @@ namespace ThePotentialJump.CharacterController
         }
         public void OnReleaseLeft(object o, EventArgs e)
         {
-            Debug.Log("OnReleaseLeft, ");
-            Debug.Log("goLeftCoroutine2 " + (goLeftCoroutine == null));
             if (goLeftCoroutine != null)
                 controller.StopCoroutine(goLeftCoroutine);
         }
@@ -154,7 +151,6 @@ namespace ThePotentialJump.CharacterController
             veclocity.y = Mathf.Sqrt((holdedEnergy * 2.0f) / rigidBody.mass);
             rigidBody.velocity = veclocity;
             IsJumping = true;
-            Debug.Log("Jumping");
             animator.SetBool("Jumping", true);
             do
             {

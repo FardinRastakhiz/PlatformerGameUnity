@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace ThePotentialJump.ProgressSystem
 {
@@ -27,11 +25,15 @@ namespace ThePotentialJump.ProgressSystem
 
         public void Play(AnimatorControllerParameters parameters)
         {
-            Debug.Log(parameters.name);
             StartCoroutine(OnPlayAnimation(parameters));
         }
         public void Play(float delay = 0.0f)
         {
+            if (activeParameters == null)
+            {
+                Debug.LogError("activeParameters cannot be null!");
+                return;
+            }
             if (activeParameters.name == "DroppingWeight")
             {
                 Debug.Log(activeParameters.name);
@@ -42,6 +44,11 @@ namespace ThePotentialJump.ProgressSystem
 
         IEnumerator OnPlayAnimation(AnimatorControllerParameters parameters, float delay = 0.0f)
         {
+            if (animator == null)
+            {
+                Debug.LogError("animator cannot be null!");
+                yield break;
+            }
             yield return new WaitForSeconds(delay);
             parameters.SetParameterFor(animator);
             activeParameters.Play(animator);

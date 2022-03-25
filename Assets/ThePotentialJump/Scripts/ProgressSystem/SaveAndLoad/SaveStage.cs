@@ -1,10 +1,13 @@
 ﻿using ThePotentialJump.ProgressSystem;
 using UnityEngine;
 
-public class SaveStage : MonoBehaviour
+namespace ThePotentialJump.ProgressSystem
 {
-    public void Save()
+    public class SaveStage : MonoBehaviour
     {
-        SaveAndLoad.Instance?.SaveProgress();
+        public void Save()
+        {
+            SaveAndLoad.Instance?.SaveProgress();
+        }
     }
 }

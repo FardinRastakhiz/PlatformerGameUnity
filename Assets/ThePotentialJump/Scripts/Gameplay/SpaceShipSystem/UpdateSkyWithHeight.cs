@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpdateSkyWithHeight : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    [SerializeField] private SpriteRenderer blueSky;
-    [SerializeField] private float baseHeight = 300;
-    [SerializeField] private float fadeDistance = 200;
-    // Start is called before the first frame update
-    void Start()
+    public class UpdateSkyWithHeight : MonoBehaviour
     {
-        StartCoroutine(UpdateSky());
-    }
-
-    IEnumerator UpdateSky()
-    {
-        while (true)
+        [SerializeField] private SpriteRenderer blueSky;
+        [SerializeField] private float baseHeight = 300;
+        [SerializeField] private float fadeDistance = 200;
+        // Start is called before the first frame update
+        void Start()
         {
-            var height = transform.position.y;
-            var fadeHeight = height - baseHeight;
-            if (fadeHeight > 0 && fadeHeight < fadeDistance)
-            {
-                var color = blueSky.color;
-                color.a = (fadeDistance-fadeHeight) / fadeDistance;
-                blueSky.color = color;
-            }
+            StartCoroutine(UpdateSky());
+        }
 
-            yield return null;
+        IEnumerator UpdateSky()
+        {
+            while (true)
+            {
+                var height = transform.position.y;
+                var fadeHeight = height - baseHeight;
+                if (fadeHeight > 0 && fadeHeight < fadeDistance)
+                {
+                    var color = blueSky.color;
+                    color.a = (fadeDistance - fadeHeight) / fadeDistance;
+                    blueSky.color = color;
+                }
+
+                yield return null;
+            }
         }
     }
 }

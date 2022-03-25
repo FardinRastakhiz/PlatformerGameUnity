@@ -17,12 +17,29 @@ namespace ThePotentialJump.Gameplay
         private DropZone dropZone;
         public void Awake()
         {
+            Debug.Log($"Awake1 {this.GetType().Name}");
             waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
+            Debug.Log($"Awake2 {this.GetType().Name}");
+            Debug.Log($"");
+            Debug.Log($"");
+
+            UnityEngine.Object[] objects;
+
+            objects = UnityEngine.Object.FindObjectsOfType(typeof(MonoBehaviour));
+            foreach (MonoBehaviour monoBehaviour in objects)
+            {
+                Debug.Log(monoBehaviour.GetType().Name + " is attached to " + monoBehaviour.gameObject.name);
+            }
+            Debug.Log($"");
+            Debug.Log($"");
+
         }
+
 
         public IEnumerator BeginTracking(Transform Projectile, DropZone dropZone)
         {
             this.dropZone = dropZone;
+            maxHeight = 0;
             while (Projectile)
             {
                 var projectileHeight = Projectile.position.y - dropZone.BaseHeight;

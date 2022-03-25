@@ -1,45 +1,48 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class CanvasGroupFadInOut : MonoBehaviour
+namespace ThePotentialJump.EditorUtilities
 {
-    [SerializeField] private CanvasGroup canvasGroup;
-
-    private void Awake()
+    public class CanvasGroupFadInOut : MonoBehaviour
     {
-        if (canvasGroup) canvasGroup = GetComponent<CanvasGroup>();
-    }
+        [SerializeField] private CanvasGroup canvasGroup;
 
-    public void FadeIn()
-    {
-        StartCoroutine(StartFadingIn());
-    }
-
-    public void FadeOut()
-    {
-        StartCoroutine(StartFadingOut());
-    }
-
-    IEnumerator StartFadingIn()
-    {
-        while (canvasGroup.alpha<1-float.Epsilon)
+        private void Awake()
         {
-            canvasGroup.alpha += Time.deltaTime*2;
-            yield return null;
+            if (!canvasGroup) canvasGroup = GetComponent<CanvasGroup>();
         }
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-    }
 
-    IEnumerator StartFadingOut()
-    {
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
-        while (canvasGroup.alpha > float.Epsilon)
+        public void FadeIn()
         {
-            canvasGroup.alpha -= Time.deltaTime * 2;
-            yield return null;
+            StartCoroutine(StartFadingIn());
         }
-    }
 
+        public void FadeOut()
+        {
+            StartCoroutine(StartFadingOut());
+        }
+
+        IEnumerator StartFadingIn()
+        {
+            while (canvasGroup.alpha < 1 - float.Epsilon)
+            {
+                canvasGroup.alpha += Time.deltaTime * 2;
+                yield return null;
+            }
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+
+        IEnumerator StartFadingOut()
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+            while (canvasGroup.alpha > float.Epsilon)
+            {
+                canvasGroup.alpha -= Time.deltaTime * 2;
+                yield return null;
+            }
+        }
+
+    }
 }

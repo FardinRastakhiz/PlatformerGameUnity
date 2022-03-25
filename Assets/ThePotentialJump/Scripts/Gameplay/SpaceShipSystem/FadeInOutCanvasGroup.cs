@@ -1,53 +1,83 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class FadeInOutCanvasGroup : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    [SerializeField] private float fadeInDuration = 1.0f;
-    [SerializeField] private float fadeOutDuration = 1.0f;
-    [SerializeField] private float presentDuration = 5.0f;
-
-    [Space]
-    [SerializeField] private CanvasGroup canvasGroup;
-
-    private Coroutine scheduleCoroutine;
-    private void OnEnable()
+    public class FadeInOutCanvasGroup : MonoBehaviour
     {
-        if (scheduleCoroutine != null) StopCoroutine(scheduleCoroutine);
-        scheduleCoroutine = StartCoroutine(scheduling());
-    }
+        [SerializeField] private float fadeInDuration = 1.0f;
+        [SerializeField] private float fadeOutDuration = 1.0f;
+        [SerializeField] private float presentDuration = 5.0f;
 
-    private void OnDisable()
-    {
-        if (scheduleCoroutine != null) StopCoroutine(scheduleCoroutine);
-    }
+        [Space]
+        [SerializeField] private CanvasGroup canvasGroup;
 
-    IEnumerator scheduling()
-    {
-        yield return FadeIn(fadeInDuration);
-        yield return new WaitForSeconds(presentDuration);
-        yield return FadeOut(fadeOutDuration);
-    }
+        [Space]
+        [SerializeField] private bool scheduled = true;
 
-    IEnumerator FadeIn(float fadeInDuration)
-    {
-        while (canvasGroup.alpha < 1)
+        private Coroutine scheduleCoroutine;
+        private Coroutine fadeInCoroutine;
+        private Coroutine fadeOutCoroutine;
+        private void OnEnable()
         {
-            canvasGroup.alpha += Time.deltaTime * 1.0f / fadeInDuration;
-            yield return null;
+            if (!scheduled) return;
+            if (scheduleCoroutine != null) StopCoroutine(scheduleCoroutine);
+            scheduleCoroutine = StartCoroutine(scheduling());
         }
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
-    }
-    IEnumerator FadeOut(float fadeOutDuration)
-    {
-        while (canvasGroup.alpha > 0)
-        {
-            canvasGroup.alpha -= Time.deltaTime * 1.0f / fadeOutDuration;
-            yield return null;
-        }
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
-    }
 
+        private void OnDisable()
+        {
+            StopCoroutines();
+        }
+
+
+        public void FadeIn()
+        {
+            StopCoroutines();
+            StartCoroutine(FadeInCoroutine(fadeInDuration));
+        }
+        public void FadeOut()
+        {
+            StopCoroutines();
+            StartCoroutine(FadeOutCoroutine(fadeOutDuration));
+        }
+
+        IEnumerator scheduling()
+        {
+            yield return FadeInCoroutine(fadeInDuration);
+            yield return new WaitForSeconds(presentDuration);
+            yield return FadeOutCoroutine(fadeOutDuration);
+        }
+
+
+        IEnumerator FadeInCoroutine(float fadeInDuration)
+        {
+            while (canvasGroup.alpha < 1)
+            {
+                canvasGroup.alpha += Time.deltaTime * 1.0f / fadeInDuration;
+                yield return null;
+            }
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+        IEnumerator FadeOutCoroutine(float fadeOutDuration)
+        {
+
+            while (canvasGroup.alpha > 0)
+            {
+                canvasGroup.alpha -= Time.deltaTime * 1.0f / fadeOutDuration;
+                yield return null;
+            }
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        }
+
+
+        private void StopCoroutines()
+        {
+            if (scheduleCoroutine != null) StopCoroutine(scheduleCoroutine);
+            if (fadeInCoroutine != null) StopCoroutine(fadeInCoroutine);
+            if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
+        }
+    }
 }

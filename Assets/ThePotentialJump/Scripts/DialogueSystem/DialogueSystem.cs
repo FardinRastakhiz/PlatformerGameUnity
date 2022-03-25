@@ -48,7 +48,6 @@ namespace ThePotentialJump.Dialogues
             destroyOnLoad = true;
             base.Awake();
             speechHandler = GetComponent<SpeechHandler>();
-            speechHandler.TtsAudioSource = GetComponent<AudioSource>();
             dialogues = JsonConvert.DeserializeObject<DialogueSequence>(dialoguesJSON.text);
             closeButton.onClick.AddListener(() => OnPassButtonClicked());
         }
@@ -99,13 +98,15 @@ namespace ThePotentialJump.Dialogues
 
             if (fillDialogueCoroutine != null) StopCoroutine(fillDialogueCoroutine);
             if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
-            fillDialogueCoroutine = StartCoroutine(FillDialogue(SharedState.LanguageDefs?[ds.Paragraph], beginPause, endingPause));
+            fillDialogueCoroutine = StartCoroutine(FillDialogue(ds.Paragraph, beginPause, endingPause));
         }
 
-        private IEnumerator FillDialogue(string dialogueText, float beginPause = 0.0f, float endingPause = 0.0f)
+        private IEnumerator FillDialogue(string key, float beginPause = 0.0f, float endingPause = 0.0f)
         {
+            string dialogueText = SharedState.LanguageDefs?[key];
             speechHandler.CancelText();
-            speechHandler.OnClickSpeakText(dialogueText, SharedState.StartGameData["languageCode"]);
+            yield return null;
+            speechHandler.OnClickSpeakText(key);
             yield return FadeIn();
             yield return new WaitForSeconds(beginPause);
             StringBuilder sb = new StringBuilder();

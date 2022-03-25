@@ -49,6 +49,11 @@ namespace ThePotentialJump.Utilities
             // Initialize the object, passing in the WebGL
             LOLSDK.Init(webGL, "com.EmeraldInteractive.ThePotentialJump");
 
+            if (LOLSDK.Instance == null)
+            {
+                Debug.LogError("(LOLSDKManager) LOLSDK.Instance cannot be null!");
+                return;
+            }
             // Register event handlers
             LOLSDK.Instance.StartGameReceived += new StartGameReceivedHandler(this.HandleStartGame);
             LOLSDK.Instance.GameStateChanged += new GameStateChangedHandler(this.HandleGameStateChange);

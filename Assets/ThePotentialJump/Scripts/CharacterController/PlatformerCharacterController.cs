@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using ThePotentialJump.EditorUtilities;
 using ThePotentialJump.Gameplay;
 using ThePotentialJump.Inputs;
 using ThePotentialJump.Utilities;

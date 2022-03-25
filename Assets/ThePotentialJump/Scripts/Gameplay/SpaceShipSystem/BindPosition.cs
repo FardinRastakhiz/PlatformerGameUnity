@@ -1,30 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
-public class BindPosition : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    [SerializeField] private Transform targetBinding;
-    [SerializeField] bool bindX;
-    [SerializeField] bool bindY;
-    [SerializeField] bool bindZ;
-    private void Start()
+    public class BindPosition : MonoBehaviour
     {
-        StartCoroutine(UpdatePosition());
-    }
+        [SerializeField] private Transform targetBinding;
+        [SerializeField] bool bindX;
+        [SerializeField] bool bindY;
+        [SerializeField] bool bindZ;
 
-    IEnumerator UpdatePosition()
-    {
-        var targetBasePosition = targetBinding.position;
-        var basePosition = transform.position;
-        while (true)
+        private Coroutine updateCoroutine;
+        private void Start()
         {
-            transform.position = new Vector3(
-                bindX ? targetBinding.position.x - targetBasePosition.x : 0,
-                bindY ? targetBinding.position.y - targetBasePosition.y : 0,
-                bindZ ? targetBinding.position.z - targetBasePosition.z : 0
-                ) + basePosition;
-            yield return null;
+            if (targetBinding != null)
+                updateCoroutine = StartCoroutine(UpdatePosition());
+        }
+
+        public void StartBinding(Transform targetBinding)
+        {
+            if (targetBinding == null) throw new ArgumentNullException($"'targetBinding' cannot be null");
+            this.targetBinding = targetBinding;
+            if (updateCoroutine != null) StopCoroutine(updateCoroutine);
+            updateCoroutine = StartCoroutine(UpdatePosition());
+        }
+
+        public void StopBinding()
+        {
+            if (updateCoroutine != null) StopCoroutine(updateCoroutine);
+        }
+
+        IEnumerator UpdatePosition()
+        {
+            var targetBasePosition = targetBinding.position;
+            var basePosition = transform.position;
+            while (true)
+            {
+                transform.position = new Vector3(
+                    bindX ? targetBinding.position.x - targetBasePosition.x : 0,
+                    bindY ? targetBinding.position.y - targetBasePosition.y : 0,
+                    bindZ ? targetBinding.position.z - targetBasePosition.z : 0
+                    ) + basePosition;
+                yield return null;
+            }
         }
     }
 }

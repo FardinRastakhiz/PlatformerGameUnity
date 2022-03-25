@@ -42,7 +42,7 @@ namespace ThePotentialJump.Gameplay
 
         private void OnNext(object o, EventArgs e)
         {
-            if (weightsCount <= 0)
+            if (projectingWeightsList.Count == 0)
             {
                 projectilesFinished?.Invoke();
                 ProjectilesFinished?.Invoke(this, null);

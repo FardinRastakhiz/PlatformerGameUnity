@@ -9,14 +9,16 @@ namespace ThePotentialJump.Menus
     public class Answer : MonoBehaviour
     {
         [SerializeField] private Button button;
-        [SerializeField] private TextMeshProUGUI answerId;
+        [SerializeField] private TextMeshProUGUI answerIndex;
         [SerializeField] private TextMeshProUGUI answerText;
         public event EventHandler AnswerSelected ;
 
-        public string AnswerId => answerId.text;
-        public void AddAnswer(string answerId, string answerText)
+        private string answerId;
+        public string AnswerId => answerId;
+        public void AddAnswer(string answerId, string answerText, int answerIndex)
         {
-            this.answerId.text = answerId;
+            this.answerId = answerId;
+            this.answerIndex.text = $"{answerIndex + 1}";
             this.answerText.text = answerText;
             button.onClick.AddListener(() => AnswerSelected?.Invoke(this, null));
         }

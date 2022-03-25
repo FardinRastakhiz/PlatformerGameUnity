@@ -16,6 +16,8 @@ namespace ThePotentialJump.Gameplay
         private ReplaceCageEventArgs placeObjectEventArgs;
 
         public GameObject BrokenObjectPrefab { get => brokenObjectPrefab; set => brokenObjectPrefab = value; }
+        public float MinEnergyTolerance => minEnergyTolerance;
+        public float MaxEnergyTolerance => maxEnergyTolerance;
 
         public event EventHandler CageBroke;
         public event EventHandler CageOpened;

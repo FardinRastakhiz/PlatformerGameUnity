@@ -54,6 +54,7 @@ MonoBehaviour:
   maxVolume: 0.03
   playOnAwake: 0
   fadeDuration: 2
+  trim: {x: 0, y: 0}
 --- !u!82 &175653230777121858
 AudioSource:
   m_ObjectHideFlags: 0
@@ -215,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 50a78d415332dd9468f63e4ba2a9b897, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76a439e7030f81f44957368e55cce041, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -238,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 2
-  m_AspectRatio: 0.60944855
+  m_AspectRatio: 1
 --- !u!1 &4330521162539213442
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +303,7 @@ MonoBehaviour:
   fadeInDuration: 0.3
   fadeOutDuration: 0.3
   keyTyping: {fileID: 8970373229295165632}
+  skipCharacterSound: 2
   activated:
     m_PersistentCalls:
       m_Calls: []
@@ -595,10 +597,10 @@ RectTransform:
   m_Father: {fileID: 4330521162539213443}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.09834375, y: 0.28}
-  m_AnchorMax: {x: 0.09834375, y: 0.652}
-  m_AnchoredPosition: {x: 35.040527, y: 3.5}
-  m_SizeDelta: {x: 489.93488, y: 3.8884277}
+  m_AnchorMin: {x: 0.09834375, y: 0.35300002}
+  m_AnchorMax: {x: 0.09834375, y: 0.731}
+  m_AnchoredPosition: {x: 35.040527, y: 0.19999695}
+  m_SizeDelta: {x: 489.93488, y: -0.111572266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &4330521163115585233
 PrefabInstance:

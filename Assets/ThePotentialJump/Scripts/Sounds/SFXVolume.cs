@@ -10,17 +10,17 @@ namespace ThePotentialJump.Sounds
         public event EventHandler<VolumeEventArgs> VolumeChanged;
 
 
-        protected override void Mute()
+        public override void Mute()
         {
             Muted?.Invoke(this, null);
         }
 
-        protected override void UnMute()
+        public override void UnMute()
         {
             UnMuted?.Invoke(this, null);
         }
 
-        protected override void ChangeVolume()
+        public override void ChangeVolume()
         {
             VolumeChanged?.Invoke(this, volumeEventArgs);
         }

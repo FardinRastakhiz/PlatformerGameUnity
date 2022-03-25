@@ -169,7 +169,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.14, y: 2.2}
-  m_SizeDelta: {x: 50.389694, y: 50}
+  m_SizeDelta: {x: 111.45134, y: 102.3385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2401001208073538826
 CanvasRenderer:
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -498,5 +498,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 3681518359973752815}
-  answerId: {fileID: 2401001208073538827}
+  answerIndex: {fileID: 2401001208073538827}
   answerText: {fileID: 2401001207846000098}

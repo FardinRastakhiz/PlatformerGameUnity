@@ -8,13 +8,16 @@ namespace ThePotentialJump.Gameplay
 {
     public class SlidingCagesManager : Replacable
     {
-        [SerializeField] private SlidingObject slidingObjectPrefab;
+        [SerializeField] private SlidingObject[] slidingObjectPrefabs;
         [SerializeField] private RegionOfGenerating[] regionsOfGenerating;
         [SerializeField] private float generateDelay = 0.33f;
         [Space]
         [Header("SFX Modules")]
         [SerializeField] private SFXModule cageOpenedSFX;
         [SerializeField] private SFXModule cageBrokeSFX;
+        [Space]
+        [SerializeField] private ToleranceEnergyLabel MinEnergyLabel;
+        [SerializeField] private ToleranceEnergyLabel MaxEnergyLabel;
         private Coroutine generateCoroutine;
         private SlidingObject[] slidingObjects;
 
@@ -65,7 +68,13 @@ namespace ThePotentialJump.Gameplay
         IEnumerator GenerateSlidingObject(int index)
         {
             yield return waitForGenerateDelay;
-            slidingObjects[index] = regionsOfGenerating[index].Generate(slidingObjectPrefab);
+            int rand = UnityEngine.Random.Range(0, slidingObjectPrefabs.Length);
+            slidingObjects[index] = regionsOfGenerating[index].Generate(slidingObjectPrefabs[rand]);
+            if(slidingObjects[index] is SlidingCage slidingCage)
+            {
+                MinEnergyLabel.SetTarget(slidingCage.transform, slidingCage.MinEnergyTolerance);
+                MaxEnergyLabel.SetTarget(slidingCage.transform, slidingCage.MaxEnergyTolerance);
+            }
             slidingObjects[index].Replace += Replace;
             slidingObjects[index].Replace += OnCageReplaced;
             //if(slidingObjects[index] is SlidingCage cage)
@@ -78,7 +87,9 @@ namespace ThePotentialJump.Gameplay
 
         private void OnCageReplaced(object sender, ReplaceObjectEventArgs e)
         {
-            if(e is ReplaceCageEventArgs replaceCage)
+            MinEnergyLabel.StopTarget();
+            MaxEnergyLabel.StopTarget();
+            if (e is ReplaceCageEventArgs replaceCage)
             {
                 if (replaceCage.isBroke)
                 {

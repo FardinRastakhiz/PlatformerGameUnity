@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: 02c5544e82d098a4cbd2caab3c7af23a
   - enabled: 1
     path: Assets/ThePotentialJump/Scenes/Scenes/Stage4Cutscene.unity
-    guid: 7fff1920a2f80284f80f26e4ee8ae343
+    guid: d06f8597c97cb23408ebb50134d4653e
   - enabled: 1
     path: Assets/ThePotentialJump/Scenes/Scenes/Stage4.unity
     guid: 73b35a510a2f8e44d9ed81a3a226e94c

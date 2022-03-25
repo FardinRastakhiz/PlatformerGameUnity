@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using ThePotentialJump.Utilities;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ThePotentialJump.Gameplay
 {

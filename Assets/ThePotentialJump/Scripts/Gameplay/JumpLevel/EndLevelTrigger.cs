@@ -1,16 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class EndLevelTrigger : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    public UnityEvent GameplayEnd;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class EndLevelTrigger : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Player")
+        public UnityEvent GameplayEnd;
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            GameplayEnd?.Invoke();
+            if (collision.gameObject.tag == "Player")
+            {
+                GameplayEnd?.Invoke();
+            }
         }
     }
 }

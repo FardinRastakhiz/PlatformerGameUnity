@@ -4,30 +4,33 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class RocketsController : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    [SerializeField] private float basePower = 0.4f;
-    [SerializeField] private ParticleSystem[] rocketParticles;
-    [SerializeField] private RocketSoundPitchController rocketSoundPitch;
-
-    public UnityEvent rocketsTurnedOn;
-
-    public void TurnOnRockets()
+    public class RocketsController : MonoBehaviour
     {
-        for (int i = 0; i < rocketParticles.Length; i++)
-            rocketParticles[i].Play();
-        UpdateRocketPower(0);
-        rocketsTurnedOn?.Invoke();
-    }
+        [SerializeField] private float basePower = 0.4f;
+        [SerializeField] private ParticleSystem[] rocketParticles;
+        [SerializeField] private RocketSoundPitchController rocketSoundPitch;
 
-    public void UpdateRocketPower(float power)
-    {
-        for (int i = 0; i < rocketParticles.Length; i++)
+        public UnityEvent rocketsTurnedOn;
+
+        public void TurnOnRockets()
         {
-            var main = rocketParticles[i].main;
-            main.startLifetime = basePower + power;
+            for (int i = 0; i < rocketParticles.Length; i++)
+                rocketParticles[i].Play();
+            UpdateRocketPower(0);
+            rocketsTurnedOn?.Invoke();
         }
-        rocketSoundPitch.OnRocketPowerChanged(basePower + power);
-    }
 
+        public void UpdateRocketPower(float power)
+        {
+            for (int i = 0; i < rocketParticles.Length; i++)
+            {
+                var main = rocketParticles[i].main;
+                main.startLifetime = basePower + power;
+            }
+            rocketSoundPitch.OnRocketPowerChanged(basePower + power);
+        }
+
+    }
 }

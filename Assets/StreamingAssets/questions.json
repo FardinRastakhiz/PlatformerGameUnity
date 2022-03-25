@@ -74,51 +74,27 @@
     },
     {
       "questionId": "q4",
-      "stem": "If we neglect wasted energy, which option is not equal with others?",
+      "stem": "What caused our spaceship to overcome gravity?",
       "imageURL": "",
       "alternatives": [
         {
           "alternativeId": "a13",
-          "text": "The potential energy at the moment Jackie's head hit the trunk"
+          "text": "Earth gravity"
         },
         {
           "alternativeId": "a14",
-          "text": "The amount of saved energy inside his muscles before jumping"
+          "text": "Burning rate energy"
         },
         {
           "alternativeId": "a15",
-          "text": "The kinematic energy at the begining"
+          "text": "Weight of spaceship"
         },
         {
           "alternativeId": "a16",
-          "text": "The potential energy at the max height he can jump"
+          "text": "None"
         }
       ],
-      "correctAlternativeId": "a13"
-    },
-    {
-      "questionId": "q5",
-      "stem": "Which one is not part of spaceship taking off?",
-      "imageURL": "",
-      "alternatives": [
-        {
-          "alternativeId": "a13",
-          "text": "Burning the fuel to releasing chemical potential energy"
-        },
-        {
-          "alternativeId": "a14",
-          "text": "Converting chemical potential energy to the kinematic energy"
-        },
-        {
-          "alternativeId": "a15",
-          "text": "Using chemical potential energy to overcome gravitational force"
-        },
-        {
-          "alternativeId": "a16",
-          "text": "Using gravitational potential energy to make kinematic energy"
-        }
-      ],
-      "correctAlternativeId": "a16"
+      "correctAlternativeId": "a14"
     }
   ]
 }

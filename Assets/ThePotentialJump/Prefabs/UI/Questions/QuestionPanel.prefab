@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 8646565712235383140}
   - component: {fileID: 464072772034340194}
   - component: {fileID: 8259189295709020592}
+  - component: {fileID: -4749729069066400466}
   m_Layer: 5
   m_Name: QuestionPanel
   m_TagString: Untagged
@@ -518,6 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 887a1d1a004bd744abe2859d4cbe91ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questionTitle: {fileID: 1226626932304414655}
+  questionStem: {fileID: 1226626931789096111}
   answerPrefab: {fileID: -6599257534194775456, guid: e21ff7bac031fc740b2d582ff0eb5191,
     type: 3}
   answerParent: {fileID: 6073845452366973046}
@@ -542,6 +545,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 7696656700441256292}
+--- !u!114 &-4749729069066400466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646565712235383142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddfdac542e852c14c939ecdefcef51ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ttsAudioSource: {fileID: 0}
 --- !u!1001 &6073845452435472881
 PrefabInstance:
   m_ObjectHideFlags: 0

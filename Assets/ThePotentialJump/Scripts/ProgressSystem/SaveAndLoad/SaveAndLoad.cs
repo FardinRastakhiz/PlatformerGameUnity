@@ -20,6 +20,9 @@ namespace ThePotentialJump.ProgressSystem
         protected override void Awake()
         {
             base.Awake();
+        }
+        private void Start()
+        {
             data = LoadGameProgress();
         }
 
@@ -62,6 +65,11 @@ namespace ThePotentialJump.ProgressSystem
 
         public GameProgressData LoadGameProgress()
         {
+            if (LOLSDK.Instance == null)
+            {
+                Debug.LogError("LOLSDK.Instance cannot be null!");
+                return null;
+            }
             GameProgressData data = null;
             LOLSDK.Instance.LoadState<GameProgressData>(state =>
             {

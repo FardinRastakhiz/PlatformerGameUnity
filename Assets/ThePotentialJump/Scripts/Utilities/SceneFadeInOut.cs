@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using ThePotentialJump.EditorUtilities;
 using ThePotentialJump.ProgressSystem;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,9 +18,17 @@ namespace ThePotentialJump.Utilities
         [SerializeField] private UnityEvent FadeInCompleted;
         [SerializeField] private UnityEvent FadeOutBegan;
 
-        private void Start()
+        private void Awake()
         {
             if (coverAnimator == null) coverAnimator = GetComponent<Animator>();
+        }
+        private void Start()
+        {
+            if (coverAnimator == null)
+            {
+                Debug.LogError("coverAnimator cannot be null!");
+                return;
+            }
             coverAnimator.SetFloat("fadeInSpeed", 1.0f / fadeInDuration);
             coverAnimator.SetFloat("fadeOutSpeed", 1.0f / fadeOutDuration);
             FadeIn();

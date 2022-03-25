@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public class ResolveMissingMaterials : MonoBehaviour
+namespace ThePotentialJump.EditorUtilities
 {
-    [SerializeField] private Material replacingMaterial;
-    public Material ReplacingMaterial => replacingMaterial;
+    public class ResolveMissingMaterials : MonoBehaviour
+    {
+        [SerializeField] private Material replacingMaterial;
+        public Material ReplacingMaterial => replacingMaterial;
+    }
 }

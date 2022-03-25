@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace ThePotentialJump.Utilities
 {
@@ -15,6 +14,7 @@ namespace ThePotentialJump.Utilities
 
         public void Deactivate()
         {
+            canvasGroup.interactable = false;
             StartCoroutine(DeactivateButton());
         }
 
@@ -30,12 +30,11 @@ namespace ThePotentialJump.Utilities
 
         IEnumerator DeactivateButton()
         {
-            while (canvasGroup.alpha > float.Epsilon)
+            while (canvasGroup.alpha > float.Epsilon*4)
             {
                 canvasGroup.alpha -= Time.deltaTime * 3;
                 yield return null;
             }
-            canvasGroup.interactable = false;
         }
     }
 

@@ -1,0 +1,1532 @@
+fileFormatVersion: 2
+guid: 5629cff2b9511624da5b837d9b83d6b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4676700266997369071
+    second: Door Prop 04
+  - first:
+      213: 4450783771362210071
+    second: Door Prop 05
+  - first:
+      213: -4285258797913012230
+    second: Box Prop 01
+  - first:
+      213: 2664700930586002223
+    second: Chimney 01
+  - first:
+      213: -6480691074657015620
+    second: Corbel 01
+  - first:
+      213: -667164785303884917
+    second: Corbel 02
+  - first:
+      213: 962033424248210371
+    second: Corbel 03
+  - first:
+      213: -2297238132519892797
+    second: Box Prop 02
+  - first:
+      213: -2340814755008522592
+    second: Briks Prop 01
+  - first:
+      213: 6618736288780660414
+    second: Door Prop 03
+  - first:
+      213: 6013489414231341439
+    second: Door Prop 02
+  - first:
+      213: -7953682171509734717
+    second: Door Prop 01
+  - first:
+      213: 2648129550548364969
+    second: Skull Prop 01
+  - first:
+      213: 1105373203308371362
+    second: Briks Prop 02
+  - first:
+      213: 1854506986772123570
+    second: Window Frame Prop 01 LR-136 T-137 B-164
+  - first:
+      213: 5159132002477244843
+    second: Window Frame Prop 02
+  - first:
+      213: -5990538554724671943
+    second: Skull Prop 02
+  - first:
+      213: 143573531583508352
+    second: Window Glass 04 LRTB-128
+  - first:
+      213: -8195610651376969752
+    second: Window Glass 03 LRTB-128
+  - first:
+      213: -5789741534558739773
+    second: Window Glass 02 LRTB-128
+  - first:
+      213: 6332939686606808622
+    second: Window Glass 01 LRTB-128
+  - first:
+      213: -6278368270235288635
+    second: Window Prop 01
+  - first:
+      213: 6930125042201250710
+    second: Skull Prop 03
+  - first:
+      213: -2746443767636386961
+    second: Window Prop 02
+  - first:
+      213: 6966063816860771095
+    second: Lantern Prop 06
+  - first:
+      213: -2559553404802021134
+    second: Skulls Prop 01
+  - first:
+      213: 1788153672934518429
+    second: Window Glass 05
+  - first:
+      213: 5505558481670751467
+    second: Box Prop 03 L-80 R-150 TB-90
+  - first:
+      213: -2524745266088075466
+    second: Window Grill 01 LRTB-128
+  - first:
+      213: 6017259495884451528
+    second: Lantern Prop 03
+  - first:
+      213: 4289539555864782641
+    second: Lantern Prop 05
+  - first:
+      213: 9145786449760169034
+    second: Lantern Prop 04
+  - first:
+      213: -8631660855649250510
+    second: Window Frame Prop 06
+  - first:
+      213: -4691991309577831002
+    second: Window Frame Prop 07
+  - first:
+      213: -7781277669057962638
+    second: Window Frame Prop 08
+  - first:
+      213: -7307513867394872388
+    second: Window Frame Prop 09
+  - first:
+      213: -5327838885989087291
+    second: Lantern Prop 02
+  - first:
+      213: 6999617704678316893
+    second: Lantern Prop 01
+  - first:
+      213: -7970227199151993864
+    second: Window Frame Prop 05
+  - first:
+      213: 7516694250164205564
+    second: Window Frame Prop 03
+  - first:
+      213: -106829459218302535
+    second: Window Frame Prop 04
+  - first:
+      213: 2471057888576879836
+    second: Window Prop 05
+  - first:
+      213: -4601862121468846899
+    second: Window Prop 06
+  - first:
+      213: 1442337431581151889
+    second: Window Prop 07
+  - first:
+      213: -3589960066971782653
+    second: Window Prop 08
+  - first:
+      213: -2382705540695154193
+    second: Window Prop 09
+  - first:
+      213: 8552135916797239875
+    second: Window Prop 03
+  - first:
+      213: -5158209671488221979
+    second: Window Prop 04
+  - first:
+      213: 2381732576994273060
+    second: Bas-relief Prop 01 flower
+  - first:
+      213: 8253043687183747372
+    second: Bas-relief Prop 02 flower
+  - first:
+      213: 8829522700057250528
+    second: Corbel Prop 04
+  - first:
+      213: 1970133429440040749
+    second: Candle Prop 03
+  - first:
+      213: 3965974760239447716
+    second: Candle Prop 02
+  - first:
+      213: -4669756456062183398
+    second: Candle Prop 01
+  - first:
+      213: 4316913407619144003
+    second: Candles Prop 01
+  - first:
+      213: 7353458521529902956
+    second: Candles Prop 02
+  - first:
+      213: 201430564038257485
+    second: Candles Prop 03
+  - first:
+      213: 3623021756084077660
+    second: Candles Prop 04
+  - first:
+      213: 8581826973113729876
+    second: Doorhandle Prop 01
+  - first:
+      213: -8758429831892899477
+    second: Doorhandle Prop 02
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Door Prop 04
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3206
+        width: 730
+        height: 890
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe84a575d1af6e040800000000000000
+      internalID: 4676700266997369071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door Prop 05
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 3206
+        width: 757
+        height: 875
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7113e10424c54cd30800000000000000
+      internalID: 4450783771362210071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Box Prop 01
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 3796
+        width: 340
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af707cbd3d3b784c0800000000000000
+      internalID: -4285258797913012230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chimney 01
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 3585
+        width: 450
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f234b30d06beaf420800000000000000
+      internalID: 2664700930586002223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corbel 01
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 3585
+        width: 350
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb82604cdc5ff06a0800000000000000
+      internalID: -6480691074657015620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corbel 02
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 3585
+        width: 512
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bef4d9921cdb6f0800000000000000
+      internalID: -667164785303884917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corbel 03
+      rect:
+        serializedVersion: 2
+        x: 3296
+        y: 3585
+        width: 800
+        height: 511
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c30e526d44d95d00800000000000000
+      internalID: 962033424248210371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Box Prop 02
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 3466
+        width: 350
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c88baaf6129e10e0800000000000000
+      internalID: -2297238132519892797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks Prop 01
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 3063
+        width: 900
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a659bae161c38fd0800000000000000
+      internalID: -2340814755008522592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door Prop 03
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2509
+        width: 236
+        height: 687
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe22ca46997adb50800000000000000
+      internalID: 6618736288780660414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door Prop 02
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 2509
+        width: 236
+        height: 687
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79b4dbe2c4347350800000000000000
+      internalID: 6013489414231341439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door Prop 01
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 2509
+        width: 364
+        height: 687
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c20ec69438de9190800000000000000
+      internalID: -7953682171509734717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull Prop 01
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2931
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae66abbbcb00c420800000000000000
+      internalID: 2648129550548364969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks Prop 02
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 3063
+        width: 600
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad5e676213175f00800000000000000
+      internalID: 1105373203308371362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 01 LR-136 T-137 B-164
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 2751
+        width: 512
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 136, y: 164, z: 136, w: 137}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf480467488cb910800000000000000
+      internalID: 1854506986772123570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 02
+      rect:
+        serializedVersion: 2
+        x: 3687
+        y: 2700
+        width: 409
+        height: 750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba18105d83be89740800000000000000
+      internalID: 5159132002477244843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull Prop 02
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2721
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e9a587ce45ddca0800000000000000
+      internalID: -5990538554724671943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Glass 04 LRTB-128
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 2511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 128, z: 128, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08fee25cd531ef100800000000000000
+      internalID: 143573531583508352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Glass 03 LRTB-128
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 2511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 128, z: 128, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e79447e887534e80800000000000000
+      internalID: -8195610651376969752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Glass 02 LRTB-128
+      rect:
+        serializedVersion: 2
+        x: 2121
+        y: 2511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 128, z: 128, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c22d4befb4b6afa0800000000000000
+      internalID: -5789741534558739773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Glass 01 LRTB-128
+      rect:
+        serializedVersion: 2
+        x: 2643
+        y: 2511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 128, z: 128, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e262c24771f13e750800000000000000
+      internalID: 6332939686606808622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 01
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 2061
+        width: 512
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbba8b8251ced8a0800000000000000
+      internalID: -6278368270235288635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull Prop 03
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2511
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69bc17d2200cc2060800000000000000
+      internalID: 6930125042201250710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 02
+      rect:
+        serializedVersion: 2
+        x: 3687
+        y: 1940
+        width: 409
+        height: 750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6b9272d1fba2e9d0800000000000000
+      internalID: -2746443767636386961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern Prop 06
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1830
+        width: 280
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71320b6322e6ca060800000000000000
+      internalID: 6966063816860771095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skulls Prop 01
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 2129
+        width: 450
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8422b4db3aa7cd0800000000000000
+      internalID: -2559553404802021134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Glass 05
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 2129
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e621f9a4cc0d810800000000000000
+      internalID: 1788153672934518429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Box Prop 03 L-80 R-150 TB-90
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 2076
+        width: 480
+        height: 410
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 80, y: 90, z: 150, w: 90}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4cf16f44ca76c40800000000000000
+      internalID: 5505558481670751467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Grill 01 LRTB-128
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1989
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 128, z: 128, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f9872ae8d46fcd0800000000000000
+      internalID: -2524745266088075466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern Prop 03
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1045
+        width: 174
+        height: 775
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cee98571a9918350800000000000000
+      internalID: 6017259495884451528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern Prop 05
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 1605
+        width: 270
+        height: 480
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137ae45cf71878b30800000000000000
+      internalID: 4289539555864782641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern Prop 04
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 1766
+        width: 431
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c2981d15c5cee70800000000000000
+      internalID: 9145786449760169034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 06
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 1032
+        width: 596
+        height: 1021
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233d16d2f2e263880800000000000000
+      internalID: -8631660855649250510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 07
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 1031
+        width: 627
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6adb46f53c2b2eeb0800000000000000
+      internalID: -4691991309577831002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 08
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 1031
+        width: 557
+        height: 1020
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27dde1ddf29530490800000000000000
+      internalID: -7781277669057962638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 09
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 1031
+        width: 379
+        height: 899
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb00bebade769a90800000000000000
+      internalID: -7307513867394872388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern Prop 02
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1045
+        width: 318
+        height: 550
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c78b14e2c6bf06b0800000000000000
+      internalID: -5327838885989087291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lantern Prop 01
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 1045
+        width: 450
+        height: 711
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bd2e28733a32160800000000000000
+      internalID: 6999617704678316893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 05
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 860
+        width: 618
+        height: 850
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb83672790146190800000000000000
+      internalID: -7970227199151993864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 03
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 523
+        width: 600
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7324a6899a05860800000000000000
+      internalID: 7516694250164205564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Frame Prop 04
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 523
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9febf3c27748ef0800000000000000
+      internalID: -106829459218302535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 05
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 0
+        width: 618
+        height: 850
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc3d04be06fa4220800000000000000
+      internalID: 2471057888576879836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 06
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 0
+        width: 596
+        height: 1021
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc168048c6e220c0800000000000000
+      internalID: -4601862121468846899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 07
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 1
+        width: 557
+        height: 1020
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192d4af8046340410800000000000000
+      internalID: 1442337431581151889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 08
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 0
+        width: 627
+        height: 948
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3023f4ae656ed2ec0800000000000000
+      internalID: -3589960066971782653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 09
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 0
+        width: 379
+        height: 899
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe1a2825fedeeeed0800000000000000
+      internalID: -2382705540695154193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 03
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1
+        width: 600
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3422f8f1e4a4fa670800000000000000
+      internalID: 8552135916797239875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Window Prop 04
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecc5f512ab5a68b0800000000000000
+      internalID: -5158209671488221979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bas-relief Prop 01 flower
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1380
+        width: 200
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42728b9e82d9d0120800000000000000
+      internalID: 2381732576994273060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bas-relief Prop 02 flower
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1165
+        width: 200
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c290e5ac183b88270800000000000000
+      internalID: 8253043687183747372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corbel Prop 04
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1045
+        width: 200
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea09296d14c88a70800000000000000
+      internalID: 8829522700057250528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candle Prop 03
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 2244
+        width: 110
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f45e57ae1575b10800000000000000
+      internalID: 1970133429440040749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candle Prop 02
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 2014
+        width: 106
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aebc342809f90730800000000000000
+      internalID: 3965974760239447716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candle Prop 01
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 2014
+        width: 110
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1893d0ae31b13fb0800000000000000
+      internalID: -4669756456062183398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candles Prop 01
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 1723
+        width: 233
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349924b4fd1c8eb30800000000000000
+      internalID: 4316913407619144003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candles Prop 02
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1723
+        width: 196
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67eb56a09bbc0660800000000000000
+      internalID: 7353458521529902956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candles Prop 03
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1723
+        width: 163
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b2860e700abc200800000000000000
+      internalID: 201430564038257485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Candles Prop 04
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 1723
+        width: 184
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5447e0771f874230800000000000000
+      internalID: 3623021756084077660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doorhandle Prop 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2269
+        width: 90
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4534f40e926c81770800000000000000
+      internalID: 8581826973113729876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Doorhandle Prop 02
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 2269
+        width: 90
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b69e6d7d87ec37680800000000000000
+      internalID: -8758429831892899477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

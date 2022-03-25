@@ -14,7 +14,13 @@ namespace ThePotentialJump.Gameplay
         IEnumerator StartEnding()
         {
             yield return new WaitForSeconds(delay);
+            if (EconomySystem.Instance == null)
+            {
+                Debug.LogError("(Stage2EndingCheck) EconomySystem.Instance cannot be null!");
+                yield break;
+            }
             var collectedCurrency = EconomySystem.Instance.CollectedOnCurrentScene;
+            Debug.Log($"collectedCurrency: {collectedCurrency}, minCollectToWin: {minCollectToWin}");
             if (collectedCurrency >= minCollectToWin)
                 Passed?.Invoke();
             else

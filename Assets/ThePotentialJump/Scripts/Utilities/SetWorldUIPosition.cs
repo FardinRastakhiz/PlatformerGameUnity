@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
-public class UIWorldPosition : MonoBehaviour
+namespace ThePotentialJump.EditorUtilities
 {
-    [SerializeField] private RectTransform rectTransform;
-
-    public void SetWorldPosition(Vector3 position)
+    public class UIWorldPosition : MonoBehaviour
     {
-        rectTransform.position = position;
+        [SerializeField] private RectTransform rectTransform;
+
+        public void SetWorldPosition(Vector3 position)
+        {
+            rectTransform.position = position;
+        }
     }
 }

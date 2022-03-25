@@ -19,11 +19,11 @@ namespace ThePotentialJump.Menus
                 slider = GetComponentInChildren<Slider>();
             if (sliderText == null)
                 sliderText = slider.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-            UpdateSlider();
         }
         
         private void Start()
         {
+            UpdateSlider();
             SetupParameters();
         }
 
@@ -59,6 +59,16 @@ namespace ThePotentialJump.Menus
 
         private void UpdateSlider()
         {
+            if (slider == null)
+            {
+                Debug.LogError("slider cannot be null!");
+                return;
+            }
+            if (sliderText == null)
+            {
+                Debug.LogError("sliderText cannot be null!");
+                return;
+            }
             sliderText.text = CollectedCurrency + " / " + MaxCurrency;
             slider.value = CollectedCurrency / (MaxCurrency * 1.0f);
         }

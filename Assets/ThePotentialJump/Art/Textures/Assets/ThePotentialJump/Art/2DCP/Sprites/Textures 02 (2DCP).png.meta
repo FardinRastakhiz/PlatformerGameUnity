@@ -1,0 +1,644 @@
+fileFormatVersion: 2
+guid: 95d2829492d2b0d4bb23b45d71e86a4a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 481607923882930817
+    second: Pillar 01 TB-256
+  - first:
+      213: -6529097122084985547
+    second: Pillar 02 TB-256
+  - first:
+      213: 963097839723415102
+    second: Pillar 03 TB-256
+  - first:
+      213: 3733773699718902074
+    second: Pillar 04 TB-512
+  - first:
+      213: 8096796502138840293
+    second: Pillar 05 TB-512
+  - first:
+      213: -5528352323273654701
+    second: Pillar 06 TB-512
+  - first:
+      213: -5285829744637493109
+    second: Pillar 07 TB-256
+  - first:
+      213: 900127990034301624
+    second: Pillar 08 TB-256
+  - first:
+      213: -2296777682868387726
+    second: Pillar 09 TB-256
+  - first:
+      213: 133254898658394268
+    second: Pillar 10 TB-256
+  - first:
+      213: -1583032587191074646
+    second: Pillar 11 TB-256
+  - first:
+      213: -1451933160932181314
+    second: Pillar 12 TB-256
+  - first:
+      213: 8510685526047183311
+    second: Arch prop 02
+  - first:
+      213: -4930990530332166343
+    second: Arches 02 LR-128
+  - first:
+      213: 9046500961242640055
+    second: Arch prop 01
+  - first:
+      213: -4195778458507615325
+    second: Arches 01 LR-0-340
+  - first:
+      213: 8342649596158706471
+    second: Bridge 02 LR-380
+  - first:
+      213: -6180519330678913786
+    second: Pillar 13 LR-64 T-256 D-128
+  - first:
+      213: -6123055434488141682
+    second: Pillar 14 LR-64 TD-128
+  - first:
+      213: -1813175447142699759
+    second: Bridge 01 LR-644
+  - first:
+      213: 7611196349929915141
+    second: Stairs 01 LR-128-256
+  - first:
+      213: -1304966527871155482
+    second: Railing 01 LR-64
+  - first:
+      213: 7967640808649066921
+    second: Railing 02 LR-128
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pillar 01 TB-256
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2432
+        width: 256
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1823e08ead30fa600800000000000000
+      internalID: 481607923882930817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 02 TB-256
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 2432
+        width: 256
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 535691692ccf365a0800000000000000
+      internalID: -6529097122084985547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 03 TB-256
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 2432
+        width: 256
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3609ace16c9d5d00800000000000000
+      internalID: 963097839723415102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 04 TB-512
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 2432
+        width: 512
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 512, z: 0, w: 512}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a31f073c56701d330800000000000000
+      internalID: 3733773699718902074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 05 TB-512
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2432
+        width: 512
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 512, z: 0, w: 512}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e46c9025899d5070800000000000000
+      internalID: 8096796502138840293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 06 TB-512
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 2432
+        width: 512
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 512, z: 0, w: 512}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e711a3ad85743b0800000000000000
+      internalID: -5528352323273654701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 07 TB-256
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 2432
+        width: 512
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8040bf4ad5f4a6b0800000000000000
+      internalID: -5285829744637493109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 08 TB-256
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 2432
+        width: 512
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2816a43a5ed7c00800000000000000
+      internalID: 900127990034301624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 09 TB-256
+      rect:
+        serializedVersion: 2
+        x: 3408
+        y: 2432
+        width: 512
+        height: 1664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270c594cdd43020e0800000000000000
+      internalID: -2296777682868387726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 10 TB-256
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1142
+        width: 512
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c904d13df9a69d100800000000000000
+      internalID: 133254898658394268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 11 TB-256
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1142
+        width: 512
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0cb9ccf30f70ae0800000000000000
+      internalID: -1583032587191074646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 12 TB-256
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1142
+        width: 512
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 256, z: 0, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebaf6099b72b9dbe0800000000000000
+      internalID: -1451933160932181314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arch prop 02
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1910
+        width: 872
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc1d917f4670c1670800000000000000
+      internalID: 8510685526047183311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arches 02 LR-128
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 1910
+        width: 1536
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9377cb8fc3a919bb0800000000000000
+      internalID: -4930990530332166343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arch prop 01
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 1220
+        width: 680
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bee81f91b0ab8d70800000000000000
+      internalID: 9046500961242640055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arches 01 LR-0-340
+      rect:
+        serializedVersion: 2
+        x: 2256
+        y: 1220
+        width: 1360
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 340, y: 0, z: 340, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a3ea60e8b995c5c0800000000000000
+      internalID: -4195778458507615325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge 02 LR-380
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 635
+        width: 1280
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 380, y: 0, z: 380, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72388904b9b07c370800000000000000
+      internalID: 8342649596158706471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 13 LR-64 T-256 D-128
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 0
+        width: 320
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 128, z: 64, w: 256}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605c27f1a626a3aa0800000000000000
+      internalID: -6180519330678913786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pillar 14 LR-64 TD-128
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 0
+        width: 320
+        height: 680
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 128, z: 64, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e882f4f0689860ba0800000000000000
+      internalID: -6123055434488141682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge 01 LR-644
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1800
+        height: 625
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 644, y: 0, z: 644, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d6995998e46d6e0800000000000000
+      internalID: -1813175447142699759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stairs 01 LR-128-256
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 690
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503825121c660a960800000000000000
+      internalID: 7611196349929915141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing 01 LR-64
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 522
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2077e5bd3d3ede0800000000000000
+      internalID: -1304966527871155482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Railing 02 LR-128
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a90f61e91fb29e60800000000000000
+      internalID: 7967640808649066921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
