@@ -68,9 +68,9 @@ namespace ThePotentialJump.Utilities
             LOLSDK.Instance.GameIsReady();
         }
 
-        private void Start()
+        public void AddData(GameProgressData data)
         {
-            data = SaveAndLoad.Instance?.LoadGameProgress();
+            this.data = data;
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)

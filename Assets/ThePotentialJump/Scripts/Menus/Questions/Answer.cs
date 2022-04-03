@@ -27,6 +27,9 @@ namespace ThePotentialJump.Menus
         {
             var colors = button.colors;
             colors.disabledColor = color;
+            colors.normalColor = color;
+            colors.selectedColor = color;
+            colors.pressedColor = color;
             button.colors = colors;
         }
         internal void IntensifyColor()

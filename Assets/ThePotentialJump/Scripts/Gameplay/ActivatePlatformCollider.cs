@@ -56,11 +56,11 @@ namespace ThePotentialJump.Gameplay
                 if (hitCeiling || hitbodyTransform == null)
                     continue;
                 var hbCollider = hitbodyTransform.GetComponent<Collider2D>();
-                if (hitbodyTransform.position.y - hbCollider.bounds.size.y/2 > transform.position.y + plaformCollider.bounds.size.y / 2.0f)
+                if (hitbodyTransform.position.y /*- hbCollider.bounds.size.y/2*/ > transform.position.y + plaformCollider.bounds.size.y / 2.0f)
                 {
                     plaformCollider.isTrigger =false;
                 }
-                else if (hitbodyTransform.position.y + hbCollider.bounds.size.y/2 < transform.position.y - plaformCollider.bounds.size.y)
+                else if (hitbodyTransform.position.y + hbCollider.bounds.size.y /*/2*/ < transform.position.y - plaformCollider.bounds.size.y)
                 {
                     plaformCollider.isTrigger = true;
                 }

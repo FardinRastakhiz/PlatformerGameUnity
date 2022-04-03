@@ -1,13 +1,11 @@
-﻿using System.Collections;
+﻿using ThePotentialJump.Inputs;
 using UnityEngine;
 
 namespace ThePotentialJump.Menus
 {
     public class PauseActivator : Utilities.MonoSingleton<PauseActivator>
-
     {
         [SerializeField] private Animator pauseMenuController;
-        private bool pauseActivated;
 
         protected override void Awake()
         {
@@ -19,26 +17,14 @@ namespace ThePotentialJump.Menus
         {
             if (pauseMenuController == null && PauseMenu.Instance != null)
                 pauseMenuController = PauseMenu.Instance.gameObject.GetComponent<Animator>();
-            StartCoroutine(CheckForInputs());
-        }
-
-        IEnumerator CheckForInputs()
-        {
-            while (true)
-            {
-                if (Input.GetKeyDown(KeyCode.Escape))
-                    OnActivatePause();
-                pauseActivated = pauseMenuController.GetBool("ShowPauseMenu");
-                yield return null;
-            }
+            InputController.Instance.PressEscape += (o, e) => OnActivatePause();
         }
 
         public void OnActivatePause()
         {
-            Debug.Log("PauseActivation: " + pauseMenuController.name);
-            if (pauseActivated) return;
-            // SharedState.
+            if (PauseMenu.Instance.IsActive) return;
             pauseMenuController.SetBool("ShowPauseMenu", true);
         }
+
     }
 }

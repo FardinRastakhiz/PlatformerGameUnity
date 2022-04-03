@@ -127,6 +127,6 @@ MonoBehaviour:
     type: 3}
   minEnergyTolerance: 450
   maxEnergyTolerance: 600
-  energyThreshold: 0.5
+  energyThreshold: 15
   openingReward: 5
   breakingCost: 1

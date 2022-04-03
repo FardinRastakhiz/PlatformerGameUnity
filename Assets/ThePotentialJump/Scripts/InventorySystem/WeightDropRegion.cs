@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ThePotentialJump.Gameplay;
 using ThePotentialJump.Sounds;
+using ThePotentialJump.Utilities;
 using UnityEngine;
 
 namespace ThePotentialJump.Inventory
@@ -13,6 +14,7 @@ namespace ThePotentialJump.Inventory
 
         public override event EventHandler<ReplaceObjectEventArgs> Replace;
         [SerializeField] private JumpRuler jumpRuler;
+        [SerializeField] private HeightViewer heightViewer;
         private void Awake()
         {
             if (jumpRuler == null) Debug.LogError("Jump Ruler cannot be null!");
@@ -30,7 +32,7 @@ namespace ThePotentialJump.Inventory
                 droppable.Replace += Replace;
                 droppable.Replace += OnReplaceDroppable;
                 droppable.Replace += (o, e) => jumpRuler.OnStopUpdateRuler();
-                droppable.DropHeight = position.y;
+                droppable.DropHeight = heightViewer.Height;
                 droppable.tag = "Weight";
                 droppables.Add(droppable);
             }

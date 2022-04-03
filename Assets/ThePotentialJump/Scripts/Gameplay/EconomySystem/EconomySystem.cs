@@ -8,10 +8,11 @@ namespace ThePotentialJump.Gameplay
 {
     public class EconomySystem : MonoSingleton<EconomySystem>
     {
-        [SerializeField] private int totalCurrency = 0;
+        private int totalCurrency = 0;
+        private int temporaryTotalCurrency = 0;
         [SerializeField] private string currencyName = "Carrot";
         [SerializeField] private Sprite currencyIcon;
-        public int TotalCurrency { get => totalCurrency; private set => totalCurrency = value; }
+        public int TotalCurrency { get => temporaryTotalCurrency; private set => temporaryTotalCurrency = value; }
         public string CurrencyName { get => currencyName; }
         public Sprite CurrencyIcon { get => currencyIcon; }
 
@@ -34,9 +35,13 @@ namespace ThePotentialJump.Gameplay
         IEnumerator SetupWithDelay()
         {
             yield return null;
+            SetupPassOrFailHandlers();
+            SetupPauseActions();
+
             CollectedOnCurrentScene = 0;
             if (totalCurrencyChanged == null) totalCurrencyChanged = new TotalCurrencyChangedEventArgs();
-            totalCurrencyChanged.TotalCurrency = TotalCurrency;
+            temporaryTotalCurrency = totalCurrency;
+            totalCurrencyChanged.TotalCurrency = temporaryTotalCurrency;
             totalCurrencyChanged.CollectedOnCurrentScene = CollectedOnCurrentScene;
             CurrencyChanged?.Invoke(this, totalCurrencyChanged);
         }
@@ -46,9 +51,9 @@ namespace ThePotentialJump.Gameplay
             Debug.Log($"Depo amount: {amount},     Maximum capacity: {MaximumCapacity}");
             CollectedOnCurrentScene += amount;
             Debug.Log($"CollectedOnCurrentScene: {CollectedOnCurrentScene}");
-            TotalCurrency += amount;
-            TotalCurrency = TotalCurrency > MaximumCapacity ? MaximumCapacity : TotalCurrency;
-            totalCurrencyChanged.TotalCurrency = TotalCurrency;
+            temporaryTotalCurrency += amount;
+            temporaryTotalCurrency = temporaryTotalCurrency > MaximumCapacity ? MaximumCapacity : temporaryTotalCurrency;
+            totalCurrencyChanged.TotalCurrency = temporaryTotalCurrency;
             totalCurrencyChanged.CollectedOnCurrentScene = CollectedOnCurrentScene;
             CurrencyChanged?.Invoke(this, totalCurrencyChanged);
         }
@@ -56,12 +61,43 @@ namespace ThePotentialJump.Gameplay
         public void Withdraw(int amount)
         {
             Debug.Log($"Depo amount: {amount}");
-            if (TotalCurrency - amount < 0) return;
-            TotalCurrency -= amount;
+            if (temporaryTotalCurrency - amount < 0) return;
+            temporaryTotalCurrency -= amount;
             if (CollectedOnCurrentScene - amount >= 0) CollectedOnCurrentScene -= amount;
-            totalCurrencyChanged.TotalCurrency = TotalCurrency;
+            totalCurrencyChanged.TotalCurrency = temporaryTotalCurrency;
             totalCurrencyChanged.CollectedOnCurrentScene = CollectedOnCurrentScene;
             CurrencyChanged?.Invoke(this, totalCurrencyChanged); 
+        }
+
+        public void LoadSavedCurrency(int amount)
+        {
+            Deposit(amount);
+            totalCurrency = temporaryTotalCurrency;
+        }
+
+        private void SetupPassOrFailHandlers()
+        {
+            var passOrFail = FindObjectOfType<PassOrFailUIContrller>();
+            if (passOrFail == null) return;
+            passOrFail.ViewedPassUI.AddListener(OnStagePassed);
+            passOrFail.ViewedFailUI.AddListener(OnStageLost);
+        }
+
+        public void SetupPauseActions()
+        {
+            if (GameManager.Instance == null) return;
+            GameManager.Instance.Restarted.AddListener(OnStageLost);
+            GameManager.Instance.GoneToMainMenu.AddListener(OnStageLost);
+        }
+
+        public void OnStagePassed()
+        {
+            totalCurrency = temporaryTotalCurrency;
+        }
+
+        public void OnStageLost()
+        {
+
         }
     }
 

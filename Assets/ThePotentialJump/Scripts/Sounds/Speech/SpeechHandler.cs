@@ -23,13 +23,13 @@ public class SpeechHandler : MonoBehaviour
 		_ttsAudioSource.Stop();
 		print(languageCode);
 		// Speak the clip of text requested from using this MonoBehaviour as the coroutine owner.
-		((ILOLSDK_EDITOR)LOLSDK.Instance.PostMessage).SpeakText(SharedState.LanguageDefs?[key],
+		((ILOLSDK_EDITOR)LOLSDK.Instance.PostMessage).SpeakText(SharedState.LanguageDefs?[key].Value,
 			clip => {_ttsAudioSource.clip = clip; _ttsAudioSource.Play(); },
 			this,
 			languageCode);
 		LOLSDK.Instance.SpeakText(key);
 #else
-			LOLSDK.Instance.SpeakText(text);
+			LOLSDK.Instance.SpeakText(key);
 			
 #endif
 	}

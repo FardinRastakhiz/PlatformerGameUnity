@@ -26,6 +26,7 @@ namespace ThePotentialJump.Inputs
         public event EventHandler ReleaseRight;
         public event EventHandler PressSpace;
         public event EventHandler ReleaseSpace;
+        public event EventHandler PressEscape;
         private void OnDestroy()
         {
             if(updateInputsCoroutine!=null) StopCoroutine(updateInputsCoroutine);
@@ -51,6 +52,9 @@ namespace ThePotentialJump.Inputs
                     PressSpace?.Invoke(this, null);
                 if (Input.GetKeyUp(KeyCode.Space))
                     ReleaseSpace?.Invoke(this, null);
+
+                if (Input.GetKeyDown(KeyCode.Escape))
+                    PressEscape?.Invoke(this, null);
                 yield return null;
             }
         }

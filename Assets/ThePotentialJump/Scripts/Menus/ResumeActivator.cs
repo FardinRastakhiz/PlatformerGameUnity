@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using ThePotentialJump.Inputs;
 using UnityEngine;
 
 namespace ThePotentialJump.Menus
@@ -6,7 +6,6 @@ namespace ThePotentialJump.Menus
     public class ResumeActivator : Utilities.MonoSingleton<ResumeActivator>
     {
         [SerializeField] private Animator pauseMenuController;
-        private bool pauseActivated;
 
         protected override void Awake()
         {
@@ -16,24 +15,17 @@ namespace ThePotentialJump.Menus
 
         private void Start()
         {
-            StartCoroutine(CheckForInputs());
-        }
-
-        IEnumerator CheckForInputs()
-        {
-            while (true)
-            {
-                pauseActivated = pauseMenuController.GetBool("ShowPauseMenu");
-                if (Input.GetKeyDown(KeyCode.Escape))
-                    OnActivateResume();
-                yield return null;
-            }
+            InputController.Instance.PressEscape += (o, e) => OnActivateResume();
         }
 
         public void OnActivateResume()
         {
-            if (!pauseActivated) return;
+            if (!PauseMenu.Instance.IsActive)
+                return;
+            Time.timeScale = 1;
             pauseMenuController.SetBool("ShowPauseMenu", false);
         }
+
+
     }
 }

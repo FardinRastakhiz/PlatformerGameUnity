@@ -61,7 +61,7 @@ namespace ThePotentialJump.Menus
         {
             if (slider == null)
             {
-                Debug.LogError("slider cannot be null!");
+                //Debug.LogError("slider cannot be null!");
                 return;
             }
             if (sliderText == null)

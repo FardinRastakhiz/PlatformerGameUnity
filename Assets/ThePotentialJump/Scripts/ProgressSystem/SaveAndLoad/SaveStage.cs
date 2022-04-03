@@ -7,6 +7,10 @@ namespace ThePotentialJump.ProgressSystem
     {
         public void Save()
         {
+            if(SaveAndLoad.Instance == null)
+            {
+                Debug.Log("SaveAndLoad.Instance is null");
+            }
             SaveAndLoad.Instance?.SaveProgress();
         }
     }

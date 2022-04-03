@@ -11,14 +11,14 @@ namespace ThePotentialJump.Utilities
         [SerializeField] private TextMeshProUGUI textMesh;
         [SerializeField] private Vector3 offset;
         [SerializeField] private Transform baseFloor;
-        [SerializeField] private float misplaced = 0.7f;
+        [SerializeField] private float cageHeight = 0.7f;
         [SerializeField] private DropRegion dropRegion;
         [SerializeField] private Camera cam;
 
         private float floorHeight = 0.0f;
         private void Awake()
         {
-            floorHeight = baseFloor.transform.position.y + misplaced;
+            floorHeight = baseFloor.transform.position.y + cageHeight;
             canvasGroup.alpha = 0.0f;
             if (cam == null) cam = Camera.main;
         }
@@ -94,12 +94,12 @@ namespace ThePotentialJump.Utilities
             }
         }
 
+        public float Height { get; set; }
         private void UpdateTextValue()
         {
-            float inMeter = transform.position.y - floorHeight;
-            float inFoot = inMeter * 3.28f;
-
-            textMesh.text = $"{(Mathf.Floor((inMeter) * 100.0f) / 100.0f)} m / {(Mathf.Floor((inFoot) * 100.0f) / 100.0f)} ft";
+            Height = transform.position.y - floorHeight;
+            float inFoot = Height * 3.28f;
+            textMesh.text = $"{(Mathf.Floor((Height) * 100.0f) / 100.0f)} m / {(Mathf.Floor((inFoot) * 100.0f) / 100.0f)} ft";
         }
     }
 

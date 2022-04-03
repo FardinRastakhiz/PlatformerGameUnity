@@ -3,6 +3,7 @@ using System.Collections;
 using ThePotentialJump.Gameplay;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace ThePotentialJump.ProgressSystem
 {
@@ -23,25 +24,29 @@ namespace ThePotentialJump.ProgressSystem
         }
         private void Start()
         {
-            data = LoadGameProgress();
+            //data = LoadGameProgress();
+            LOLSDK.Instance.SaveResultReceived += OnSaveResult;
         }
 
         public void SaveProgress()
         {
+            Debug.Log($"Save 1: {data}");
             if (data == null) data = new GameProgressData();
+            Debug.Log($"Save 2: {data.LastCompletedLevel}");
             data.LastCompletedLevel = SceneManager.GetActiveScene().name;
+            Debug.Log($"Save 3: {data.Score}");
             data.Score = EconomySystem.Instance.TotalCurrency;
+            Debug.Log($"Save 4: {data.LastCompletedLevel}");
             if (!data.CompletedLevels.Contains(data.LastCompletedLevel))
                 data.CompletedLevels.Add(data.LastCompletedLevel);
-             
-            // At least 8 progress point should be submitted
-            LOLSDK.Instance.SubmitProgress(
-                EconomySystem.Instance.TotalCurrency,
-                EconomySystem.Instance.CollectedOnCurrentScene,
-                EconomySystem.Instance.MaximumCapacity);
+            Debug.Log($"Save 5: {data.CompletedLevels.Contains(data.LastCompletedLevel)}");
+
+            //LOLSDK.Instance.SubmitProgress(
+            //    EconomySystem.Instance.TotalCurrency,
+            //    EconomySystem.Instance.CollectedOnCurrentScene,
+            //    EconomySystem.Instance.MaximumCapacity);
 
             LOLSDK.Instance.SaveState(data);
-            LOLSDK.Instance.SaveResultReceived -= OnSaveResult;
         }
 
         public void GameCompleted()
@@ -57,33 +62,95 @@ namespace ThePotentialJump.ProgressSystem
                 return;
             }
 
-            if (_feedbackMethod != null)
-                StopCoroutine(_feedbackMethod);
+            Debug.Log("Saved successfully");
+            //if (_feedbackMethod != null)
+            //    StopCoroutine(_feedbackMethod);
             // ...Auto Saving Complete
             //_feedbackMethod = StartCoroutine(_Feedback("autoSave"));
+        }
+        private void OnDestroy()
+        {
+#if UNITY_EDITOR
+            if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
+                return;
+#endif
+            LOLSDK.Instance.SaveResultReceived -= OnSaveResult;
         }
 
         public GameProgressData LoadGameProgress()
         {
+            Debug.Log($"1: {LOLSDK.Instance}");
             if (LOLSDK.Instance == null)
             {
                 Debug.LogError("LOLSDK.Instance cannot be null!");
                 return null;
             }
             GameProgressData data = null;
+            Debug.Log($"2: {data}");
             LOLSDK.Instance.LoadState<GameProgressData>(state =>
             {
+                Debug.Log($"3: {state}");
                 if (state != null)
                 {
                     data = state.data;
+                    Debug.Log($"4: {data}");
                     var totalCurrency = EconomySystem.Instance.TotalCurrency;
-                    EconomySystem.Instance.Deposit(data.Score - totalCurrency);
+                    EconomySystem.Instance.LoadSavedCurrency(data.Score - totalCurrency);
+                    LOLSDK.Instance.SubmitProgress(state.score, state.currentProgress, state.maximumProgress);
+                }
+                else
+                {
+                    Debug.Log("Saved sate is null");
                 }
             });
+            Debug.Log($"5: {data}");
+            if (data != null)
+                Debug.Log($"data: {data.Score},  {data.CompletedLevels},   {data.LastCompletedLevel}");
+            else
+                Debug.Log("data is null");
             return data;
         }
 
+        public void StateButtonInitialize<T>(Button newGameButton, Button continueButton, System.Action<T> callback)
+            where T : class
+        {
+            //// Invoke callback with null to use the default serialized values of the state data from the editor.
+            //newGameButton.onClick.AddListener(() =>
+            //{
+            //    newGameButton.gameObject.SetActive(false);
+            //    continueButton.gameObject.SetActive(false);
+            //    callback(null);
+            //});
 
+            // Hide while checking for data.
+            newGameButton.gameObject.SetActive(true);
+            continueButton.gameObject.SetActive(false);
+            // Check for valid state data, from server or fallback local ( PlayerPrefs )
+            LOLSDK.Instance.LoadState<T>(state =>
+            {
+                if (state != null)
+                {
+                    if (state.data != null)
+                    {
+                        this.data = state.data as GameProgressData;
+                        continueButton.gameObject.SetActive(true);
+                        callback(state.data);
+                    }
+                    // Hook up and show continue only if valid data exists.
+                    continueButton.onClick.AddListener(() =>
+                    {
+                        //newGameButton.gameObject.SetActive(false);
+                        //continueButton.gameObject.SetActive(false);
+                        //callback(state.data);
+                        // Broadcast saved progress back to the teacher app.
+                        LOLSDK.Instance.SubmitProgress(state.score, state.currentProgress, state.maximumProgress);
+                    });
+
+                }
+
+                newGameButton.gameObject.SetActive(true);
+            });
+        }
         //IEnumerator _Feedback(string text)
         //{
         //    feedbackText.text = text;

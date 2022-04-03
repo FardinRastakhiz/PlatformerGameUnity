@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using ThePotentialJump.Utilities;
 using ThePotentialJump.ProgressSystem;
+using LoLSDK;
 
 namespace ThePotentialJump.Menus
 {
@@ -29,20 +30,36 @@ namespace ThePotentialJump.Menus
 
         private void Start()
         {
-            SaveAndLoad.Instance.LoadGameProgress();
-            if (LOLSDKManager.Instance.Data == null)
-            {
-                DeactivateButton(continueButton);
-                ChangeButtonColor(newGameButton, greenButton);
-                ChangeButtonColor(continueButton, grayButton);
-            }
-            else
-            {
-                ActivateButton(continueButton);
-                ChangeButtonColor(newGameButton, yellowButton);
-                ChangeButtonColor(continueButton, greenButton);
-                carrotViewer.SetCollectedCarrots(LOLSDKManager.Instance.Data.Score);
-            }
+            DeactivateButton(continueButton);
+            ChangeButtonColor(newGameButton, greenButton);
+            ChangeButtonColor(continueButton, grayButton);
+
+            SaveAndLoad.Instance.StateButtonInitialize<GameProgressData>
+                (newGameButton, continueButton, LoadDataCallback);
+
+            //if (LOLSDKManager.Instance.Data == null)
+            //{
+            //    DeactivateButton(continueButton);
+            //    ChangeButtonColor(newGameButton, greenButton);
+            //    ChangeButtonColor(continueButton, grayButton);
+            //}
+            //else
+            //{
+            //    ActivateButton(continueButton);
+            //    ChangeButtonColor(newGameButton, yellowButton);
+            //    ChangeButtonColor(continueButton, greenButton);
+            //    carrotViewer.SetCollectedCarrots(LOLSDKManager.Instance.Data.Score);
+            //}
+        }
+
+        private void LoadDataCallback(GameProgressData data)
+        {
+            if (data == null) return;
+            LOLSDKManager.Instance.AddData(data);
+            ActivateButton(continueButton);
+            ChangeButtonColor(newGameButton, yellowButton);
+            ChangeButtonColor(continueButton, greenButton);
+            carrotViewer.SetCollectedCarrots(data.Score);
         }
 
         //private void OnContinueClicked()

@@ -18,7 +18,7 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private TextMeshProUGUI heightViewer;
         [SerializeField] private string speedId;
         [SerializeField] private TextMeshProUGUI speedViewer;
-        [SerializeField] private string accelerationId;
+        [SerializeField] private string energyFlowId;
         [SerializeField] private TextMeshProUGUI accelerationViewer;
 
         private WaitForSeconds waitForFixedUpdate;
@@ -30,6 +30,7 @@ namespace ThePotentialJump.Gameplay
 
         private void Start()
         {
+            spaceShipRigidBody.drag = 0;
             StartCoroutine(UpdateForce());
         }
         public void TurnOnSpaceShip()
@@ -77,7 +78,7 @@ namespace ThePotentialJump.Gameplay
                 accelerationInFoot = accelerationInMeter * 3.28f;
                 heightViewer.text = $"{SharedState.LanguageDefs?[heightId]}  = {heightInMeter.ToString("F1")} m or {heightInFoot.ToString("F1")} ft";
                 speedViewer.text = $"{SharedState.LanguageDefs?[speedId]} = {speedInMeter.ToString("F1")} m/s or {speedInFoot.ToString("F1")} ft/s";
-                accelerationViewer.text = $"{SharedState.LanguageDefs?[accelerationId]} = {accelerationInMeter.ToString("F1")} m/s^2 or {accelerationInFoot.ToString("F1")} ft/s^2";
+                accelerationViewer.text = $"{SharedState.LanguageDefs?[energyFlowId]} = {energyRate} J"; // {accelerationInMeter.ToString("F1")} m/s^2 or {accelerationInFoot.ToString("F1")} ft/s^2";
                 yield return waitForFixedUpdate;
             }
         }

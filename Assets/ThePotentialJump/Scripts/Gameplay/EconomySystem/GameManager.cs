@@ -1,5 +1,6 @@
 ﻿using ThePotentialJump.Utilities;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace ThePotentialJump.Gameplay
@@ -10,6 +11,8 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private string nextLevel;
         [SerializeField] private SceneFadeInOut sceneFadeInOut;
 
+        public UnityEvent Restarted;
+        public UnityEvent GoneToMainMenu;
 
         public GameType GameType { get => gameType; }
 
@@ -26,11 +29,15 @@ namespace ThePotentialJump.Gameplay
 
         public void Restart()
         {
+            Time.timeScale = 1.0f;
+            Restarted?.Invoke();
             sceneFadeInOut.FadeOut(0.0f, SceneManager.GetActiveScene().name);
         }
 
         public void GoToMainMenu()
         {
+            Time.timeScale = 1.0f;
+            GoneToMainMenu?.Invoke();
             sceneFadeInOut.FadeOut(0.0f, "MainMenu");
         }
 

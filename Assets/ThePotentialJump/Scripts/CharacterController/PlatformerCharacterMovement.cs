@@ -22,6 +22,7 @@ namespace ThePotentialJump.CharacterController
             this.controller = controller;
             transform = controller.transform;
             rigidBody = controller.GetComponent<Rigidbody2D>();
+            rigidBody.drag = 0;
             waitFixedDeltaTime = new WaitForSeconds(Time.fixedDeltaTime);
             this.animator = animator;
             if (updateCoroutine != null) controller.StopCoroutine(updateCoroutine);
@@ -152,10 +153,17 @@ namespace ThePotentialJump.CharacterController
             rigidBody.velocity = veclocity;
             IsJumping = true;
             animator.SetBool("Jumping", true);
+            float startHeight = transform.position.y;
+            float jumpHeight = 0.0f;
             do
             {
+                if ((transform.position.y - startHeight)> jumpHeight)
+                {
+                    jumpHeight = transform.position.y - startHeight;
+                }
                 yield return null;
             } while (IsJumping);
+            Debug.Log("jumpHeight: " + jumpHeight);
             animator.SetBool("Jumping", false);
             IsJumping = false;
         }

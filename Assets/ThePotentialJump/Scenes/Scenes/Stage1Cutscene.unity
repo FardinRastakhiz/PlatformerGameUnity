@@ -289,6 +289,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4330521162999311352, guid: e925f13daaae1fb4288c3b09b26d7b80,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330521162999311352, guid: e925f13daaae1fb4288c3b09b26d7b80,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330521164111403727, guid: e925f13daaae1fb4288c3b09b26d7b80,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.2000122
+      objectReference: {fileID: 0}
     - target: {fileID: 8970373229295165632, guid: e925f13daaae1fb4288c3b09b26d7b80,
         type: 3}
       propertyPath: maxVolume
@@ -1763,6 +1778,12 @@ MonoBehaviour:
   gameType: 1
   nextLevel: Stage1
   sceneFadeInOut: {fileID: 749445669}
+  Restarted:
+    m_PersistentCalls:
+      m_Calls: []
+  GoneToMainMenu:
+    m_PersistentCalls:
+      m_Calls: []
   restart: 0
   goMainMenu: 0
   loadNextLevel: 0

@@ -36,7 +36,7 @@ namespace ThePotentialJump.Gameplay
             if (collision.gameObject.tag == "Weight")
             {
                 var droppableWeight = collision.gameObject.GetComponent<FreeDropWeight>();
-                var energy = collision.rigidbody.mass * Mathf.Pow(droppableWeight.MaxSpeed, 2) * 0.5f;
+                var energy = collision.rigidbody.mass * 9.81f * droppableWeight.DropHeight;
                 if (energy > minEnergyTolerance - energyThreshold)
                 {
                     droppableWeight.ReleaseEnergy(energy);
