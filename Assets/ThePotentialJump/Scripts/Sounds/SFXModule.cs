@@ -14,6 +14,9 @@ namespace ThePotentialJump.Sounds
                 Debug.LogError("SFXVolume.Instance cannot be null!");
                 return;
             }
+            if (SFXVolume.Instance.IsMute)
+                OnMute(this, null);
+            OnVolumeChange(this, new VolumeEventArgs { Volume = SFXVolume.Instance.Volume });
             SFXVolume.Instance.Muted += OnMute;
             SFXVolume.Instance.UnMuted += OnUnMute;
             SFXVolume.Instance.VolumeChanged += OnVolumeChange;

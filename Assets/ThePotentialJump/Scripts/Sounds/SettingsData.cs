@@ -21,10 +21,6 @@ namespace ThePotentialJump.Utilities
             musicVolume = musicVolumeClass.Volume;
             sfxMute = sfxVolumeClass.IsMute;
             musicMute = musicVolumeClass.IsMute;
-            Debug.Log($"sfxVolume: {sfxVolume}");
-            Debug.Log($"musicVolume: {musicVolume}");
-            Debug.Log($"sfxMute: {sfxMute}");
-            Debug.Log($"musicMute: {musicMute}");
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
@@ -66,7 +62,6 @@ namespace ThePotentialJump.Utilities
         }
         private void OnMusicVolumeChange(object sender, VolumeEventArgs e)
         {
-            Debug.Log($"musicVolume: {musicVolume}");
             musicVolume = e.Volume;
         }
 
@@ -80,7 +75,6 @@ namespace ThePotentialJump.Utilities
         }
         private void OnSFXVolumeChange(object sender, VolumeEventArgs e)
         {
-            Debug.Log($"sfxVolume: {sfxVolume}");
             sfxVolume = e.Volume;
         }
     }

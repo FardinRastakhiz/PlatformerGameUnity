@@ -79,7 +79,6 @@ namespace ThePotentialJump.Sounds
             var sign = Mathf.Sign(maxVolume - newMaxVolume);
             while (sign*(maxVolume - newMaxVolume) > float.Epsilon*2)
             {
-                Debug.Log("Update Update");
                 maxVolume -= sign * Time.deltaTime / fadeDuration;
                 audioSource.volume = volume * maxVolume;
                 yield return null;
