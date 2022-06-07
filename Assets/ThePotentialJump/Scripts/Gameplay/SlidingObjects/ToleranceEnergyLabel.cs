@@ -18,7 +18,7 @@ namespace ThePotentialJump.Gameplay
         {
             fadeInOut.FadeIn();
             transform.position = targetTransform.position + offset;
-            textComponent.text = $"{SharedState.LanguageDefs?[id]} = {energy.ToString("F1")} J";
+            textComponent.text = $"{SharedState.LanguageDefs?[id]} = {energy.ToString("F0")} J";
             bindPosition.StartBinding(targetTransform);
         }
 

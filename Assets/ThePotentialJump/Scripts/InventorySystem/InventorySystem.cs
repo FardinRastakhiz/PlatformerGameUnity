@@ -52,10 +52,15 @@ namespace ThePotentialJump.Inventory
             callback(inventoryCell);
         }
 
+        public event EventHandler<CellActivatedEventArgs> CellActivated;
+        private CellActivatedEventArgs cellActivatedEventArgs = new CellActivatedEventArgs();
+
         private void OnCellActivated(object sender, EventArgs e)
         {
             if (ActivatedCell != null) ActivatedCell.DeactivateCell();
             ActivatedCell = sender as InventoryCell;
+            cellActivatedEventArgs.ActivatedCell = ActivatedCell;
+            CellActivated?.Invoke(this, cellActivatedEventArgs);
         }
     }
 }

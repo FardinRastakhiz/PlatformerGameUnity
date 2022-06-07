@@ -10,6 +10,7 @@ namespace ThePotentialJump.Gameplay
         private float maxSpeedSquare = 0.0f;
         public override event System.EventHandler<ReplaceObjectEventArgs> Replace;
         public float MaxSpeed => Mathf.Sqrt(maxSpeedSquare);
+        public float Mass => rigidbody == null ? GetComponent<Rigidbody2D>().mass : rigidbody.mass;
 
         private void Awake()
         {
