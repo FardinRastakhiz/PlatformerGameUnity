@@ -20,7 +20,6 @@ namespace ThePotentialJump.Gameplay
         {
             yield return new WaitForSeconds(delay);
             var collectedCurrency = EconomySystem.Instance.CollectedOnCurrentScene;
-            Debug.Log($"collectedCurrency: {collectedCurrency}");
             if (collectedCurrency >= minCollectToWin)
                 Passed?.Invoke();
             else

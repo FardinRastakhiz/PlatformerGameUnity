@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoLSDK;
+using System;
 using System.Collections;
 using ThePotentialJump.Utilities;
 using UnityEngine;
@@ -25,6 +26,12 @@ namespace ThePotentialJump.Gameplay
         {
             StartCoroutine(SetupWithDelay());
             SceneManager.sceneLoaded += OnSceneLoaded;
+            CurrencyChanged += OnCurrencyChanged;
+        }
+
+        private void OnCurrencyChanged(object sender, TotalCurrencyChangedEventArgs e)
+        {
+            //LOLSDK.Instance.SubmitProgress(e.TotalCurrency, e.TotalCurrency, MaximumCapacity);
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
@@ -48,9 +55,7 @@ namespace ThePotentialJump.Gameplay
 
         public void Deposit(int amount)
         {
-            Debug.Log($"Depo amount: {amount},     Maximum capacity: {MaximumCapacity}");
             CollectedOnCurrentScene += amount;
-            Debug.Log($"CollectedOnCurrentScene: {CollectedOnCurrentScene}");
             temporaryTotalCurrency += amount;
             temporaryTotalCurrency = temporaryTotalCurrency > MaximumCapacity ? MaximumCapacity : temporaryTotalCurrency;
             totalCurrencyChanged.TotalCurrency = temporaryTotalCurrency;
@@ -60,7 +65,6 @@ namespace ThePotentialJump.Gameplay
 
         public void Withdraw(int amount)
         {
-            Debug.Log($"Depo amount: {amount}");
             if (temporaryTotalCurrency - amount < 0) return;
             temporaryTotalCurrency -= amount;
             if (CollectedOnCurrentScene - amount >= 0) CollectedOnCurrentScene -= amount;

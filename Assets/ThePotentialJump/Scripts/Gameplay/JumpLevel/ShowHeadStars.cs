@@ -10,6 +10,14 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private SpriteRenderer headStars;
         [SerializeField] private UnityEvent StartShowing;
         [SerializeField] private UnityEvent StopShowing;
+        [Space]
+        [SerializeField] private bool headStarsOnStart = false;
+
+        private void Start()
+        {
+            if(headStarsOnStart)
+                OnHeadHit();
+        }
 
         private Coroutine showStarsCoroutine;
         public void OnHeadHit()
