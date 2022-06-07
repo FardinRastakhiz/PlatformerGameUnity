@@ -279,6 +279,6 @@ MonoBehaviour:
   textMesh: {fileID: 3755558024212845887}
   offset: {x: 1, y: -0.5, z: 0}
   baseFloor: {fileID: 0}
-  misplaced: 0.7
+  cageHeight: 0.7
   dropRegion: {fileID: 0}
   cam: {fileID: 0}
