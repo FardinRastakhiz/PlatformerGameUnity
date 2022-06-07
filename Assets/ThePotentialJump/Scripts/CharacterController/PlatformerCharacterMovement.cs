@@ -150,7 +150,7 @@ namespace ThePotentialJump.CharacterController
         {
             var veclocity = rigidBody.velocity;
             veclocity.y = Mathf.Sqrt((holdedEnergy * 2.0f) / rigidBody.mass);
-            rigidBody.velocity = veclocity;
+            rigidBody.velocity = new Vector2(veclocity.x/2.0f, veclocity.y);
             IsJumping = true;
             animator.SetBool("Jumping", true);
             float startHeight = transform.position.y;
@@ -163,7 +163,6 @@ namespace ThePotentialJump.CharacterController
                 }
                 yield return null;
             } while (IsJumping);
-            Debug.Log("jumpHeight: " + jumpHeight);
             animator.SetBool("Jumping", false);
             IsJumping = false;
         }

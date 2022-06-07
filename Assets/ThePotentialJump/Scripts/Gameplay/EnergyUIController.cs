@@ -62,7 +62,6 @@ namespace ThePotentialJump.Gameplay
 
         public void SetUIValues(float value)
         {
-            Debug.Log(value);
             energySlider.value = value;
             inputField.text = ((int)value).ToString();
         }

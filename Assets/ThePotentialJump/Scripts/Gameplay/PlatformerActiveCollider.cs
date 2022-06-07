@@ -2,6 +2,7 @@
 using System.Collections;
 using ThePotentialJump.CharacterController;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Gameplay
 {
@@ -47,7 +48,7 @@ namespace ThePotentialJump.Gameplay
             if (updateCoroutine != null) StopCoroutine(updateCoroutine);
         }
 
-
+        Collider2D hbCollider;
         private IEnumerator CheckforActivate()
         {
             while (true)
@@ -55,12 +56,12 @@ namespace ThePotentialJump.Gameplay
                 yield return null;
                 if (hitCeiling || hitbodyTransform == null)
                     continue;
-                var hbCollider = hitbodyTransform.GetComponent<Collider2D>();
+                if(hbCollider==null) hbCollider = hitbodyTransform.GetComponent<Collider2D>();
                 if (hitbodyTransform.position.y > transform.position.y + plaformCollider.bounds.size.y / 2.0f)
                 {
                     plaformCollider.isTrigger =false;
                 }
-                else if (hitbodyTransform.position.y + hbCollider.bounds.size.y < transform.position.y - plaformCollider.bounds.size.y)
+                else if (hitbodyTransform.position.y + hbCollider.bounds.size.y/3.0f < transform.position.y - plaformCollider.bounds.size.y)
                 {
                     plaformCollider.isTrigger = true;
                 }

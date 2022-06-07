@@ -145,7 +145,6 @@ namespace ThePotentialJump.CharacterController
                     addDirection = 1;
                     holdedEnergy = 0;
                 }
-                Debug.Log($"{holdedEnergy} : {addDirection}");
                 holdedEnergy += Time.fixedDeltaTime * saveEnergyRate * addDirection;
                 holdEnergyEventArgs.Value = holdedEnergy;
                 energyUIController.SetUIValues(holdedEnergy);
