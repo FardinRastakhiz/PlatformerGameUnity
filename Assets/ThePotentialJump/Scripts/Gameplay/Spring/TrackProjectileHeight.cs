@@ -15,25 +15,24 @@ namespace ThePotentialJump.Gameplay
         private WaitForSeconds waitForFixedUpdate;
         private float maxHeight = 0.0f;
         private DropZone dropZone;
-        public void Awake()
-        {
-            Debug.Log($"Awake1 {this.GetType().Name}");
-            waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
-            Debug.Log($"Awake2 {this.GetType().Name}");
-            Debug.Log($"");
-            Debug.Log($"");
+        //public void Awake()
+        //{
+            //Debug.Log($"Awake1 {this.GetType().Name}");
+            //waitForFixedUpdate = new WaitForSeconds(Time.fixedDeltaTime);
+            //Debug.Log($"Awake2 {this.GetType().Name}");
+            //Debug.Log($"");
+            //Debug.Log($"");
 
-            UnityEngine.Object[] objects;
+            //UnityEngine.Object[] objects;
 
-            objects = UnityEngine.Object.FindObjectsOfType(typeof(MonoBehaviour));
-            foreach (MonoBehaviour monoBehaviour in objects)
-            {
-                Debug.Log(monoBehaviour.GetType().Name + " is attached to " + monoBehaviour.gameObject.name);
-            }
-            Debug.Log($"");
-            Debug.Log($"");
-
-        }
+            //objects = UnityEngine.Object.FindObjectsOfType(typeof(MonoBehaviour));
+            //foreach (MonoBehaviour monoBehaviour in objects)
+            //{
+            //    Debug.Log(monoBehaviour.GetType().Name + " is attached to " + monoBehaviour.gameObject.name);
+            //}
+            //Debug.Log($"");
+            //Debug.Log($"");
+        //}
 
 
         public IEnumerator BeginTracking(Transform Projectile, DropZone dropZone)

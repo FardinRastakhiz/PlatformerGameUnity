@@ -15,6 +15,7 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private TrackProjectileHeight projectilesTracker;
         [SerializeField] private DropZone[] dropZones;
         [SerializeField] private ProjectileParameters[] projectingWeights;
+        [SerializeField] private Sprite[] springs;
         [SerializeField] private ActivatePlatformCollider[] platforms;
         [SerializeField] private GameObject projectileExplosionPrefab;
         [Space]
@@ -52,17 +53,22 @@ namespace ThePotentialJump.Gameplay
             var nextWeightIndex = UnityEngine.Random.Range(0, weightsCount);
 
             activeProjectile = Instantiate(projectilePrefab, springController.transform.position + Vector3.up * 2, Quaternion.identity, springSystem);
+            activeProjectile.transform.localScale = 0.04f * Mathf.Log(projectingWeightsList[nextWeightIndex].Mass) * Vector3.one;
             activeProjectile.SetSprite(projectingWeightsList[nextWeightIndex].Icon);
             activeProjectile.SetMass(projectingWeightsList[nextWeightIndex].Mass);
             activeProjectile.ReplaceObjectPrefab = projectileExplosionPrefab;
             SetPlatformsHitBody(activeProjectile.transform);
+            float targetMass = projectingWeightsList[nextWeightIndex].Mass;
             projectingWeightsList.RemoveAt(nextWeightIndex);
             weightsCount = projectingWeightsList.Count;
 
 
             activeProjectile.Replace += OnProjectileDestroyed;
             activeProjectile.Replace += projectilesTracker.OnProjectileDestroyed;
-            springController.AddProjectile(activeProjectile, true);
+
+            int springIndex = GetSpringIndex(targetMass);
+            print($"targetMass: {targetMass}, springIndex: {springIndex}");
+            springController.AddProjectile(activeProjectile, springs[springIndex], true);
 
 
             var nextZoneIndex = UnityEngine.Random.Range(0, dropZonesCount);
@@ -75,6 +81,19 @@ namespace ThePotentialJump.Gameplay
             }
 
             StartCoroutine(projectilesTracker.BeginTracking(activeProjectile.transform, activeZone));
+        }
+
+        private int GetSpringIndex(float mass)
+        {
+            if(mass < 40)
+            {
+                return 0;
+            }
+            else if (mass < 75)
+            {
+                return 1;
+            }
+            return 2;
         }
 
         public void SetPlatformsHitBody(Transform targetBody)

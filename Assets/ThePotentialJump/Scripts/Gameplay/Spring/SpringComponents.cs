@@ -32,5 +32,10 @@ namespace ThePotentialJump.Gameplay
             springCollider.offset = new Vector2(0, size / 2.0f);
             springCollider.size = new Vector2(springCollider.size.x, size);
         }
+
+        public void ChangeSpring(Sprite springSprite)
+        {
+            spring.sprite = springSprite;
+        }
     }
 }

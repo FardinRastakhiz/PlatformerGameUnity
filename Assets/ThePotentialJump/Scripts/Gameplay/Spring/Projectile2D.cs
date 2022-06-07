@@ -30,7 +30,6 @@ namespace ThePotentialJump.Gameplay
                 Parent = transform.parent,
                 Position = transform.position
             });
-            Debug.Log("dESTROYED"); 
         }
 
         private WaitForSeconds waitForSeconds;

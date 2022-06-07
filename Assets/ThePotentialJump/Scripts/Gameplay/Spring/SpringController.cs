@@ -49,12 +49,13 @@ namespace ThePotentialJump.Gameplay
             }
         }
 
-        public void AddProjectile(Projectile2D projectile, bool resetConstant = false)
+        public void AddProjectile(Projectile2D projectile, Sprite springSprite, bool resetConstant = false)
         {
             springPhysics.AddProjectile(projectile, resetConstant);
             if (resetConstant)
             {
                 energyUIController.SetupSlider(transform.position, GetEnergy(springComponents.MaxCompressCapacity));
+                springComponents.ChangeSpring(springSprite);
             }
         }
 
