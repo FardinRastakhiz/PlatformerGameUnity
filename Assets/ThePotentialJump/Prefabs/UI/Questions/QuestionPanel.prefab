@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 464072772034340194}
   - component: {fileID: 8259189295709020592}
   - component: {fileID: -4749729069066400466}
+  - component: {fileID: 7632322278482102494}
   m_Layer: 5
   m_Name: QuestionPanel
   m_TagString: Untagged
@@ -555,11 +556,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7632322278482102494}
+        m_MethodName: OnSubmitProgress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   AnsweredIncorrectly:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7114410225126876824}
         m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7632322278482102494}
+        m_MethodName: OnSubmitProgress
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -595,6 +618,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ttsAudioSource: {fileID: 0}
+--- !u!114 &7632322278482102494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8646565712235383142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b64641f71b51f46bb72eb191194874, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressValue: 0
+  maxProgressValue: 100
 --- !u!1001 &6073845452435472881
 PrefabInstance:
   m_ObjectHideFlags: 0

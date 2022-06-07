@@ -1,12 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using LoLSDK;
+using System.Collections;
 using UnityEngine;
 
 
-public class GameCompleted : MonoBehaviour
+namespace ThePotentialJump.Gameplay
 {
-    public void OnClick()
+    public class GameCompleted : MonoBehaviour
     {
-        ///LoLSDK.
+        public void Start()
+        {
+            StartCoroutine(CompleteWithDelay());
+        }
+        IEnumerator CompleteWithDelay()
+        {
+            yield return new WaitForSeconds(2);
+            LOLSDK.Instance.CompleteGame();
+        }
     }
 }

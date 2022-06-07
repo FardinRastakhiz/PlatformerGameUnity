@@ -1,4 +1,5 @@
 ﻿using ThePotentialJump.Inputs;
+using ThePotentialJump.Utilities;
 using UnityEngine;
 
 namespace ThePotentialJump.Menus
@@ -22,6 +23,7 @@ namespace ThePotentialJump.Menus
 
         public void OnActivatePause()
         {
+            if (SceneFadeInOut.Instance.FadingOut) return;
             if (PauseMenu.Instance.IsActive) return;
             pauseMenuController.SetBool("ShowPauseMenu", true);
         }
