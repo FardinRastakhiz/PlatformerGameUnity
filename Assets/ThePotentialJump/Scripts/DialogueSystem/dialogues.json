@@ -49,6 +49,26 @@
 		"speaker": "jackie",
 		"paragraph": "dialogue_1_13",
 		"titleAlignment": "Right"
+		},
+	"21": {
+		"speaker": "evelyn",
+		"paragraph": "dialogue_1_21",
+		"titleAlignment": "Right"
+		},
+	"22": {
+		"speaker": "evelyn",
+		"paragraph": "dialogue_1_22",
+		"titleAlignment": "Right"
+		},
+	"23": {
+		"speaker": "evelyn",
+		"paragraph": "dialogue_1_23",
+		"titleAlignment": "Right"
+		},
+	"24": {
+		"speaker": "evelyn",
+		"paragraph": "dialogue_1_24",
+		"titleAlignment": "Right"
 		}
 	},
 "2":{

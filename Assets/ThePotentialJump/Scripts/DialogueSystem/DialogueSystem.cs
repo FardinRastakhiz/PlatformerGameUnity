@@ -90,8 +90,9 @@ namespace ThePotentialJump.Dialogues
                                             float endingPause = 0.0f)
         {
             this.onFinishSectionAction = onFinishSectionAction;
+            //Debug.Log($"stage: {stage}, section: {section}");
             var ds = dialogues[stage][section];
-            dialogueTitle.text = SharedState.LanguageDefs?[ds.Speaker];
+            dialogueTitle.text = $"<color=yellow>{SharedState.LanguageDefs?[ds.Speaker]}</color>";
             dialogueTitle.alignment = ds.TitleAlignment;
             dialogueTextField.text = "";
             //closeButton.interactable = false;
@@ -110,7 +111,7 @@ namespace ThePotentialJump.Dialogues
             yield return FadeIn();
             yield return new WaitForSeconds(beginPause);
             StringBuilder sb = new StringBuilder();
-            print("SharedState.StartGameData.Value: "+SharedState.StartGameData.Value);
+            //print("SharedState.StartGameData.Value: "+SharedState.StartGameData.Value);
             var waitTime = new WaitForSeconds(1.0f / (characterPerSecond * 1.0f));
             for(int i = 0; i< dialogueText.Length; i++)
             {
