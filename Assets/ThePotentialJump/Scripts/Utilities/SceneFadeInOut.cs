@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 namespace ThePotentialJump.Utilities
 {
-    public class SceneFadeInOut : MonoBehaviour
+    public class SceneFadeInOut : MonoSingleton<SceneFadeInOut>
     {
         [SerializeField] private float fadeInDuration = 3.0f;
         [SerializeField] private float fadeOutDuration = 3.0f;
@@ -18,8 +18,10 @@ namespace ThePotentialJump.Utilities
         [SerializeField] private UnityEvent FadeInCompleted;
         [SerializeField] private UnityEvent FadeOutBegan;
 
-        private void Awake()
+        protected override void Awake()
         {
+            destroyOnLoad = true;
+            base.Awake();
             if (coverAnimator == null) coverAnimator = GetComponent<Animator>();
         }
         private void Start()
@@ -45,6 +47,7 @@ namespace ThePotentialJump.Utilities
         {
             if (!string.IsNullOrEmpty(nextLevelToLoad))
                 this.nextLevelToLoad = nextLevelToLoad;
+            GC.Collect();
             StartCoroutine(FadeOutCoroutine(delay));
         }
 
@@ -63,8 +66,11 @@ namespace ThePotentialJump.Utilities
                 }
             }
         }
+
+        public bool FadingOut { get; set; } = false;
         IEnumerator FadeOutCoroutine(float delay = 0.0f)
         {
+            FadingOut = true;
             yield return new WaitForSeconds(delay);
             FadeOutBegan?.Invoke();
             coverAnimator.SetBool("fadeOut", true);

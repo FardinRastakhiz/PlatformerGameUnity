@@ -6,6 +6,7 @@ namespace ThePotentialJump.Utilities
     public class SpritesGroup : MonoBehaviour
     {
         [SerializeField] private float alpha = 1.0f;
+        [SerializeField] private bool destroyOnHidden = false;
 
         private WaitForSeconds waitForFixedUpdate;
         private float epsilon = float.Epsilon;
@@ -46,6 +47,10 @@ namespace ThePotentialJump.Utilities
             {
                 Alpha -= Time.fixedDeltaTime * 2f;
                 yield return waitForFixedUpdate;
+            }
+            if (destroyOnHidden)
+            {
+                Destroy(this.gameObject);
             }
         }
 

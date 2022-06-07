@@ -11,15 +11,18 @@ namespace ThePotentialJump.EditorUtilities
         {
             if (!canvasGroup) canvasGroup = GetComponent<CanvasGroup>();
         }
-
+        private Coroutine fadeInCoroutine;
+        private Coroutine fadeOutCoroutine;
         public void FadeIn()
         {
-            StartCoroutine(StartFadingIn());
+            if (fadeOutCoroutine != null) StopCoroutine(fadeOutCoroutine);
+            fadeInCoroutine = StartCoroutine(StartFadingIn());
         }
 
         public void FadeOut()
         {
-            StartCoroutine(StartFadingOut());
+            if (fadeInCoroutine != null) StopCoroutine(fadeInCoroutine);
+            fadeOutCoroutine = StartCoroutine(StartFadingOut());
         }
 
         IEnumerator StartFadingIn()

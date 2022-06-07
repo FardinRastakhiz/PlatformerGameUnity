@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using ThePotentialJump.Inventory;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ThePotentialJump.Utilities
 {
@@ -95,11 +97,22 @@ namespace ThePotentialJump.Utilities
         }
 
         public float Height { get; set; }
+        private string lastHeightText = "";
+        public event EventHandler<HeightChangedEventArgs> HeightChanged;
+        private HeightChangedEventArgs heightChangedEventArgs = new HeightChangedEventArgs();
         private void UpdateTextValue()
         {
             Height = transform.position.y - floorHeight;
-            float inFoot = Height * 3.28f;
-            textMesh.text = $"{(Mathf.Floor((Height) * 100.0f) / 100.0f)} m / {(Mathf.Floor((inFoot) * 100.0f) / 100.0f)} ft";
+            Height = Mathf.Floor((Height) * 100.0f) / 100.0f;
+            //float inFoot = Height * 3.28f;
+            textMesh.text = $"{Height.ToString("F1")} m";// / {(Mathf.Floor((inFoot) * 100.0f) / 100.0f)} ft";
+            if(textMesh.text != lastHeightText)
+            {
+                lastHeightText = textMesh.text;
+                heightChangedEventArgs.Height = Height;
+                HeightChanged?.Invoke(this, heightChangedEventArgs);
+            }
+
         }
     }
 

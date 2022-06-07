@@ -43,8 +43,6 @@ namespace ThePotentialJump.ProgressSystem
 
         public void Finish(object o, EventArgs e)
         {
-            Debug.Log(this.name);
-            Debug.Log("AnimationExitted");
             Finished?.Invoke();
         }
     }

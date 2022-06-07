@@ -12,6 +12,7 @@ namespace ThePotentialJump.Utilities
     {
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private float fadingRate = 1.0f;
+        [SerializeField] private bool reverse = false;
 
         private CancellationToken cancellation = new CancellationToken();
 
@@ -23,14 +24,30 @@ namespace ThePotentialJump.Utilities
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            cancellation.IsCancelled = true;
-            StartCoroutine(FadeOut());
+            if (reverse)
+            {
+                cancellation.IsCancelled = false;
+                StartCoroutine(FadeIn());
+            }
+            else
+            {
+                cancellation.IsCancelled = true;
+                StartCoroutine(FadeOut());
+            }
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
-            cancellation.IsCancelled = false;
-            StartCoroutine(FadeIn());
+            if (reverse)
+            {
+                cancellation.IsCancelled = true;
+                StartCoroutine(FadeOut());
+            }
+            else
+            {
+                cancellation.IsCancelled = false;
+                StartCoroutine(FadeIn());
+            }
         }
 
         IEnumerator FadeIn()
