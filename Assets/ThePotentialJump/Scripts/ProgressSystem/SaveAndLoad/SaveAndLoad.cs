@@ -30,16 +30,11 @@ namespace ThePotentialJump.ProgressSystem
 
         public void SaveProgress()
         {
-            Debug.Log($"Save 1: {data}");
             if (data == null) data = new GameProgressData();
-            Debug.Log($"Save 2: {data.LastCompletedLevel}");
             data.LastCompletedLevel = SceneManager.GetActiveScene().name;
-            Debug.Log($"Save 3: {data.Score}");
             data.Score = EconomySystem.Instance.TotalCurrency;
-            Debug.Log($"Save 4: {data.LastCompletedLevel}");
             if (!data.CompletedLevels.Contains(data.LastCompletedLevel))
                 data.CompletedLevels.Add(data.LastCompletedLevel);
-            Debug.Log($"Save 5: {data.CompletedLevels.Contains(data.LastCompletedLevel)}");
 
             //LOLSDK.Instance.SubmitProgress(
             //    EconomySystem.Instance.TotalCurrency,
@@ -77,39 +72,39 @@ namespace ThePotentialJump.ProgressSystem
             LOLSDK.Instance.SaveResultReceived -= OnSaveResult;
         }
 
-        public GameProgressData LoadGameProgress()
-        {
-            Debug.Log($"1: {LOLSDK.Instance}");
-            if (LOLSDK.Instance == null)
-            {
-                Debug.LogError("LOLSDK.Instance cannot be null!");
-                return null;
-            }
-            GameProgressData data = null;
-            Debug.Log($"2: {data}");
-            LOLSDK.Instance.LoadState<GameProgressData>(state =>
-            {
-                Debug.Log($"3: {state}");
-                if (state != null)
-                {
-                    data = state.data;
-                    Debug.Log($"4: {data}");
-                    var totalCurrency = EconomySystem.Instance.TotalCurrency;
-                    EconomySystem.Instance.LoadSavedCurrency(data.Score - totalCurrency);
-                    LOLSDK.Instance.SubmitProgress(state.score, state.currentProgress, state.maximumProgress);
-                }
-                else
-                {
-                    Debug.Log("Saved sate is null");
-                }
-            });
-            Debug.Log($"5: {data}");
-            if (data != null)
-                Debug.Log($"data: {data.Score},  {data.CompletedLevels},   {data.LastCompletedLevel}");
-            else
-                Debug.Log("data is null");
-            return data;
-        }
+        //public GameProgressData LoadGameProgress()
+        //{
+        //    Debug.Log($"1: {LOLSDK.Instance}");
+        //    if (LOLSDK.Instance == null)
+        //    {
+        //        Debug.LogError("LOLSDK.Instance cannot be null!");
+        //        return null;
+        //    }
+        //    GameProgressData data = null;
+        //    Debug.Log($"2: {data}");
+        //    LOLSDK.Instance.LoadState<GameProgressData>(state =>
+        //    {
+        //        Debug.Log($"3: {state}");
+        //        if (state != null)
+        //        {
+        //            data = state.data;
+        //            Debug.Log($"4: {data}");
+        //            var totalCurrency = EconomySystem.Instance.TotalCurrency;
+        //            EconomySystem.Instance.LoadSavedCurrency(data.Score - totalCurrency);
+        //            LOLSDK.Instance.SubmitProgress(state.score, state.currentProgress, state.maximumProgress);
+        //        }
+        //        else
+        //        {
+        //            Debug.Log("Saved sate is null");
+        //        }
+        //    });
+        //    Debug.Log($"5: {data}");
+        //    if (data != null)
+        //        Debug.Log($"data: {data.Score},  {data.CompletedLevels},   {data.LastCompletedLevel}");
+        //    else
+        //        Debug.Log("data is null");
+        //    return data;
+        //}
 
         public void StateButtonInitialize<T>(Button newGameButton, Button continueButton, System.Action<T> callback)
             where T : class

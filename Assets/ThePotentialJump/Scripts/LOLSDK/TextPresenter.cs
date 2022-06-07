@@ -15,7 +15,14 @@ namespace ThePotentialJump
         }
         public virtual void AlterLanguage(JSONNode langNode)
         {
-            textComponent.text = langNode?[id];
+            try
+            {
+                textComponent.text = langNode?[id];
+            }
+            catch
+            {
+                print($"hint id: {id}");
+            }
         }
     }
 

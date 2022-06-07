@@ -273,7 +273,7 @@ namespace LoLSDK
         public void GameIsReady(string gameName, string callbackGameObject, string aspectRatio, string resolution)
         {
             _gameName = gameName;
-            Debug.Log($"GameIsReady Editor - name: {gameName}, callbackGameObject: {callbackGameObject}");
+            //Debug.Log($"GameIsReady Editor - name: {gameName}, callbackGameObject: {callbackGameObject}");
         }
 
         /* *********************************************
@@ -305,12 +305,12 @@ namespace LoLSDK
 
         public void SpeakText(string key)
         {
-            Debug.Log("SpeakText");
+            //Debug.Log("SpeakText");
         }
 
         public void CancelSpeakText()
         {
-            Debug.Log("Cancel SpeakText. NOTE: Will not cancel editor testing SpeakText.");
+            //Debug.Log("Cancel SpeakText. NOTE: Will not cancel editor testing SpeakText.");
         }
 
         Coroutine pollyTTSRequest;
@@ -389,7 +389,7 @@ namespace LoLSDK
 
                 onDownloaded?.Invoke(((DownloadHandlerAudioClip)clipRequest.downloadHandler).audioClip);
 
-                Debug.Log("Playing polly tts: " + text);
+                //Debug.Log("Playing polly tts: " + text);
 
                 pollyTTSRequest = null;
             }
@@ -448,7 +448,7 @@ namespace LoLSDK
 
         public void GetPlayerActivityId()
         {
-            Debug.Log("GetPlayerActivityId");
+            //Debug.Log("GetPlayerActivityId");
         }
     }
 #endif

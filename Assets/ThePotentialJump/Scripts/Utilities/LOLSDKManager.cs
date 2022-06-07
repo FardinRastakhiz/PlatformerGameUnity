@@ -109,9 +109,7 @@ namespace ThePotentialJump.Utilities
         // Store the questions and show them in order based on your game flow.
         void HandleQuestions(MultipleChoiceQuestionList questionList)
         {
-            Debug.Log("HandleQuestions");
             SharedState.QuestionList = questionList;
-            Debug.Log("HandleQuestions: questionList");
         }
 
         // Handle pause / resume
@@ -126,7 +124,6 @@ namespace ThePotentialJump.Utilities
                     ResumeActivator.Instance?.OnActivateResume();
                     break;
             }
-            Debug.Log($"Game State: {gameState}");
 			// SaveAndLoad.Instance.LoadGameProgress();
 		}
 
@@ -151,7 +148,6 @@ namespace ThePotentialJump.Utilities
             string startDataFilePath = Path.Combine(Application.streamingAssetsPath, startGameJSONFilePath);
             string langCode = "en";
 
-            Debug.Log(File.Exists(startDataFilePath));
 
             if (File.Exists(startDataFilePath))
             {

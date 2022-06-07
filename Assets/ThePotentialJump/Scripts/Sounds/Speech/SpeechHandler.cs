@@ -21,7 +21,7 @@ public class SpeechHandler : MonoBehaviour
 		// Stop any current tts.
 		string languageCode = SharedState.StartGameData["languageCode"];
 		_ttsAudioSource.Stop();
-		print(languageCode);
+		//print(languageCode);
 		// Speak the clip of text requested from using this MonoBehaviour as the coroutine owner.
 		((ILOLSDK_EDITOR)LOLSDK.Instance.PostMessage).SpeakText(SharedState.LanguageDefs?[key].Value,
 			clip => {_ttsAudioSource.clip = clip; _ttsAudioSource.Play(); },
