@@ -18,6 +18,7 @@ namespace ThePotentialJump.Gameplay
         }
 
         private Coroutine updateRulerCoroutine;
+        private Coroutine hideRulerCoroutine;
         private Vector3 startPosition = Vector3.zero;
         public void OnStartUpdateRuler(Transform targetBinding)
         {
@@ -38,8 +39,11 @@ namespace ThePotentialJump.Gameplay
 
         public void OnStopUpdateRuler()
         {
+            if (hideRulerCoroutine != null)
+                StopCoroutine(hideRulerCoroutine);
             if (updateRulerCoroutine != null)
                 StopCoroutine(updateRulerCoroutine);
+            hideRulerCoroutine = StartCoroutine(HideWithDelay(showDuration));
         }
 
         public void OnHideRuler()
@@ -55,6 +59,13 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private float scale;
         [SerializeField] private float baseSize;
         [SerializeField] private Vector3 offset;
+        [SerializeField] private float showDuration = 15.0f;
+
+        IEnumerator HideWithDelay(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            OnHideRuler();
+        }
         IEnumerator UpdateRuler(Transform targetBinding)
         {
             while (true)
