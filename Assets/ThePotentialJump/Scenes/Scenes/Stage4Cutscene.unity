@@ -7109,6 +7109,12 @@ MonoBehaviour:
   gameType: 1
   nextLevel: Stage4
   sceneFadeInOut: {fileID: 749445669}
+  Restarted:
+    m_PersistentCalls:
+      m_Calls: []
+  GoneToMainMenu:
+    m_PersistentCalls:
+      m_Calls: []
   restart: 0
   goMainMenu: 0
   loadNextLevel: 0
@@ -14281,6 +14287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alpha: 0
+  destroyOnHidden: 0
 --- !u!225 &1955649818
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -17304,7 +17311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2452489010965133329
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17545,7 +17552,7 @@ PrefabInstance:
     - target: {fileID: 7965923654795715921, guid: ab916a3704cd07f44a6ee651796a25e8,
         type: 3}
       propertyPath: orthographic size
-      value: 11.859375
+      value: 10.3125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab916a3704cd07f44a6ee651796a25e8, type: 3}

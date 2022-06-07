@@ -8,6 +8,9 @@ namespace ThePotentialJump.Gameplay
         [SerializeField] private float fadeInDuration = 1.0f;
         [SerializeField] private float fadeOutDuration = 1.0f;
         [SerializeField] private float presentDuration = 5.0f;
+        [Space]
+        [SerializeField] private bool blockRaycast = true;
+        [SerializeField] private bool interactable = true;
 
         [Space]
         [SerializeField] private CanvasGroup canvasGroup;
@@ -22,7 +25,7 @@ namespace ThePotentialJump.Gameplay
         {
             if (!scheduled) return;
             if (scheduleCoroutine != null) StopCoroutine(scheduleCoroutine);
-            scheduleCoroutine = StartCoroutine(scheduling());
+            scheduleCoroutine = StartCoroutine(Scheduling());
         }
 
         private void OnDisable()
@@ -34,15 +37,20 @@ namespace ThePotentialJump.Gameplay
         public void FadeIn()
         {
             StopCoroutines();
-            StartCoroutine(FadeInCoroutine(fadeInDuration));
+
+            if (scheduled)
+                scheduleCoroutine = StartCoroutine(Scheduling());
+            else
+                fadeInCoroutine = StartCoroutine(FadeInCoroutine(fadeInDuration));
         }
         public void FadeOut()
         {
             StopCoroutines();
-            StartCoroutine(FadeOutCoroutine(fadeOutDuration));
+            fadeOutCoroutine = StartCoroutine(FadeOutCoroutine(fadeOutDuration));
         }
 
-        IEnumerator scheduling()
+
+        IEnumerator Scheduling()
         {
             yield return FadeInCoroutine(fadeInDuration);
             yield return new WaitForSeconds(presentDuration);
@@ -52,17 +60,16 @@ namespace ThePotentialJump.Gameplay
 
         IEnumerator FadeInCoroutine(float fadeInDuration)
         {
+            canvasGroup.interactable = blockRaycast;
+            canvasGroup.blocksRaycasts = interactable;
             while (canvasGroup.alpha < 1)
             {
                 canvasGroup.alpha += Time.deltaTime * 1.0f / fadeInDuration;
                 yield return null;
             }
-            canvasGroup.interactable = true;
-            canvasGroup.blocksRaycasts = true;
         }
         IEnumerator FadeOutCoroutine(float fadeOutDuration)
         {
-
             while (canvasGroup.alpha > 0)
             {
                 canvasGroup.alpha -= Time.deltaTime * 1.0f / fadeOutDuration;
