@@ -1,0 +1,1043 @@
+fileFormatVersion: 2
+guid: b9248084647eea143b6ec984cb1178be
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 480747311026274845
+    second: Pine Needles 08
+  - first:
+      213: -5331290304776637444
+    second: BG Building 01 T-310 B-128
+  - first:
+      213: -2966362890043969121
+    second: BG Building 02 T-340 B-140
+  - first:
+      213: -4598832124919308699
+    second: BG Bridge 01 LR-128
+  - first:
+      213: 163474069382202118
+    second: BG Building 03
+  - first:
+      213: 8783396234734320317
+    second: Pine Needles 07
+  - first:
+      213: 7265703526885160360
+    second: BG Bridge 02 LR-128
+  - first:
+      213: -8686475156540293427
+    second: Pine Needles 06
+  - first:
+      213: -3763446575997454608
+    second: Pavement 01 LR-128
+  - first:
+      213: -3355389924021739771
+    second: Pavement 02 LR-256
+  - first:
+      213: -8204546953777243590
+    second: Pine Needles 05
+  - first:
+      213: 6764804724085713091
+    second: Stones 02
+  - first:
+      213: -6122623647737794869
+    second: Pine Needles 04
+  - first:
+      213: 1409309881116252654
+    second: Pine Needles 03
+  - first:
+      213: 6356049483952842355
+    second: Stones 01
+  - first:
+      213: 4267562217521859196
+    second: Stones 04
+  - first:
+      213: 1565753604293991679
+    second: Pine Needles 02
+  - first:
+      213: -5899483887500180312
+    second: Stones 03
+  - first:
+      213: 6141083276740684161
+    second: Tree Pine 01
+  - first:
+      213: 4698193682968500961
+    second: Pine Needles 01
+  - first:
+      213: 97985520712042729
+    second: Bush 05
+  - first:
+      213: -3623944835536719136
+    second: Bush 04
+  - first:
+      213: -5101571587787245758
+    second: Bush 03
+  - first:
+      213: -8162296317901528679
+    second: Bush 02
+  - first:
+      213: -1133838059554327100
+    second: Bush 01
+  - first:
+      213: 2871809083168267183
+    second: Bush Silhouette 01
+  - first:
+      213: -3740240981187414641
+    second: Tree Pine 02
+  - first:
+      213: -4143541199454401157
+    second: Tree Pine 04
+  - first:
+      213: -5643949043595665689
+    second: Tree Pine 03
+  - first:
+      213: 701010953856558896
+    second: Tree Pine 05
+  - first:
+      213: 5437213662620271355
+    second: Cloud 01
+  - first:
+      213: -7008000529349467411
+    second: Cloud 02
+  - first:
+      213: 1298942523726499995
+    second: Cloud 03
+  - first:
+      213: -6074261476714486436
+    second: Cloud 04
+  - first:
+      213: 7330442994542847196
+    second: BG Building 04
+  - first:
+      213: 9204270426104758204
+    second: House 03 BG
+  - first:
+      213: -3417805561918056932
+    second: House 01 BG
+  - first:
+      213: -9143984979458973958
+    second: House 03 BG
+  - first:
+      213: 8139903468104270694
+    second: House 02 BG
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pine Needles 08
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3316
+        width: 680
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12027cd125fba600800000000000000
+      internalID: 480747311026274845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 01 T-310 B-128
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 3072
+        width: 360
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 128, z: 0, w: 310}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3fd45d6b37306b0800000000000000
+      internalID: -5331290304776637444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 02 T-340 B-140
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 3072
+        width: 420
+        height: 900
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 140, z: 0, w: 340}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9137000bac55d6d0800000000000000
+      internalID: -2966362890043969121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Bridge 01 LR-128
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3302
+        width: 512
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e978c4c8aad20c0800000000000000
+      internalID: -4598832124919308699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 03
+      rect:
+        serializedVersion: 2
+        x: 2636
+        y: 3072
+        width: 1460
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603838bccc6c44200800000000000000
+      internalID: 163474069382202118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 07
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3050
+        width: 660
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbab7dcc654e4e970800000000000000
+      internalID: 8783396234734320317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Bridge 02 LR-128
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 3072
+        width: 512
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5fa43ccd6f4d460800000000000000
+      internalID: 7265703526885160360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 06
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2825
+        width: 615
+        height: 215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcef8283ed0737780800000000000000
+      internalID: -8686475156540293427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pavement 01 LR-128
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 2934
+        width: 1152
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f6f28a574d85cbc0800000000000000
+      internalID: -3763446575997454608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pavement 02 LR-256
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2934
+        width: 2048
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f52c744a24f61d0800000000000000
+      internalID: -3355389924021739771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 05
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2525
+        width: 512
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a181dd308932e80800000000000000
+      internalID: -8204546953777243590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 02
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 2270
+        width: 650
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8630a1e0a61ed50800000000000000
+      internalID: 6764804724085713091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 04
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2285
+        width: 460
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bceae2f3b32180ba0800000000000000
+      internalID: -6122623647737794869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 03
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2101
+        width: 472
+        height: 174
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee9d16abedfde8310800000000000000
+      internalID: 1409309881116252654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 01
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1660
+        width: 800
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37660d17459353850800000000000000
+      internalID: 6356049483952842355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 04
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1996
+        width: 808
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ac440f93d693b30800000000000000
+      internalID: 4267562217521859196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 02
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1931
+        width: 430
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc1bbd7b9caab510800000000000000
+      internalID: 1565753604293991679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stones 03
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1556
+        width: 1024
+        height: 430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4496f39a2d02ea0800000000000000
+      internalID: -5899483887500180312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 01
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 2044
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189683e04b2893550800000000000000
+      internalID: 6141083276740684161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pine Needles 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1665
+        width: 200
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea52573346533140800000000000000
+      internalID: 4698193682968500961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 05
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1290
+        width: 465
+        height: 370
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e84c2bdf4d1c5100800000000000000
+      internalID: 97985520712042729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 04
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1290
+        width: 534
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2f8306f5925bdc0800000000000000
+      internalID: -3623944835536719136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 03
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1290
+        width: 480
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24737b19ba39339b0800000000000000
+      internalID: -5101571587787245758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 02
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 1290
+        width: 512
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991200c9eb2b9be80800000000000000
+      internalID: -8162296317901528679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush 01
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1290
+        width: 259
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c5327bca4cc340f0800000000000000
+      internalID: -1133838059554327100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush Silhouette 01
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1034
+        width: 511
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab1cf84527bad720800000000000000
+      internalID: 2871809083168267183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 02
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 768
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8537fde4aef71cc0800000000000000
+      internalID: -3740240981187414641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 04
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 0
+        width: 670
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d03568b3f2f76c0800000000000000
+      internalID: -4143541199454401157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 03
+      rect:
+        serializedVersion: 2
+        x: 2038
+        y: 0
+        width: 1024
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee131e6f3aaca1b0800000000000000
+      internalID: -5643949043595665689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree Pine 05
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 512
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03727489fbd7ab900800000000000000
+      internalID: 701010953856558896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 01
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 2644
+        width: 510
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf2c160c40dd47b40800000000000000
+      internalID: 5437213662620271355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 02
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 2304
+        width: 560
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2206606a49ebe90800000000000000
+      internalID: -7008000529349467411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 03
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 2570
+        width: 800
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b901e5ed755c60210800000000000000
+      internalID: 1298942523726499995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud 04
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 2570
+        width: 1024
+        height: 354
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55e797ae53e3bba0800000000000000
+      internalID: -6074261476714486436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG Building 04
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 3072
+        width: 347
+        height: 1024
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd42affa017fab560800000000000000
+      internalID: 7330442994542847196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House 03 BG
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 1812
+        width: 366
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbf7b9caf232cbf70800000000000000
+      internalID: 9204270426104758204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House 01 BG
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 1290
+        width: 420
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16158223f38190d0800000000000000
+      internalID: -3417805561918056932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: House 02 BG
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 1812
+        width: 360
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6634352c31fb6f070800000000000000
+      internalID: 8139903468104270694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

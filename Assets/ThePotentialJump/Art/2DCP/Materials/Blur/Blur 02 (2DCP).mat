@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blur 02 (2DCP)
+  m_Shader: {fileID: 4800000, guid: cf81c85f95fe47e1a27f6ae460cf182c, type: 3}
+  m_ShaderKeywords: BOOLEAN_A8233755860F4314A3B431B642C00DED_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_42c9ff981a5f417697eec8caf49aa0fe:
+        m_Texture: {fileID: 2800000, guid: 8ad9ccf5cf0897642929c5ae97c03705, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_5aee361f82744714a12a7fe8150c2602:
+        m_Texture: {fileID: 2800000, guid: 11454648eaed1d842b7d425a326edf72, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_76ecdae0298a46df8503e3c15d059ebb:
+        m_Texture: {fileID: 2800000, guid: 3f581e81776a1d04e82fe623ab6fdc2b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_860f1f5651fd47538dd47bc42cd1455c:
+        m_Texture: {fileID: 2800000, guid: a8d1dc7096e0c334f830c27998a9ff99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8fa47e525978403c840c714383053275:
+        m_Texture: {fileID: 2800000, guid: b9248084647eea143b6ec984cb1178be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_cc2d2bcf380b438a96fb6f6c8dc7aed9:
+        m_Texture: {fileID: 2800000, guid: 2125627d5d04df748b6c3dec73e00462, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_dfc36bd9d8574eb58ace8ac1cb58a2ea:
+        m_Texture: {fileID: 2800000, guid: 074e0fce0d70c744ca1edd431764500f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_e41b0a0cf5d943678ccc1de401a1da7f:
+        m_Texture: {fileID: 2800000, guid: d5915d798d867a0458926ffa08472447, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlurredTex:
+        m_Texture: {fileID: 2800000, guid: d2aa296a8180f62428d349afd5a78f87, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 8ad9ccf5cf0897642929c5ae97c03705, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - BOOLEAN_A8233755860F4314A3B431B642C00DED: 1
+    - BOOLEAN_B2362723499B40FEBBABA5BDAD718877: 0
+    - ENUM_0B0D4FF8FC8F4E1CA6DBD60A4F5B2992: -1.63
+    - Vector1_76b1c06a01ca4eebb07dab4cdb81363d: 30
+    - _BlurStrength: 0
+    - _ColorMask: 15
+    - _CullMode: 0
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _ClipRect: {r: -32767, g: -32767, b: 32767, a: 32767}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}

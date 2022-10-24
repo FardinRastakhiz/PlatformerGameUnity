@@ -1,0 +1,1088 @@
+fileFormatVersion: 2
+guid: 16902abece6d5814aa4757abdeeda37f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1632077683150559789
+    second: Wall 01 LRTB-64 (Blurred)
+  - first:
+      213: 9209488192886729919
+    second: Wall 02 LRTB-64 (Blurred)
+  - first:
+      213: 8677471416347873637
+    second: Wall 03 LR-256 TB-64 (Blurred)
+  - first:
+      213: 2104209075111369103
+    second: Briks 01 TB-64 (Blurred)
+  - first:
+      213: 3972484555863512645
+    second: Briks 02 TB-64 (Blurred)
+  - first:
+      213: -2551243403476327703
+    second: Briks 03 TB-256 (Blurred)
+  - first:
+      213: 353177619474058052
+    second: Shadow 01 (Blurred)
+  - first:
+      213: 206450576787650826
+    second: Wall 04 LRTB-64 (Blurred)
+  - first:
+      213: -7387563040107032449
+    second: Wall 12 LRTB-64 (Blurred)
+  - first:
+      213: 6472559063074669014
+    second: Platform 01 LR-128 (Blurred)
+  - first:
+      213: 379768080397246835
+    second: Wall 05 LRTB-64 (Blurred)
+  - first:
+      213: -4584310356759110113
+    second: Beam 04 LR-64 (Blurred)
+  - first:
+      213: -6498553289403440261
+    second: Roof 05 LR-640 (Blurred)
+  - first:
+      213: -8073244040888276996
+    second: Wall 06 LRTB-64 (Blurred)
+  - first:
+      213: -7245170741062201929
+    second: Wall 09 LRTB-64 (Blurred)
+  - first:
+      213: -1347938168359701866
+    second: Platform 02 LR-256 (Blurred)
+  - first:
+      213: 4151194727582515552
+    second: Platform 04 LR-128 (Blurred)
+  - first:
+      213: -6587635207050377007
+    second: Platform 03 LR-256 (Blurred)
+  - first:
+      213: -317810381165318851
+    second: Platform 05 LR-96-224 (Blurred)
+  - first:
+      213: -930947206743342105
+    second: Beam 02 LR-128 (Blurred)
+  - first:
+      213: 8168134097532287733
+    second: Platform 06 LR-256 (Blurred)
+  - first:
+      213: -1886687909548907791
+    second: Wall 07 LRTB-64 (Blurred)
+  - first:
+      213: -7224073828889364849
+    second: Wall 10 LRTB-64 (Blurred)
+  - first:
+      213: -1125989731673218134
+    second: Beam 01 LR-64 (Blurred)
+  - first:
+      213: 5025233773856918371
+    second: Roof 01 LR-256 (Blurred)
+  - first:
+      213: 2994748346946484179
+    second: Wall 08 LRTB-64 (Blurred)
+  - first:
+      213: 6365125908849038642
+    second: Wall 11 LRTB-64 (Blurred)
+  - first:
+      213: -3514005641740390922
+    second: Roof 02 LR-256 (Blurred)
+  - first:
+      213: 971956440153438114
+    second: Roof 03 LR-640 (Blurred)
+  - first:
+      213: 3614197129089120354
+    second: Roof 09 TB-64 (Blurred)
+  - first:
+      213: 6773220476028543216
+    second: Roof 08 TB-64 (Blurred)
+  - first:
+      213: -7084171748431892816
+    second: Briks 04 TB-64-128-256 (Blurred)
+  - first:
+      213: -78045555191606972
+    second: Platform 08 LR-64 TB-32 (Blurred)
+  - first:
+      213: 5102280993158097463
+    second: Platform 07 LR-128 (Blurred)
+  - first:
+      213: -1830143507499944487
+    second: Beam 03 LR-64 (Blurred)
+  - first:
+      213: -5298312847823041094
+    second: Roof 07 TB-64 (Blurred)
+  - first:
+      213: -6220080367504489031
+    second: Roof 06 TB-64 (Blurred)
+  - first:
+      213: 8159518565369664752
+    second: Roof 04 LR-256 (Blurred)
+  - first:
+      213: 1165001838234060676
+    second: Bricks Block 01 LRTB-64 (Blurred)
+  - first:
+      213: 8204433636714368875
+    second: Bricks Block 02 LRTB-64 (Blurred)
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wall 01 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2944
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a1806710e46a610800000000000000
+      internalID: 1632077683150559789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 02 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 2944
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcea2ca7bcaecf70800000000000000
+      internalID: 9209488192886729919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 03 LR-256 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2944
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 64, z: 256, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561550827429c6870800000000000000
+      internalID: 8677471416347873637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 01 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 2944
+        width: 128
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f899a275107a33d10800000000000000
+      internalID: 2104209075111369103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 02 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3624
+        y: 2944
+        width: 128
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54658fb08a9112730800000000000000
+      internalID: 3972484555863512645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 03 TB-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3762
+        y: 2944
+        width: 128
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 128, z: 0, w: 128}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e22c3044a9289cd0800000000000000
+      internalID: -2551243403476327703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow 01 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3968
+        y: 3072
+        width: 128
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b8e577c2db6e400800000000000000
+      internalID: 353177619474058052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 04 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2422
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a093a1da4b57dd200800000000000000
+      internalID: 206450576787650826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 12 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1782
+        width: 1152
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f709d965e8a1a7990800000000000000
+      internalID: -7387563040107032449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 05 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1900
+        width: 1152
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3712c199e05354500800000000000000
+      internalID: 379768080397246835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 04 LR-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 0
+        width: 1152
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e9a3de4024160c0800000000000000
+      internalID: -4584310356759110113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 06 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1378
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7a0d5915316ff80800000000000000
+      internalID: -8073244040888276996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 09 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1378
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd0fe9f89bf37b90800000000000000
+      internalID: -7245170741062201929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 02 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 927
+        width: 1024
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692bab7a0692b4de0800000000000000
+      internalID: -1347938168359701866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 04 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 585
+        width: 1152
+        height: 183
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061c70b5c910c9930800000000000000
+      internalID: 4151194727582515552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 03 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 660
+        width: 1024
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8c7e59ea40494a0800000000000000
+      internalID: -6587635207050377007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 05 LR-96-224 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1516
+        width: 1216
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 224, y: 0, z: 224, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3da5b46429e69bf0800000000000000
+      internalID: -317810381165318851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 02 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 1024
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3cb65a27c9413f0800000000000000
+      internalID: -930947206743342105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 06 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 1324
+        width: 1280
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fafa216faa0b5170800000000000000
+      internalID: 8168134097532287733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 07 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f22055a75321d5e0800000000000000
+      internalID: -1886687909548907791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 10 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 856
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f867add902feebb90800000000000000
+      internalID: -7224073828889364849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 01 LR-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 1024
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa361e60e4eaf50f0800000000000000
+      internalID: -1125989731673218134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 01 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 940
+        width: 1280
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b89041e773db540800000000000000
+      internalID: 5025233773856918371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 08 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 334
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7fe6331cb7f8920800000000000000
+      internalID: 2994748346946484179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall 11 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 334
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235159b4a48755850800000000000000
+      internalID: 6365125908849038642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 02 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1552
+        width: 1280
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd6851ac7ebb3fc0800000000000000
+      internalID: -3514005641740390922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 03 LR-640 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2444
+        width: 1664
+        height: 490
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 640, y: 0, z: 640, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7bf709b351d7d00800000000000000
+      internalID: 971956440153438114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Briks 04 TB-64-128-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3900
+        y: 2944
+        width: 64
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0beebde0457ffad90800000000000000
+      internalID: -7084171748431892816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 08 LR-64 TB-32 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 0
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 32, z: 64, w: 32}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44191862bf9baeef0800000000000000
+      internalID: -78045555191606972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 07 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 778
+        width: 1152
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a6a6db781fec640800000000000000
+      internalID: 5102280993158097463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beam 03 LR-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 1024
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 0, z: 64, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d57a7b2d260a96e0800000000000000
+      internalID: -1830143507499944487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 07 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 139
+        width: 64
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd8e9c598c9876b0800000000000000
+      internalID: -5298312847823041094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 06 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 4032
+        y: 1378
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b583847cd5dda9a0800000000000000
+      internalID: -6220080367504489031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 09 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 139
+        width: 64
+        height: 1152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268f79bd325382230800000000000000
+      internalID: 3614197129089120354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 08 TB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 3924
+        y: 1378
+        width: 64
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 64, z: 0, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0651b03205ffd50800000000000000
+      internalID: 6773220476028543216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform 01 LR-128 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2856
+        y: 139
+        width: 1024
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 128, y: 0, z: 128, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d10d4ebc2623d950800000000000000
+      internalID: 6472559063074669014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 05 LR-640 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 2074
+        width: 1664
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 640, y: 0, z: 640, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73692fc63080d5a0800000000000000
+      internalID: -6498553289403440261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roof 04 LR-256 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1117
+        width: 1280
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 256, y: 0, z: 256, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4501b77ee6c3170800000000000000
+      internalID: 8159518565369664752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bricks Block 01 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 595
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4874e9adffaea2010800000000000000
+      internalID: 1165001838234060676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bricks Block 02 LRTB-64 (Blurred)
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 73
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 64, y: 64, z: 64, w: 64}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f40a37ce00cd170800000000000000
+      internalID: 8204433636714368875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
